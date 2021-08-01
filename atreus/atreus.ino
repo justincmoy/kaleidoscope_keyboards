@@ -38,7 +38,7 @@ KEYMAPS(
        // right
        Key_F, Key_G, Key_C, Key_R, Key_L,
        Key_D, SFT_T(H), CTL_T(T), ALT_T(N), GUI_T(S),
-       XXX, Key_B, Key_M, Key_W, Key_V ,Key_Z,
+       XXX, Key_B, Key_M, Key_W, Key_V, Key_Z,
        LT(SYM, Enter), LT(NUM, Backspace), LT(FUN, Delete), XXX, XXX, LockLayer(GAME)
   ),
 
@@ -83,10 +83,10 @@ KEYMAPS(
 
   [NUM] = KEYMAP_STACKED
   (
-       Key_LeftBracket ,Key_7 ,Key_8, Key_9, Key_RightBracket,
+       Key_LeftBracket, Key_7, Key_8, Key_9, Key_RightBracket,
        Key_Semicolon, Key_4, Key_5, Key_6, Key_Equals,
        Key_Backtick,Key_1, Key_2, Key_3, Key_Backslash, ___,
-       ___,___, ___, Key_Period , Key_0 , Key_Minus,
+       ___,___, ___, Key_Period, Key_0 , Key_Minus,
 
        ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___,
@@ -112,7 +112,7 @@ KEYMAPS(
        Key_F12, Key_F7, Key_F8, Key_F9, Key_PrintScreen,
        Key_F11, Key_F4, Key_F5, Key_F6, Key_ScrollLock,
        Key_F10, Key_F1, Key_F2, Key_F3, Key_Pause, ___,
-       ___ ,___ ,___ ,___ ,___, ___,
+       ___, ___, ___, ___, ___, ___,
 
        ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___,
