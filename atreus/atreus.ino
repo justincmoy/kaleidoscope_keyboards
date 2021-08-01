@@ -86,7 +86,7 @@ KEYMAPS(
        Key_LeftBracket, Key_7, Key_8, Key_9, Key_RightBracket,
        Key_Semicolon, Key_4, Key_5, Key_6, Key_Equals,
        Key_Backtick,Key_1, Key_2, Key_3, Key_Backslash, ___,
-       ___,___, ___, Key_Period, Key_0 , Key_Minus,
+       ___,___, ___, Key_Period, Key_0, Key_Minus,
 
        ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___,
