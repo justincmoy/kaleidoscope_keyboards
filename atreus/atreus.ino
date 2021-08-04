@@ -1,8 +1,10 @@
 #include "Kaleidoscope.h"
-#include "Kaleidoscope-EEPROM-Keymap.h"
+#include "kaleidoscope/layers.h"
+#include "Kaleidoscope-AutoShift.h"
 #include "Kaleidoscope-HostOS.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
+#include "Kaleidoscope-OneShot.h"
 #include "Kaleidoscope-Qukeys.h"
 
 enum {
@@ -11,7 +13,8 @@ enum {
   MACRO_COPY,
   MACRO_CUT,
   MACRO_UNDO,
-  MACRO_HOSTOS_SWITCH
+  MACRO_HOSTOS_SWITCH,
+  MACRO_LOCK_GAME
 };
 
 enum {
@@ -31,21 +34,21 @@ KEYMAPS(
   (
        // left
        Key_Quote, Key_Comma, Key_Period, Key_P, Key_Y,
-       GUI_T(A), ALT_T(O), CTL_T(E), SFT_T(U), Key_I,
+       Key_A, Key_O, Key_E, Key_U, Key_I,
        Key_Slash, Key_Q, Key_J, Key_K, Key_X, XXX,
        XXX, XXX, XXX, LT(MEDIA, Esc), LT(NAV, Space), LT(MOUSE, Tab),
 
        // right
        Key_F, Key_G, Key_C, Key_R, Key_L,
-       Key_D, SFT_T(H), CTL_T(T), ALT_T(N), GUI_T(S),
+       Key_D, Key_H, Key_T, Key_N, Key_S,
        XXX, Key_B, Key_M, Key_W, Key_V, Key_Z,
-       LT(SYM, Enter), LT(NUM, Backspace), LT(FUN, Delete), XXX, XXX, LockLayer(GAME)
+       LT(SYM, Enter), LT(NUM, Backspace), LT(FUN, Delete), XXX, XXX, M(MACRO_LOCK_GAME)
   ),
 
   [MEDIA] = KEYMAP_STACKED
   (
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       OSM(LeftGui), OSM(LeftAlt), OSM(LeftControl), OSM(LeftShift), ___,
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___,
 
@@ -58,7 +61,7 @@ KEYMAPS(
   [NAV] = KEYMAP_STACKED
   (
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       OSM(LeftGui), OSM(LeftAlt), OSM(LeftControl), OSM(LeftShift), ___,
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___,
 
@@ -71,7 +74,7 @@ KEYMAPS(
   [MOUSE] = KEYMAP_STACKED
   (
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       OSM(LeftGui), OSM(LeftAlt), OSM(LeftControl), OSM(LeftShift), ___,
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___,
 
@@ -89,7 +92,7 @@ KEYMAPS(
        ___,___, ___, Key_Period, Key_0, Key_Minus,
 
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       ___, OSM(LeftShift), OSM(LeftControl), OSM(LeftAlt), OSM(LeftGui),
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___
   ),
@@ -102,7 +105,7 @@ KEYMAPS(
        ___, ___, ___, Key_LeftParen, LSHIFT(Key_0), LSHIFT(Key_Minus),
 
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       ___, OSM(LeftShift), OSM(LeftControl), OSM(LeftAlt), OSM(LeftGui),
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___
   ),
@@ -115,7 +118,7 @@ KEYMAPS(
        ___, ___, ___, ___, ___, ___,
 
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       ___, OSM(LeftShift), OSM(LeftControl), OSM(LeftAlt), OSM(LeftGui),
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___
   ),
@@ -135,8 +138,9 @@ KEYMAPS(
 )
 
 KALEIDOSCOPE_INIT_PLUGINS(
-  EEPROMKeymap,
   Qukeys,
+  AutoShift,
+  OneShot,
   HostOS,
   Macros,
   MouseKeys
@@ -193,6 +197,17 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
       HostOS.os(kaleidoscope::hostos::OSX);
     }
     break;
+  case MACRO_LOCK_GAME:
+    if (keyToggledOn(keyState)) {
+      if (Layer.isActive(GAME)) {
+	Layer.deactivate(GAME);
+        AutoShift.enable();
+      } else {
+	Layer.activate(GAME);
+        AutoShift.disable();
+      }
+    }
+    break;
   default:
     break;
   }
@@ -202,10 +217,8 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
 void setup() {
   Kaleidoscope.setup();
-  EEPROMKeymap.setup(10);
+  AutoShift.setEnabled(AutoShift.letterKeys());
   HostOS.os(kaleidoscope::hostos::OSX);
-  Qukeys.setOverlapThreshold(100);
-  Qukeys.setMinimumHoldTime(170);
   MouseKeys.accelDelay = 30;
   MouseKeys.accelSpeed = 5;
   MouseKeys.setSpeedLimit(60);
