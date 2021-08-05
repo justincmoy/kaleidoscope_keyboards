@@ -217,7 +217,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
 void setup() {
   Kaleidoscope.setup();
-  AutoShift.setEnabled(AutoShift.letterKeys());
+  AutoShift.setEnabled(AutoShift.printableKeys());
   HostOS.os(kaleidoscope::hostos::OSX);
   MouseKeys.accelDelay = 30;
   MouseKeys.accelSpeed = 5;
