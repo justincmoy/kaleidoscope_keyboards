@@ -1,6 +1,7 @@
 #include "Kaleidoscope.h"
 #include "kaleidoscope/layers.h"
 #include "Kaleidoscope-AutoShift.h"
+#include "Kaleidoscope-Escape-OneShot.h"
 #include "Kaleidoscope-HostOS.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
@@ -141,6 +142,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   Qukeys,
   AutoShift,
   OneShot,
+  EscapeOneShot,
   HostOS,
   Macros,
   MouseKeys
