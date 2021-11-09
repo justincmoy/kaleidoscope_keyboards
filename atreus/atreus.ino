@@ -28,7 +28,7 @@ KEYMAPS(
        Key_Quote, Key_Comma, Key_Period, Key_P, Key_Y,
        Key_A, Key_O, Key_E, Key_U, Key_I,
        Key_Slash, Key_Q, Key_J, Key_K, Key_X, XXX,
-       XXX, XXX, XXX, LT(MOUSE, Esc), LT(NUM, Space), CTL_T(Tab),
+       XXX, XXX, XXX, LT(MOUSE, Esc), CTL_T(Space), LT(NUM, Tab),
 
        // right
        Key_F, Key_G, Key_C, Key_R, Key_L,
@@ -65,15 +65,15 @@ KEYMAPS(
 
   [NUM] = KEYMAP_STACKED
   (
-       ___, Key_LeftParen, Key_Semicolon, Key_RightParen, ___,
-       Key_LeftGui, Key_LeftAlt, Key_LeftControl, Key_LeftShift, ___,
-       ___, ___, ___, ___, ___, ___,
+       ___, Key_Equals, Key_Backslash, LSHIFT(Key_Semicolon), ___,
+       Key_1, Key_2, Key_3, Key_4, Key_5,
+       Key_LeftGui, Key_LeftAlt, Key_LeftControl, Key_LeftShift, ___, ___,
        ___, ___, ___, ___, ___, ___,
 
-       Key_LeftBracket, Key_7, Key_8, Key_9, Key_RightBracket,
-       LSHIFT(Key_Semicolon), Key_4, Key_5, Key_6, Key_Equals,
-       ___, Key_Backtick, Key_1, Key_2, Key_3, Key_Backslash,
-       Key_Minus, SFT_T(0), LSHIFT(Key_Minus), ___, ___, ___
+       Key_LeftBracket, Key_Semicolon, Key_Minus, Key_Backtick, Key_RightBracket,
+       Key_6, Key_7, Key_8, Key_9, Key_0,
+       ___, ___, Key_LeftShift, Key_LeftControl, Key_LeftAlt, Key_LeftGui,
+       ___, ___, ___, ___, ___, ___
   ),
 
   [GAME] = KEYMAP_STACKED
