@@ -17,49 +17,33 @@ enum {
 
 enum {
   DVORAK,
-  MEDIA,
   NAV,
   MOUSE,
   NUM,
   SYM,
-  FUN,
   GAME
 };
-
 
 KEYMAPS(
   [DVORAK] = KEYMAP_STACKED
   (
        // left
        Key_Quote, Key_Comma, Key_Period, Key_P, Key_Y,
-       GUI_T(A), ALT_T(O), CTL_T(E), SFT_T(U), Key_I,
+       Key_A, Key_O, Key_E, Key_U, Key_I,
        Key_Slash, Key_Q, Key_J, Key_K, Key_X, XXX,
-       XXX, XXX, XXX, LT(MEDIA, Esc), LT(NAV, Space), LT(MOUSE, Tab),
+       XXX, XXX, XXX, LT(MOUSE, Esc), LT(NAV, Space), CTL_T(Tab),
 
        // right
        Key_F, Key_G, Key_C, Key_R, Key_L,
-       Key_D, SFT_T(H), CTL_T(T), ALT_T(N), GUI_T(S),
+       Key_D, Key_H, Key_T, Key_N, Key_S,
        XXX, Key_B, Key_M, Key_W, Key_V, Key_Z,
-       LT(SYM, Enter), LT(NUM, Backspace), LT(FUN, Delete), XXX, XXX, M(MACRO_LOCK_GAME)
-  ),
-
-  [MEDIA] = KEYMAP_STACKED
-  (
-       ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___, ___,
-
-       ___, ___, ___, ___, ___,
-       ___, Consumer_ScanPreviousTrack, Consumer_VolumeDecrement, Consumer_VolumeIncrement, Consumer_ScanNextTrack,
-       ___, ___, ___, ___, ___, ___,
-       Consumer_Stop, Consumer_PlaySlashPause, Consumer_Mute, ___, ___, ___
+       LT(NUM, Enter), SFT_T(Backspace), GUI_T(Delete), XXX, XXX, M(MACRO_LOCK_GAME)
   ),
 
   [NAV] = KEYMAP_STACKED
   (
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       Key_LeftGui, Key_LeftAlt, Key_LeftControl, Key_LeftShift, ___,
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___,
 
@@ -72,7 +56,7 @@ KEYMAPS(
   [MOUSE] = KEYMAP_STACKED
   (
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       Key_LeftGui, Key_LeftAlt, Key_LeftControl, Key_LeftShift, ___,
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___,
 
@@ -85,12 +69,12 @@ KEYMAPS(
   [NUM] = KEYMAP_STACKED
   (
        Key_LeftBracket, Key_7, Key_8, Key_9, Key_RightBracket,
-       Key_Semicolon, Key_4, Key_5, Key_6, Key_Equals,
+       LSHIFT(Key_Semicolon), Key_4, Key_5, Key_6, Key_Equals,
        Key_Backtick,Key_1, Key_2, Key_3, Key_Backslash, ___,
-       ___,___, ___, Key_Period, Key_0, Key_Minus,
+       ___,___, ___, Key_9, Key_0, Key_Minus,
 
        ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
+       ___, ShiftToLayer(SYM), Key_LeftControl, Key_LeftAlt, Key_LeftGui,
        ___, ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___
   ),
@@ -98,22 +82,9 @@ KEYMAPS(
   [SYM] = KEYMAP_STACKED
   (
        LSHIFT(Key_LeftBracket), LSHIFT(Key_7), LSHIFT(Key_8), LSHIFT(Key_9), LSHIFT(Key_RightBracket),
-       LSHIFT(Key_Semicolon), LSHIFT(Key_4), LSHIFT(Key_5), LSHIFT(Key_6), LSHIFT(Key_Equals),
+       Key_Semicolon, LSHIFT(Key_4), LSHIFT(Key_5), LSHIFT(Key_6), LSHIFT(Key_Equals),
        LSHIFT(Key_Backtick), LSHIFT(Key_1), LSHIFT(Key_2), LSHIFT(Key_3), Key_Pipe, ___,
        ___, ___, ___, Key_LeftParen, LSHIFT(Key_0), LSHIFT(Key_Minus),
-
-       ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___, ___
-  ),
-
-  [FUN] = KEYMAP_STACKED
-  (
-       Key_F12, Key_F7, Key_F8, Key_F9, Key_PrintScreen,
-       Key_F11, Key_F4, Key_F5, Key_F6, Key_ScrollLock,
-       Key_F10, Key_F1, Key_F2, Key_F3, Key_Pause, ___,
-       ___, ___, ___, ___, ___, ___,
 
        ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___,
@@ -211,7 +182,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
 void setup() {
   Kaleidoscope.setup();
-  Qukeys.setOverlapThreshold(100)
+  Qukeys.setOverlapThreshold(100);
   HostOS.os(kaleidoscope::hostos::OSX);
   MouseKeys.accelDelay = 30;
   MouseKeys.accelSpeed = 5;
