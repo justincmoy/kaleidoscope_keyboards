@@ -1,15 +1,10 @@
 #include "Kaleidoscope.h"
 #include "kaleidoscope/layers.h"
-#include "Kaleidoscope-HostOS.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
 #include "Kaleidoscope-Qukeys.h"
 
 enum {
-  MACRO_PASTE,
-  MACRO_COPY,
-  MACRO_CUT,
-  MACRO_HOSTOS_SWITCH,
   MACRO_LOCK_GAME
 };
 
@@ -27,13 +22,13 @@ KEYMAPS(
        Key_Quote, Key_Comma, Key_Period, Key_P, Key_Y,
        Key_A, Key_O, Key_E, Key_U, Key_I,
        Key_Slash, Key_Q, Key_J, Key_K, Key_X, XXX,
-       XXX, XXX, XXX, Key_Esc, CTL_T(Space), LT(NUM, Tab),
+       XXX, XXX, XXX, GUI_T(Esc), CTL_T(Space), LT(NUM, Tab),
 
        // right
        Key_F, Key_G, Key_C, Key_R, Key_L,
        Key_D, Key_H, Key_T, Key_N, Key_S,
        XXX, Key_B, Key_M, Key_W, Key_V, Key_Z,
-       LT(NAV, Enter), SFT_T(Backspace), GUI_T(Delete), XXX, XXX, M(MACRO_LOCK_GAME)
+       LT(NAV, Enter), SFT_T(Backspace), Key_Delete, XXX, XXX, M(MACRO_LOCK_GAME)
   ),
 
   [NAV] = KEYMAP_STACKED
@@ -43,9 +38,9 @@ KEYMAPS(
        Key_mouseScrollL, Key_mouseScrollUp, Key_mouseScrollDn, Key_mouseScrollR, ___, ___,
        ___, ___, ___, ___, ___, ___,
 
-       LCTRL(Key_LeftArrow), M(MACRO_PASTE), M(MACRO_COPY), M(MACRO_CUT), LCTRL(Key_RightArrow),
-       Key_CapsLock, Key_LeftArrow, Key_DownArrow, Key_UpArrow, Key_RightArrow,
-       M(MACRO_HOSTOS_SWITCH), Key_Insert, Key_Home, Key_PageDown, Key_PageUp, Key_End,
+       ___, ___, ___, ___, ___,
+       ___, Key_LeftArrow, Key_DownArrow, Key_UpArrow, Key_RightArrow,
+       ___, Key_Insert, Key_Home, Key_PageDown, Key_PageUp, Key_End,
        ___, ___, ___, ___, ___, ___
   ),
 
@@ -78,46 +73,12 @@ KEYMAPS(
 
 KALEIDOSCOPE_INIT_PLUGINS(
   Qukeys,
-  HostOS,
   Macros,
   MouseKeys
 );
 
 const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   switch (macroIndex) {
-  case MACRO_PASTE:
-    if (keyToggledOn(keyState)) {
-      if (HostOS.os() == kaleidoscope::hostos::OSX) {
-        return MACRO(D(LeftGui), T(V), U(LeftGui));
-      }
-      return MACRO(D(LeftControl), T(V), U(LeftControl));
-    }
-    break;
-  case MACRO_COPY:
-    if (keyToggledOn(keyState)) {
-      if (HostOS.os() == kaleidoscope::hostos::OSX) {
-        return MACRO(D(LeftGui), T(C), U(LeftGui));
-      }
-      return MACRO(D(LeftControl), T(C), U(LeftControl));
-    }
-    break;
-  case MACRO_CUT:
-    if (keyToggledOn(keyState)) {
-      if (HostOS.os() == kaleidoscope::hostos::OSX) {
-        return MACRO(D(LeftGui), T(X), U(LeftGui));
-      }
-      return MACRO(D(LeftControl), T(X), U(LeftControl));
-    }
-    break;
-  case MACRO_HOSTOS_SWITCH:
-    if (keyToggledOn(keyState)) {
-      if (HostOS.os() == kaleidoscope::hostos::OSX) {
-        HostOS.os(kaleidoscope::hostos::WINDOWS);
-        break;
-      }
-      HostOS.os(kaleidoscope::hostos::OSX);
-    }
-    break;
   case MACRO_LOCK_GAME:
     if (keyToggledOn(keyState)) {
       if (Layer.isActive(GAME)) {
@@ -137,7 +98,6 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 void setup() {
   Kaleidoscope.setup();
   Qukeys.setOverlapThreshold(100);
-  HostOS.os(kaleidoscope::hostos::OSX);
   MouseKeys.accelDelay = 30;
   MouseKeys.accelSpeed = 5;
   MouseKeys.setSpeedLimit(60);
