@@ -40,7 +40,7 @@ KEYMAPS(
   (
        Key_mouseBtnP, Key_mouseBtnN, Key_mouseBtnL, Key_mouseBtnM, Key_mouseBtnR,
        Key_mouseL, Key_mouseUp, Key_mouseDn, Key_mouseR, ___,
-       GUI_T(mouseScrollL), ALT_T(mouseScrollDn), CTL_T(mouseScrollUp), GUI_T(mouseScrollR), ___, ___,
+       Key_mouseScrollL, Key_mouseScrollUp, Key_mouseScrollDn, Key_mouseScrollR, ___, ___,
        ___, ___, ___, ___, ___, ___,
 
        LCTRL(Key_LeftArrow), M(MACRO_PASTE), M(MACRO_COPY), M(MACRO_CUT), LCTRL(Key_RightArrow),
