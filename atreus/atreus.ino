@@ -16,7 +16,6 @@ enum {
 enum {
   DVORAK,
   NAV,
-  MOUSE,
   NUM,
   GAME
 };
@@ -28,7 +27,7 @@ KEYMAPS(
        Key_Quote, Key_Comma, Key_Period, Key_P, Key_Y,
        Key_A, Key_O, Key_E, Key_U, Key_I,
        Key_Slash, Key_Q, Key_J, Key_K, Key_X, XXX,
-       XXX, XXX, XXX, LT(MOUSE, Esc), CTL_T(Space), LT(NUM, Tab),
+       XXX, XXX, XXX, Key_Esc, CTL_T(Space), LT(NUM, Tab),
 
        // right
        Key_F, Key_G, Key_C, Key_R, Key_L,
@@ -39,28 +38,15 @@ KEYMAPS(
 
   [NAV] = KEYMAP_STACKED
   (
-       ___, ___, ___, ___, ___,
-       Key_LeftGui, Key_LeftAlt, Key_LeftControl, Key_LeftShift, ___,
+       Key_mouseBtnP, Key_mouseBtnN, Key_mouseBtnL, Key_mouseBtnM, Key_mouseBtnR,
+       Key_mouseL, Key_mouseUp, Key_mouseDn, Key_mouseR, ___,
+       GUI_T(mouseScrollL), ALT_T(mouseScrollDn), CTL_T(mouseScrollUp), GUI_T(mouseScrollR), ___, ___,
        ___, ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___, LCTRL(Key_B),
 
        LCTRL(Key_LeftArrow), M(MACRO_PASTE), M(MACRO_COPY), M(MACRO_CUT), LCTRL(Key_RightArrow),
        Key_CapsLock, Key_LeftArrow, Key_DownArrow, Key_UpArrow, Key_RightArrow,
        M(MACRO_HOSTOS_SWITCH), Key_Insert, Key_Home, Key_PageDown, Key_PageUp, Key_End,
        ___, ___, ___, ___, ___, ___
-  ),
-
-  [MOUSE] = KEYMAP_STACKED
-  (
-       ___, ___, ___, ___, ___,
-       Key_LeftGui, Key_LeftAlt, Key_LeftControl, Key_LeftShift, ___,
-       ___, ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___, ___,
-
-       ___, Key_mouseBtnP, Key_mouseBtnN, ___, ___,
-       ___, Key_mouseL, Key_mouseDn, Key_mouseUp, Key_mouseR,
-       ___, ___, Key_mouseScrollL, Key_mouseScrollDn, Key_mouseScrollUp, Key_mouseScrollR,
-       Key_mouseBtnL, Key_mouseBtnM, Key_mouseBtnR, ___, ___, ___
   ),
 
   [NUM] = KEYMAP_STACKED
@@ -86,7 +72,7 @@ KEYMAPS(
        ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___, ___,
-       ___, ___, ___, ___, ___, ___
+       ___, ___, ___, ___, ___, M(MACRO_LOCK_GAME)
   )
 )
 
