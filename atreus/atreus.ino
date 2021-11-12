@@ -111,7 +111,6 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
 void setup() {
   Kaleidoscope.setup();
-  Qukeys.setOverlapThreshold(100);
   MouseKeys.accelDelay = 30;
   MouseKeys.accelSpeed = 5;
   MouseKeys.setSpeedLimit(60);
