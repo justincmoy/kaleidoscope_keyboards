@@ -76,7 +76,7 @@ KEYMAPS(
        Key_Backtick, Key_1, Key_2, Key_3, Key_4,
        Key_Esc, Key_Q, Key_W, Key_E, Key_R,
        Key_LShift, Key_A, Key_S, Key_D, Key_F, Key_G,
-       Key_LCtrl, Key_Z, Key_X, Key_C, Key_Space, Key_Tab,
+       Key_LCtrl, Key_Z, Key_X, Key_C, Key_Space, ___,
 
        ___, ___, ___, ___, ___,
        ___, ___, ___, ___, ___,
