@@ -12,5 +12,6 @@ if [ ! -d "$SCRIPT_DIR/qmk/$1" ]; then
 	exit 1
 fi
 
+rm -r "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
 cp -r "$SCRIPT_DIR/qmk/$1" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
 qmk flash -kb "$1" -km "justincmoy"
