@@ -17,10 +17,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [GAME] = LAYOUT_split_3x5_3(
-    KC_GRV,  KC_Q,    KC_W,           KC_E,            KC_R,           KC_F,            KC_G,             KC_C,           KC_R,    KC_L,
+    KC_TAB,  KC_Q,    KC_W,           KC_E,            KC_R,           KC_F,            KC_G,             KC_C,           KC_R,    KC_L,
     KC_LSFT, KC_A,    KC_S,           KC_D,            KC_F,           KC_D,            KC_H,             KC_T,           KC_N,    KC_S,
     KC_LCTL, KC_Z,    KC_X,           KC_C,            KC_V,           KC_B,            KC_M,             KC_W,           KC_V,    KC_Z,
-                      KC_ESC,         LT(NUM, KC_TAB), KC_SPC,         LSFT_T(KC_ENT),  LT(NAV, KC_BSPC), KC_DEL
+                      KC_ESC,         LT(NUM, KC_NO),  KC_SPC,         LSFT_T(KC_ENT),  LT(NAV, KC_BSPC), KC_DEL
   ),
 
   [NUM] = LAYOUT_split_3x5_3(
