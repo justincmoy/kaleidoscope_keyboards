@@ -1,12 +1,9 @@
 #include QMK_KEYBOARD_H
-
-#include "artsey-qmk/left_hand/artsey.h"
-#include "artsey-qmk/left_hand/keymap_combo.h"
-#include "artsey-qmk/left_hand/artsey.c"
 #include "common/keymap.h"
 
 enum layer_names {
-  LAYER_BASE = 7,
+  LAYER_BASE,
+  LAYER_APTe,
   LAYER_GAME,
   LAYER_NUMB,
   LAYER_SYMB,
@@ -14,60 +11,18 @@ enum layer_names {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_A_BASE] = LAYOUT_split_3x5_3(
-    A_BASE_S, A_BASE_T, A_BASE_R,      A_BASE_A,        KC_NO,          KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    A_BASE_O, A_BASE_I, A_BASE_Y,      A_BASE_E,        KC_NO,          KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    KC_NO,    KC_NO,    KC_NO,         KC_NO,           KC_NO,          KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-                        KC_NO,         KC_NO,           TG(LAYER_BASE),    KC_NO,           KC_NO,            KC_NO
-  ),
-
-  [_A_NUM] = LAYOUT_split_3x5_3(
-    A_NUM_S,  A_NUM_T,  A_NUM_R,       A_NUM_A,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    A_NUM_O,  A_NUM_I,  A_NUM_Y,       A_NUM_E,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    KC_NO,    KC_NO,    KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-                        KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO
-  ),
-
-  [_A_NAV] = LAYOUT_split_3x5_3(
-    A_NAV_S,  A_NAV_T,  A_NAV_R,       A_NAV_A,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    A_NAV_O,  A_NAV_I,  A_NAV_Y,       A_NAV_E,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    KC_NO,    KC_NO,    KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-                        KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO
-  ),
-
-  [_A_SYM] = LAYOUT_split_3x5_3(
-    A_SYM_S,  A_SYM_T,  A_SYM_R,       A_SYM_A,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    A_SYM_O,  A_SYM_I,  A_SYM_Y,       A_SYM_E,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    KC_NO,    KC_NO,    KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-                        KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO
-  ),
-
-  [_A_BRAC] = LAYOUT_split_3x5_3(
-    A_BRAC_S, A_BRAC_T, A_BRAC_R,      A_BRAC_A,        KC_NO,          KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    A_BRAC_O, A_BRAC_I, A_BRAC_Y,      A_BRAC_E,        KC_NO,          KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    KC_NO,    KC_NO,    KC_NO,         KC_NO,           KC_NO,          KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-                        KC_NO,         KC_NO,           KC_NO,          KC_NO,           KC_NO,            KC_NO
-  ),
-
-  [_A_MOU] = LAYOUT_split_3x5_3(
-    A_MOU_S,  A_MOU_T,  A_MOU_R,       A_MOU_A,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    A_MOU_O,  A_MOU_I,  A_MOU_Y,       A_MOU_E,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    KC_NO,    KC_NO,    KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-                        KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO
-  ),
-
-  [_A_CUSTOM] = LAYOUT_split_3x5_3(
-    A_CUSTOM_S,  A_CUSTOM_T,  A_CUSTOM_R,       A_CUSTOM_A,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    A_CUSTOM_O,  A_CUSTOM_I,  A_CUSTOM_Y,       A_CUSTOM_E,         KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-    KC_NO,    KC_NO,    KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO,          KC_NO,   KC_NO,
-                        KC_NO,         KC_NO,           KC_NO,           KC_NO,           KC_NO,            KC_NO
-  ),
-
   [LAYER_BASE] = LAYOUT_split_3x5_3(
     KC_BASE_0_0, KC_BASE_0_1, KC_BASE_0_2, KC_BASE_0_3, KC_BASE_0_4, KC_BASE_0_5, KC_BASE_0_6, KC_BASE_0_7, KC_BASE_0_8, KC_BASE_0_9,
     KC_BASE_1_0, KC_BASE_1_1, KC_BASE_1_2, KC_BASE_1_3, KC_BASE_1_4, KC_BASE_1_5, KC_BASE_1_6, KC_BASE_1_7, KC_BASE_1_8, KC_BASE_1_9,
     KC_BASE_2_0, KC_BASE_2_1, KC_BASE_2_2, KC_BASE_2_3, KC_BASE_2_4, KC_BASE_2_5, KC_BASE_2_6, KC_BASE_2_7, KC_BASE_2_8, KC_BASE_2_9,
                               KC_BASE_3_0, KC_BASE_3_1, KC_BASE_3_2, KC_BASE_3_3, KC_BASE_3_4, KC_BASE_3_5
+  ),
+
+  [LAYER_APTe] = LAYOUT_split_3x5_3(
+    KC_APTe_0_0, KC_APTe_0_1, KC_APTe_0_2, KC_APTe_0_3, KC_APTe_0_4, KC_APTe_0_5, KC_APTe_0_6, KC_APTe_0_7, KC_APTe_0_8, KC_APTe_0_9,
+    KC_APTe_1_0, KC_APTe_1_1, KC_APTe_1_2, KC_APTe_1_3, KC_APTe_1_4, KC_APTe_1_5, KC_APTe_1_6, KC_APTe_1_7, KC_APTe_1_8, KC_APTe_1_9,
+    KC_APTe_2_0, KC_APTe_2_1, KC_APTe_2_2, KC_APTe_2_3, KC_APTe_2_4, KC_APTe_2_5, KC_APTe_2_6, KC_APTe_2_7, KC_APTe_2_8, KC_APTe_2_9,
+                              KC_APTe_3_0, KC_APTe_3_1, KC_APTe_3_2, KC_APTe_3_3, KC_APTe_3_4, KC_APTe_3_5
   ),
 
   [LAYER_GAME] = LAYOUT_split_3x5_3(

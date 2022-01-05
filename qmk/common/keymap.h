@@ -47,6 +47,46 @@
 #define KC_BASE_3_4 KC_THUMB_4
 #define KC_BASE_3_5 KC_THUMB_5
 
+#define KC_APTe_0_0 KC_SLSH
+#define KC_APTe_0_1 KC_W
+#define KC_APTe_0_2 KC_G
+#define KC_APTe_0_3 KC_D
+#define KC_APTe_0_4 KC_B
+#define KC_APTe_0_5 KC_J
+#define KC_APTe_0_6 KC_F
+#define KC_APTe_0_7 KC_O
+#define KC_APTe_0_8 KC_U
+#define KC_APTe_0_9 KC_SCLN
+
+#define KC_APTe_1_0 LGUI_T(KC_R)
+#define KC_APTe_1_1 LALT_T(KC_S)
+#define KC_APTe_1_2 LCTL_T(KC_T)
+#define KC_APTe_1_3 LSFT_T(KC_H)
+#define KC_APTe_1_4 KC_V
+#define KC_APTe_1_5 KC_Y
+#define KC_APTe_1_6 LSFT_T(KC_N)
+#define KC_APTe_1_7 LCTL_T(KC_A)
+#define KC_APTe_1_8 LALT_T(KC_I)
+#define KC_APTe_1_9 LGUI_T(KC_L)
+
+#define KC_APTe_2_0 KC_X
+#define KC_APTe_2_1 KC_C
+#define KC_APTe_2_2 KC_M
+#define KC_APTe_2_3 KC_K
+#define KC_APTe_2_4 KC_Q
+#define KC_APTe_2_5 KC_Z
+#define KC_APTe_2_6 KC_P
+#define KC_APTe_2_7 KC_QUOT
+#define KC_APTe_2_8 KC_COMM
+#define KC_APTe_2_9 KC_DOT
+
+#define KC_APTe_3_0 KC_ESC
+#define KC_APTe_3_1 KC_TAB
+#define KC_APTe_3_2 LT(LAYER_NUMB, KC_SPC)
+#define KC_APTe_3_3 LSFT_T(KC_E)
+#define KC_APTe_3_4 LT(LAYER_SYMB, KC_BSPC)
+#define KC_APTe_3_5 LT(LAYER_NAVI, KC_DEL)
+
 #define KC_GAME_0_0 KC_TAB
 #define KC_GAME_0_1 KC_Q
 #define KC_GAME_0_2 KC_W
@@ -113,7 +153,7 @@
 #define KC_NUMB_2_1 KC_LALT
 #define KC_NUMB_2_2 KC_LCTL
 #define KC_NUMB_2_3 KC_LSFT
-#define KC_NUMB_2_4 KC_NO
+#define KC_NUMB_2_4 TG(LAYER_APTe)
 #define KC_NUMB_2_5 KC_NO
 #define KC_NUMB_2_6 KC_LSFT
 #define KC_NUMB_2_7 KC_LCTL
