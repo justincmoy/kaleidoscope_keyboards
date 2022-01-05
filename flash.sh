@@ -13,6 +13,8 @@ if [ ! -d "$SCRIPT_DIR/qmk/$1" ]; then
 fi
 
 rm -r "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
-cp -r "$SCRIPT_DIR/qmk/$1" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
-cp -r "$SCRIPT_DIR/../artsey-qmk" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
+mkdir "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
+cp -r "$SCRIPT_DIR/qmk/common" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
+cp -r $SCRIPT_DIR/qmk/$1/* "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
+rsync -r "$SCRIPT_DIR/../artsey-qmk" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy" --exclude ".git"
 qmk flash -kb "$1" -km "justincmoy"

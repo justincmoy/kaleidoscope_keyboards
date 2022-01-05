@@ -1,46 +1,47 @@
 #include QMK_KEYBOARD_H
+#include "common/keymap.h"
 
 enum layer_names {
-  DVORAK,
+  BASE,
   GAME,
-  NUM,
-  SYM,
-  NAV,
+  NUMB,
+  SYMB,
+  NAVI,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [DVORAK] = LAYOUT(
-    KC_QUOT, KC_COMM, KC_DOT,  KC_P,           KC_Y,                                             KC_F,             KC_G,            KC_C,    KC_R,    KC_L,
-    KC_A,    KC_O,    KC_E,    KC_U,           KC_I,                                             KC_D,             KC_H,            KC_T,    KC_N,    KC_S,
-    KC_SLSH, KC_Q,    KC_J,    KC_K,           KC_X,           KC_NO,           KC_NO,           KC_B,             KC_M,            KC_W,    KC_V,    KC_Z,
-    KC_NO,   KC_NO,   KC_NO,   LGUI_T(KC_ESC), LCTL_T(KC_TAB), LT(NUM, KC_SPC), LSFT_T(KC_ENT),  LT(NAV, KC_BSPC), KC_DEL,          KC_NO,   KC_NO,   KC_NO
+  [BASE] = LAYOUT(
+    KC_BASE_0_0, KC_BASE_0_1, KC_BASE_0_2, KC_BASE_0_3, KC_BASE_0_4,                           KC_BASE_0_5, KC_BASE_0_6, KC_BASE_0_7, KC_BASE_0_8, KC_BASE_0_9,
+    KC_BASE_1_0, KC_BASE_1_1, KC_BASE_1_2, KC_BASE_1_3, KC_BASE_1_4,                           KC_BASE_1_5, KC_BASE_1_6, KC_BASE_1_7, KC_BASE_1_8, KC_BASE_1_9,
+    KC_BASE_2_0, KC_BASE_2_1, KC_BASE_2_2, KC_BASE_2_3, KC_BASE_2_4, KC_NO,       KC_NO,       KC_BASE_2_5, KC_BASE_2_6, KC_BASE_2_7, KC_BASE_2_8, KC_BASE_2_9,
+    KC_NO,       KC_NO,       KC_NO,       KC_BASE_3_0, KC_BASE_3_1, KC_BASE_3_2, KC_BASE_3_3, KC_BASE_3_4, KC_BASE_3_5, KC_NO,       KC_NO,       KC_NO
   ),
 
   [GAME] = LAYOUT(
     KC_GRV,  KC_Q,    KC_W,    KC_E,           KC_R,                                             KC_F,             KC_G,            KC_C,    KC_R,    KC_L,
     KC_LSFT, KC_A,    KC_S,    KC_D,           KC_F,                                             KC_D,             KC_H,            KC_T,    KC_N,    KC_S,
     KC_LCTL, KC_Z,    KC_X,    KC_C,           KC_V,           KC_NO,           KC_NO,           KC_B,             KC_M,            KC_W,    KC_V,    KC_Z,
-    KC_NO,   KC_NO,   KC_NO,   KC_ESC,         KC_SPC,         LT(NUM, KC_TAB), LT(SYM, KC_ENT), LSFT_T(KC_BSPC),  LT(NAV, KC_DEL), KC_NO,   KC_NO,   KC_NO
+    KC_NO,   KC_NO,   KC_NO,   KC_ESC,         KC_SPC,         LT(NUMB, KC_TAB), LT(SYMB, KC_ENT), LSFT_T(KC_BSPC),  LT(NAVI, KC_DEL), KC_NO,   KC_NO,   KC_NO
   ),
 
-  [NUM] = LAYOUT(
-    KC_NO,   KC_EQL,  KC_BSLS, KC_COLN,        KC_NO,                                            KC_LBRC,          KC_SCLN,         KC_MINS, KC_GRV,  KC_RBRC,
-    KC_1,    KC_2,    KC_3,    KC_4,           KC_5,                                             KC_6,             KC_7,            KC_8,    KC_9,    KC_0,
-    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT,        KC_NO,          KC_NO,           KC_NO,           KC_NO,            KC_LSFT,         KC_LCTL, KC_LALT, KC_LGUI,
-    KC_NO,   KC_NO,   KC_NO,   LGUI_T(KC_ESC), LCTL_T(KC_TAB), LT(NUM, KC_SPC), LSFT_T(KC_ENT),  LT(NAV, KC_BSPC), KC_DEL,          KC_NO,   KC_NO,   KC_NO
+  [NUMB] = LAYOUT(
+    KC_NUMB_0_0, KC_NUMB_0_1, KC_NUMB_0_2, KC_NUMB_0_3, KC_NUMB_0_4,                           KC_NUMB_0_5, KC_NUMB_0_6, KC_NUMB_0_7, KC_NUMB_0_8, KC_NUMB_0_9,
+    KC_NUMB_1_0, KC_NUMB_1_1, KC_NUMB_1_2, KC_NUMB_1_3, KC_NUMB_1_4,                           KC_NUMB_1_5, KC_NUMB_1_6, KC_NUMB_1_7, KC_NUMB_1_8, KC_NUMB_1_9,
+    KC_NUMB_2_0, KC_NUMB_2_1, KC_NUMB_2_2, KC_NUMB_2_3, KC_NUMB_2_4, KC_NO,       KC_NO,       KC_NUMB_2_5, KC_NUMB_2_6, KC_NUMB_2_7, KC_NUMB_2_8, KC_NUMB_2_9,
+    KC_NO,       KC_NO,       KC_NO,       KC_NUMB_3_0, KC_NUMB_3_1, KC_NUMB_3_2, KC_NUMB_3_3, KC_NUMB_3_4, KC_NUMB_3_5, KC_NO,       KC_NO,       KC_NO
   ),
 
-  [SYM] = LAYOUT(
-    KC_NO,   KC_PLUS, KC_PIPE, KC_COLN,        KC_NO,                                            KC_LCBR,          KC_SCLN,         KC_UNDS, KC_TILD, KC_RCBR,
-    KC_EXLM, KC_AT,   KC_HASH, KC_DLR,         KC_PERC,                                          KC_CIRC,          KC_AMPR,         KC_ASTR, KC_LPRN, KC_RPRN,
-    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT,        KC_NO,          KC_NO,           KC_NO,           KC_NO,            KC_LSFT,         KC_LCTL, KC_LALT, KC_LGUI,
-    KC_NO,   KC_NO,   KC_NO,   LGUI_T(KC_ESC), LCTL_T(KC_TAB), LT(NUM, KC_SPC), LSFT_T(KC_ENT),  LT(NAV, KC_BSPC), KC_DEL,          KC_NO,   KC_NO,   KC_NO
+  [SYMB] = LAYOUT(
+    KC_SYMB_0_0, KC_SYMB_0_1, KC_SYMB_0_2, KC_SYMB_0_3, KC_SYMB_0_4,                           KC_SYMB_0_5, KC_SYMB_0_6, KC_SYMB_0_7, KC_SYMB_0_8, KC_SYMB_0_9,
+    KC_SYMB_1_0, KC_SYMB_1_1, KC_SYMB_1_2, KC_SYMB_1_3, KC_SYMB_1_4,                           KC_SYMB_1_5, KC_SYMB_1_6, KC_SYMB_1_7, KC_SYMB_1_8, KC_SYMB_1_9,
+    KC_SYMB_2_0, KC_SYMB_2_1, KC_SYMB_2_2, KC_SYMB_2_3, KC_SYMB_2_4, KC_NO,       KC_NO,       KC_SYMB_2_5, KC_SYMB_2_6, KC_SYMB_2_7, KC_SYMB_2_8, KC_SYMB_2_9,
+    KC_NO,       KC_NO,       KC_NO,       KC_SYMB_3_0, KC_SYMB_3_1, KC_SYMB_3_2, KC_SYMB_3_3, KC_SYMB_3_4, KC_SYMB_3_5, KC_NO,       KC_NO,       KC_NO
   ),
 
-  [NAV] = LAYOUT(
-    KC_BTN4, KC_BTN5, KC_BTN1, KC_BTN2,        KC_BTN3,                                          KC_NO,             KC_NO,          KC_NO,   KC_NO,   TG(GAME),
-    KC_MS_L, KC_MS_U, KC_MS_D, KC_MS_R,        KC_NO,                                            KC_NO,             KC_LEFT,        KC_DOWN, KC_UP,   KC_RGHT,
-    KC_WH_L, KC_WH_U, KC_WH_D, KC_WH_R,        KC_NO,          KC_NO,           KC_NO,           KC_INS,            KC_HOME,        KC_PGDN, KC_PGUP, KC_END,
-    KC_NO,   KC_NO,   KC_NO,   LGUI_T(KC_ESC), LCTL_T(KC_TAB), LT(NUM, KC_SPC), LSFT_T(KC_ENT),  LT(NAV, KC_BSPC),  KC_DEL,         KC_NO,   KC_NO,   KC_NO
+  [NAVI] = LAYOUT(
+    KC_NAVI_0_0, KC_NAVI_0_1, KC_NAVI_0_2, KC_NAVI_0_3, KC_NAVI_0_4,                           KC_NAVI_0_5, KC_NAVI_0_6, KC_NAVI_0_7, KC_NAVI_0_8, KC_NAVI_0_9,
+    KC_NAVI_1_0, KC_NAVI_1_1, KC_NAVI_1_2, KC_NAVI_1_3, KC_NAVI_1_4,                           KC_NAVI_1_5, KC_NAVI_1_6, KC_NAVI_1_7, KC_NAVI_1_8, KC_NAVI_1_9,
+    KC_NAVI_2_0, KC_NAVI_2_1, KC_NAVI_2_2, KC_NAVI_2_3, KC_NAVI_2_4, KC_NO,       KC_NO,       KC_NAVI_2_5, KC_NAVI_2_6, KC_NAVI_2_7, KC_NAVI_2_8, KC_NAVI_2_9,
+    KC_NO,       KC_NO,       KC_NO,       KC_NAVI_3_0, KC_NAVI_3_1, KC_NAVI_3_2, KC_NAVI_3_3, KC_NAVI_3_4, KC_NAVI_3_5, KC_NO,       KC_NO,       KC_NO
   ),
 };
