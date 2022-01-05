@@ -35,16 +35,16 @@
 
 #define KC_BASE_3_0 LGUI_T(KC_ESC)
 #define KC_BASE_3_1 LCTL_T(KC_TAB)
-#define KC_BASE_3_2 LT(NUMB, KC_SPC)
+#define KC_BASE_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_BASE_3_3 LSFT_T(KC_ENT)
-#define KC_BASE_3_4 LT(NAVI, KC_BSPC)
+#define KC_BASE_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_BASE_3_5 KC_DEL
 
-#define KC_NUMB_0_0 KC_NO
+#define KC_NUMB_0_0 TG(LAYER_GAME)
 #define KC_NUMB_0_1 KC_EQL
 #define KC_NUMB_0_2 KC_BSLS
 #define KC_NUMB_0_3 KC_COLN
-#define KC_NUMB_0_4 KC_NO
+#define KC_NUMB_0_4 TG(LAYER_BASE)
 #define KC_NUMB_0_5 KC_LBRC
 #define KC_NUMB_0_6 KC_SCLN
 #define KC_NUMB_0_7 KC_MINS
@@ -75,9 +75,9 @@
 
 #define KC_NUMB_3_0 LGUI_T(KC_ESC)
 #define KC_NUMB_3_1 LCTL_T(KC_TAB)
-#define KC_NUMB_3_2 LT(NUMB, KC_SPC)
+#define KC_NUMB_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_NUMB_3_3 LSFT_T(KC_ENT)
-#define KC_NUMB_3_4 LT(NAVI, KC_BSPC)
+#define KC_NUMB_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_NUMB_3_5 KC_DEL
 
 #define KC_SYMB_0_0 KC_NO
@@ -115,9 +115,9 @@
 
 #define KC_SYMB_3_0 LGUI_T(KC_ESC)
 #define KC_SYMB_3_1 LCTL_T(KC_TAB)
-#define KC_SYMB_3_2 LT(NUMB, KC_SPC)
+#define KC_SYMB_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_SYMB_3_3 LSFT_T(KC_ENT)
-#define KC_SYMB_3_4 LT(NAVI, KC_BSPC)
+#define KC_SYMB_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_SYMB_3_5 KC_DEL
 
 #define KC_NAVI_0_0 KC_BTN4
@@ -129,7 +129,7 @@
 #define KC_NAVI_0_6 KC_NO
 #define KC_NAVI_0_7 KC_NO
 #define KC_NAVI_0_8 KC_NO
-#define KC_NAVI_0_9 TG(GAME)
+#define KC_NAVI_0_9 KC_NO
 
 #define KC_NAVI_1_0 KC_MS_L
 #define KC_NAVI_1_1 KC_MS_U
@@ -155,7 +155,7 @@
 
 #define KC_NAVI_3_0 LGUI_T(KC_ESC)
 #define KC_NAVI_3_1 LCTL_T(KC_TAB)
-#define KC_NAVI_3_2 LT(NUMB, KC_SPC)
+#define KC_NAVI_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_NAVI_3_3 LSFT_T(KC_ENT)
-#define KC_NAVI_3_4 LT(NAVI, KC_BSPC)
+#define KC_NAVI_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_NAVI_3_5 KC_DEL
