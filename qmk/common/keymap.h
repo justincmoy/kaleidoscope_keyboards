@@ -84,8 +84,8 @@
 #define KC_APTe_3_1 KC_TAB
 #define KC_APTe_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_APTe_3_3 LSFT_T(KC_E)
-#define KC_APTe_3_4 LT(LAYER_SYMB, KC_BSPC)
-#define KC_APTe_3_5 LT(LAYER_NAVI, KC_DEL)
+#define KC_APTe_3_4 LT(LAYER_NAVI, KC_BSPC)
+#define KC_APTe_3_5 KC_DEL
 
 #define KC_GAME_0_0 KC_TAB
 #define KC_GAME_0_1 KC_Q
