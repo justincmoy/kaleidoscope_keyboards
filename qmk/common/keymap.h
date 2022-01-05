@@ -1,5 +1,12 @@
 #pragma once
 
+#define KC_THUMB_0 KC_ESC
+#define KC_THUMB_1 KC_TAB
+#define KC_THUMB_2 LT(LAYER_NUMB, KC_SPC)
+#define KC_THUMB_3 LT(LAYER_SYMB, KC_ENT)
+#define KC_THUMB_4 LT(LAYER_NAVI, KC_BSPC)
+#define KC_THUMB_5 KC_DEL
+
 #define KC_BASE_0_0 KC_QUOT
 #define KC_BASE_0_1 KC_COMM
 #define KC_BASE_0_2 KC_DOT
@@ -33,12 +40,12 @@
 #define KC_BASE_2_8 KC_V
 #define KC_BASE_2_9 KC_Z
 
-#define KC_BASE_3_0 KC_ESC
-#define KC_BASE_3_1 KC_TAB
-#define KC_BASE_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_BASE_3_3 LT(LAYER_SYMB, KC_ENT)
-#define KC_BASE_3_4 LT(LAYER_NAVI, KC_BSPC)
-#define KC_BASE_3_5 KC_DEL
+#define KC_BASE_3_0 KC_THUMB_0
+#define KC_BASE_3_1 KC_THUMB_1
+#define KC_BASE_3_2 KC_THUMB_2
+#define KC_BASE_3_3 KC_THUMB_3
+#define KC_BASE_3_4 KC_THUMB_4
+#define KC_BASE_3_5 KC_THUMB_5
 
 #define KC_GAME_0_0 KC_TAB
 #define KC_GAME_0_1 KC_Q
@@ -113,12 +120,12 @@
 #define KC_NUMB_2_8 KC_LALT
 #define KC_NUMB_2_9 KC_LGUI
 
-#define KC_NUMB_3_0 KC_ESC
-#define KC_NUMB_3_1 KC_TAB
-#define KC_NUMB_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_NUMB_3_3 LT(LAYER_SYMB, KC_ENT)
-#define KC_NUMB_3_4 LT(LAYER_NAVI, KC_BSPC)
-#define KC_NUMB_3_5 KC_DEL
+#define KC_NUMB_3_0 KC_THUMB_0
+#define KC_NUMB_3_1 KC_THUMB_1
+#define KC_NUMB_3_2 KC_THUMB_2
+#define KC_NUMB_3_3 KC_THUMB_3
+#define KC_NUMB_3_4 KC_THUMB_4
+#define KC_NUMB_3_5 KC_THUMB_5
 
 #define KC_SYMB_0_0 KC_NO
 #define KC_SYMB_0_1 KC_PLUS
@@ -153,12 +160,12 @@
 #define KC_SYMB_2_8 KC_LALT
 #define KC_SYMB_2_9 KC_LGUI
 
-#define KC_SYMB_3_0 KC_ESC
-#define KC_SYMB_3_1 KC_TAB
-#define KC_SYMB_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_SYMB_3_3 LT(LAYER_SYMB, KC_ENT)
-#define KC_SYMB_3_4 LT(LAYER_NAVI, KC_BSPC)
-#define KC_SYMB_3_5 KC_DEL
+#define KC_SYMB_3_0 KC_THUMB_0
+#define KC_SYMB_3_1 KC_THUMB_1
+#define KC_SYMB_3_2 KC_THUMB_2
+#define KC_SYMB_3_3 KC_THUMB_3
+#define KC_SYMB_3_4 KC_THUMB_4
+#define KC_SYMB_3_5 KC_THUMB_5
 
 #define KC_NAVI_0_0 KC_BTN4
 #define KC_NAVI_0_1 KC_BTN5
@@ -193,9 +200,9 @@
 #define KC_NAVI_2_8 KC_PGUP
 #define KC_NAVI_2_9 KC_END
 
-#define KC_NAVI_3_0 KC_ESC
-#define KC_NAVI_3_1 KC_TAB
-#define KC_NAVI_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_NAVI_3_3 LT(LAYER_SYMB, KC_ENT)
-#define KC_NAVI_3_4 LT(LAYER_NAVI, KC_BSPC)
-#define KC_NAVI_3_5 KC_DEL
+#define KC_NAVI_3_0 KC_THUMB_0
+#define KC_NAVI_3_1 KC_THUMB_1
+#define KC_NAVI_3_2 KC_THUMB_2
+#define KC_NAVI_3_3 KC_THUMB_3
+#define KC_NAVI_3_4 KC_THUMB_4
+#define KC_NAVI_3_5 KC_THUMB_5
