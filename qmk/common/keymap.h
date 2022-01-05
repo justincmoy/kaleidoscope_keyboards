@@ -11,16 +11,16 @@
 #define KC_BASE_0_8 KC_R
 #define KC_BASE_0_9 KC_L
 
-#define KC_BASE_1_0 KC_A
-#define KC_BASE_1_1 KC_O
-#define KC_BASE_1_2 KC_E
-#define KC_BASE_1_3 KC_U
+#define KC_BASE_1_0 LGUI_T(KC_A)
+#define KC_BASE_1_1 LALT_T(KC_O)
+#define KC_BASE_1_2 LCTL_T(KC_E)
+#define KC_BASE_1_3 LSFT_T(KC_U)
 #define KC_BASE_1_4 KC_I
 #define KC_BASE_1_5 KC_D
-#define KC_BASE_1_6 KC_H
-#define KC_BASE_1_7 KC_T
-#define KC_BASE_1_8 KC_N
-#define KC_BASE_1_9 KC_S
+#define KC_BASE_1_6 LSFT_T(KC_H)
+#define KC_BASE_1_7 LCTL_T(KC_T)
+#define KC_BASE_1_8 LALT_T(KC_N)
+#define KC_BASE_1_9 LGUI_T(KC_S)
 
 #define KC_BASE_2_0 KC_SLSH
 #define KC_BASE_2_1 KC_Q
@@ -33,10 +33,10 @@
 #define KC_BASE_2_8 KC_V
 #define KC_BASE_2_9 KC_Z
 
-#define KC_BASE_3_0 LGUI_T(KC_ESC)
-#define KC_BASE_3_1 LCTL_T(KC_TAB)
+#define KC_BASE_3_0 KC_ESC
+#define KC_BASE_3_1 KC_TAB
 #define KC_BASE_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_BASE_3_3 LSFT_T(KC_ENT)
+#define KC_BASE_3_3 LT(LAYER_SYMB, KC_ENT)
 #define KC_BASE_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_BASE_3_5 KC_DEL
 
@@ -113,10 +113,10 @@
 #define KC_NUMB_2_8 KC_LALT
 #define KC_NUMB_2_9 KC_LGUI
 
-#define KC_NUMB_3_0 LGUI_T(KC_ESC)
-#define KC_NUMB_3_1 LCTL_T(KC_TAB)
+#define KC_NUMB_3_0 KC_ESC
+#define KC_NUMB_3_1 KC_TAB
 #define KC_NUMB_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_NUMB_3_3 LSFT_T(KC_ENT)
+#define KC_NUMB_3_3 LT(LAYER_SYMB, KC_ENT)
 #define KC_NUMB_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_NUMB_3_5 KC_DEL
 
@@ -153,10 +153,10 @@
 #define KC_SYMB_2_8 KC_LALT
 #define KC_SYMB_2_9 KC_LGUI
 
-#define KC_SYMB_3_0 LGUI_T(KC_ESC)
-#define KC_SYMB_3_1 LCTL_T(KC_TAB)
+#define KC_SYMB_3_0 KC_ESC
+#define KC_SYMB_3_1 KC_TAB
 #define KC_SYMB_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_SYMB_3_3 LSFT_T(KC_ENT)
+#define KC_SYMB_3_3 LT(LAYER_SYMB, KC_ENT)
 #define KC_SYMB_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_SYMB_3_5 KC_DEL
 
@@ -193,9 +193,9 @@
 #define KC_NAVI_2_8 KC_PGUP
 #define KC_NAVI_2_9 KC_END
 
-#define KC_NAVI_3_0 LGUI_T(KC_ESC)
-#define KC_NAVI_3_1 LCTL_T(KC_TAB)
+#define KC_NAVI_3_0 KC_ESC
+#define KC_NAVI_3_1 KC_TAB
 #define KC_NAVI_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_NAVI_3_3 LSFT_T(KC_ENT)
+#define KC_NAVI_3_3 LT(LAYER_SYMB, KC_ENT)
 #define KC_NAVI_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_NAVI_3_5 KC_DEL
