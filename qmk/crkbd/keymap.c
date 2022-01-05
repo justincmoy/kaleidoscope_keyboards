@@ -71,10 +71,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [LAYER_GAME] = LAYOUT_split_3x5_3(
-    KC_TAB,   KC_Q,    KC_W,           KC_E,            KC_R,           KC_F,            KC_G,             KC_C,           KC_R,    KC_L,
-    KC_LSFT,  KC_A,    KC_S,           KC_D,            KC_F,           KC_D,            KC_H,             KC_T,           KC_N,    KC_S,
-    KC_LCTL,  KC_Z,    KC_X,           KC_C,            KC_V,           KC_B,            KC_M,             KC_W,           KC_V,    KC_Z,
-                       KC_ESC,         LT(LAYER_NUMB, KC_NO),  KC_SPC,         LSFT_T(KC_ENT),  LT(LAYER_NAVI, KC_BSPC), KC_DEL
+    KC_GAME_0_0, KC_GAME_0_1, KC_GAME_0_2, KC_GAME_0_3, KC_GAME_0_4, KC_GAME_0_5, KC_GAME_0_6, KC_GAME_0_7, KC_GAME_0_8, KC_GAME_0_9,
+    KC_GAME_1_0, KC_GAME_1_1, KC_GAME_1_2, KC_GAME_1_3, KC_GAME_1_4, KC_GAME_1_5, KC_GAME_1_6, KC_GAME_1_7, KC_GAME_1_8, KC_GAME_1_9,
+    KC_GAME_2_0, KC_GAME_2_1, KC_GAME_2_2, KC_GAME_2_3, KC_GAME_2_4, KC_GAME_2_5, KC_GAME_2_6, KC_GAME_2_7, KC_GAME_2_8, KC_GAME_2_9,
+                              KC_GAME_3_0, KC_GAME_3_1, KC_GAME_3_2, KC_GAME_3_3, KC_GAME_3_4, KC_GAME_3_5
   ),
 
   [LAYER_NUMB] = LAYOUT_split_3x5_3(

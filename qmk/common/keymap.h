@@ -40,6 +40,46 @@
 #define KC_BASE_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_BASE_3_5 KC_DEL
 
+#define KC_GAME_0_0 KC_TAB
+#define KC_GAME_0_1 KC_Q
+#define KC_GAME_0_2 KC_W
+#define KC_GAME_0_3 KC_E
+#define KC_GAME_0_4 KC_R
+#define KC_GAME_0_5 KC_F
+#define KC_GAME_0_6 KC_G
+#define KC_GAME_0_7 KC_C
+#define KC_GAME_0_8 KC_R
+#define KC_GAME_0_9 KC_L
+
+#define KC_GAME_1_0 KC_LSFT
+#define KC_GAME_1_1 KC_A
+#define KC_GAME_1_2 KC_S
+#define KC_GAME_1_3 KC_D
+#define KC_GAME_1_4 KC_F
+#define KC_GAME_1_5 KC_D
+#define KC_GAME_1_6 KC_H
+#define KC_GAME_1_7 KC_T
+#define KC_GAME_1_8 KC_N
+#define KC_GAME_1_9 KC_S
+
+#define KC_GAME_2_0 KC_LCTL
+#define KC_GAME_2_1 KC_Z
+#define KC_GAME_2_2 KC_X
+#define KC_GAME_2_3 KC_C
+#define KC_GAME_2_4 KC_V
+#define KC_GAME_2_5 KC_B
+#define KC_GAME_2_6 KC_M
+#define KC_GAME_2_7 KC_W
+#define KC_GAME_2_8 KC_V
+#define KC_GAME_2_9 KC_Z
+
+#define KC_GAME_3_0 KC_ESC
+#define KC_GAME_3_1 LT(LAYER_NUMB, KC_NO)
+#define KC_GAME_3_2 KC_SPC
+#define KC_GAME_3_3 LSFT_T(KC_ENT)
+#define KC_GAME_3_4 LT(LAYER_NAVI, KC_BSPC)
+#define KC_GAME_3_5 KC_DEL
+
 #define KC_NUMB_0_0 TG(LAYER_GAME)
 #define KC_NUMB_0_1 KC_EQL
 #define KC_NUMB_0_2 KC_BSLS
