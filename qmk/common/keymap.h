@@ -54,8 +54,8 @@
 #define KC_APTe_0_4 KC_B
 #define KC_APTe_0_5 KC_J
 #define KC_APTe_0_6 KC_F
-#define KC_APTe_0_7 KC_O
-#define KC_APTe_0_8 KC_U
+#define KC_APTe_0_7 KC_U
+#define KC_APTe_0_8 KC_QUOT
 #define KC_APTe_0_9 KC_SCLN
 
 #define KC_APTe_1_0 LGUI_T(KC_R)
@@ -63,11 +63,11 @@
 #define KC_APTe_1_2 LCTL_T(KC_T)
 #define KC_APTe_1_3 LSFT_T(KC_H)
 #define KC_APTe_1_4 KC_V
-#define KC_APTe_1_5 KC_Y
+#define KC_APTe_1_5 KC_L
 #define KC_APTe_1_6 LSFT_T(KC_N)
 #define KC_APTe_1_7 LCTL_T(KC_A)
-#define KC_APTe_1_8 LALT_T(KC_I)
-#define KC_APTe_1_9 LGUI_T(KC_L)
+#define KC_APTe_1_8 LALT_T(KC_O)
+#define KC_APTe_1_9 LGUI_T(KC_I)
 
 #define KC_APTe_2_0 KC_X
 #define KC_APTe_2_1 KC_C
@@ -76,9 +76,9 @@
 #define KC_APTe_2_4 KC_Q
 #define KC_APTe_2_5 KC_Z
 #define KC_APTe_2_6 KC_P
-#define KC_APTe_2_7 KC_QUOT
-#define KC_APTe_2_8 KC_COMM
-#define KC_APTe_2_9 KC_DOT
+#define KC_APTe_2_7 KC_COMM
+#define KC_APTe_2_8 KC_DOT
+#define KC_APTe_2_9 KC_Y
 
 #define KC_APTe_3_0 KC_ESC
 #define KC_APTe_3_1 LT(LAYER_SYMB, KC_TAB)
