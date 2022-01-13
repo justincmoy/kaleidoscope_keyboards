@@ -81,7 +81,7 @@
 #define KC_APTe_2_9 KC_DOT
 
 #define KC_APTe_3_0 KC_ESC
-#define KC_APTe_3_1 KC_TAB
+#define KC_APTe_3_1 LT(LAYER_SYMB, KC_TAB)
 #define KC_APTe_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_APTe_3_3 LSFT_T(KC_E)
 #define KC_APTe_3_4 LT(LAYER_NAVI, KC_BSPC)
@@ -168,37 +168,37 @@
 #define KC_NUMB_3_5 KC_THUMB_5
 
 #define KC_SYMB_0_0 KC_NO
-#define KC_SYMB_0_1 KC_PLUS
-#define KC_SYMB_0_2 KC_PIPE
-#define KC_SYMB_0_3 KC_COLN
+#define KC_SYMB_0_1 KC_NO
+#define KC_SYMB_0_2 KC_NO
+#define KC_SYMB_0_3 KC_NO
 #define KC_SYMB_0_4 KC_NO
 #define KC_SYMB_0_5 KC_LCBR
-#define KC_SYMB_0_6 KC_SCLN
-#define KC_SYMB_0_7 KC_UNDS
-#define KC_SYMB_0_8 KC_TILD
+#define KC_SYMB_0_6 KC_AMPR
+#define KC_SYMB_0_7 KC_ASTR
+#define KC_SYMB_0_8 KC_LPRN
 #define KC_SYMB_0_9 KC_RCBR
 
-#define KC_SYMB_1_0 KC_EXLM
-#define KC_SYMB_1_1 KC_AT
-#define KC_SYMB_1_2 KC_HASH
-#define KC_SYMB_1_3 KC_DLR
-#define KC_SYMB_1_4 KC_PERC
-#define KC_SYMB_1_5 KC_CIRC
-#define KC_SYMB_1_6 KC_AMPR
-#define KC_SYMB_1_7 KC_ASTR
-#define KC_SYMB_1_8 KC_LPRN
-#define KC_SYMB_1_9 KC_RPRN
+#define KC_SYMB_1_0 KC_LGUI
+#define KC_SYMB_1_1 KC_LALT
+#define KC_SYMB_1_2 KC_LCTL
+#define KC_SYMB_1_3 KC_LSFT
+#define KC_SYMB_1_4 KC_NO
+#define KC_SYMB_1_5 KC_PIPE
+#define KC_SYMB_1_6 KC_DLR
+#define KC_SYMB_1_7 KC_PERC
+#define KC_SYMB_1_8 KC_CIRC
+#define KC_SYMB_1_9 KC_TILD
 
-#define KC_SYMB_2_0 KC_LGUI
-#define KC_SYMB_2_1 KC_LALT
-#define KC_SYMB_2_2 KC_LCTL
-#define KC_SYMB_2_3 KC_LSFT
+#define KC_SYMB_2_0 KC_NO
+#define KC_SYMB_2_1 KC_NO
+#define KC_SYMB_2_2 KC_NO
+#define KC_SYMB_2_3 KC_NO
 #define KC_SYMB_2_4 KC_NO
-#define KC_SYMB_2_5 KC_NO
-#define KC_SYMB_2_6 KC_LSFT
-#define KC_SYMB_2_7 KC_LCTL
-#define KC_SYMB_2_8 KC_LALT
-#define KC_SYMB_2_9 KC_LGUI
+#define KC_SYMB_2_5 KC_PLUS
+#define KC_SYMB_2_6 KC_EXLM
+#define KC_SYMB_2_7 KC_AT
+#define KC_SYMB_2_8 KC_HASH
+#define KC_SYMB_2_9 KC_UNDS
 
 #define KC_SYMB_3_0 KC_THUMB_0
 #define KC_SYMB_3_1 KC_THUMB_1
