@@ -154,11 +154,11 @@
 #define KC_NUMB_2_2 KC_NO
 #define KC_NUMB_2_3 KC_NO
 #define KC_NUMB_2_4 TG(LAYER_APTe)
-#define KC_NUMB_2_5 KC_NO
+#define KC_NUMB_2_5 KC_EQL
 #define KC_NUMB_2_6 KC_1
 #define KC_NUMB_2_7 KC_2
 #define KC_NUMB_2_8 KC_3
-#define KC_NUMB_2_9 KC_EQL
+#define KC_NUMB_2_9 KC_MINS
 
 #define KC_NUMB_3_0 KC_THUMB_0
 #define KC_NUMB_3_1 KC_THUMB_1
