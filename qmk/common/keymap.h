@@ -204,7 +204,7 @@
 #define KC_SYMB_3_1 KC_THUMB_1
 #define KC_SYMB_3_2 KC_THUMB_2
 #define KC_SYMB_3_3 KC_THUMB_3
-#define KC_SYMB_3_4 KC_THUMB_4
+#define KC_SYMB_3_4 KC_RPRN
 #define KC_SYMB_3_5 KC_THUMB_5
 
 #define KC_NAVI_0_0 KC_BTN4
