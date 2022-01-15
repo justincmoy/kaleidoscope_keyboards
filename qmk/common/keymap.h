@@ -9,8 +9,8 @@
 
 // https://discord.com/channels/807843650717483049/807844118826975262/931002774248914954
 #define KC_OPT0_0_0 KC_X
-#define KC_OPT0_0_1 KC_C
-#define KC_OPT0_0_2 KC_Y
+#define KC_OPT0_0_1 KC_W
+#define KC_OPT0_0_2 KC_G
 #define KC_OPT0_0_3 KC_P
 #define KC_OPT0_0_4 KC_B
 #define KC_OPT0_0_5 KC_Q
@@ -31,8 +31,8 @@
 #define KC_OPT0_1_9 LGUI_T(KC_I)
 
 #define KC_OPT0_2_0 KC_J
-#define KC_OPT0_2_1 KC_W
-#define KC_OPT0_2_2 KC_G
+#define KC_OPT0_2_1 KC_C
+#define KC_OPT0_2_2 KC_Y
 #define KC_OPT0_2_3 KC_F
 #define KC_OPT0_2_4 KC_K
 #define KC_OPT0_2_5 KC_Z
@@ -50,8 +50,8 @@
 
 // same as option 0 for now
 #define KC_OPT1_0_0 KC_X
-#define KC_OPT1_0_1 KC_C
-#define KC_OPT1_0_2 KC_Y
+#define KC_OPT1_0_1 KC_W
+#define KC_OPT1_0_2 KC_G
 #define KC_OPT1_0_3 KC_P
 #define KC_OPT1_0_4 KC_B
 #define KC_OPT1_0_5 KC_Q
@@ -72,8 +72,8 @@
 #define KC_OPT1_1_9 LGUI_T(KC_I)
 
 #define KC_OPT1_2_0 KC_J
-#define KC_OPT1_2_1 KC_W
-#define KC_OPT1_2_2 KC_G
+#define KC_OPT1_2_1 KC_C
+#define KC_OPT1_2_2 KC_Y
 #define KC_OPT1_2_3 KC_F
 #define KC_OPT1_2_4 KC_K
 #define KC_OPT1_2_5 KC_Z
