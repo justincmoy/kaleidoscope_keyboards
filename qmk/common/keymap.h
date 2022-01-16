@@ -14,7 +14,7 @@
 #define KC_OPT0_0_3 KC_P
 #define KC_OPT0_0_4 KC_B
 #define KC_OPT0_0_5 KC_Q
-#define KC_OPT0_0_6 KC_V
+#define KC_OPT0_0_6 KC_F
 #define KC_OPT0_0_7 KC_U
 #define KC_OPT0_0_8 KC_QUOT
 #define KC_OPT0_0_9 KC_SCLN
@@ -33,7 +33,7 @@
 #define KC_OPT0_2_0 KC_J
 #define KC_OPT0_2_1 KC_C
 #define KC_OPT0_2_2 KC_Y
-#define KC_OPT0_2_3 KC_F
+#define KC_OPT0_2_3 KC_V
 #define KC_OPT0_2_4 KC_K
 #define KC_OPT0_2_5 KC_Z
 #define KC_OPT0_2_6 KC_M
@@ -55,7 +55,7 @@
 #define KC_OPT1_0_3 KC_P
 #define KC_OPT1_0_4 KC_B
 #define KC_OPT1_0_5 KC_Q
-#define KC_OPT1_0_6 KC_V
+#define KC_OPT1_0_6 KC_F
 #define KC_OPT1_0_7 KC_U
 #define KC_OPT1_0_8 KC_QUOT
 #define KC_OPT1_0_9 KC_SCLN
@@ -74,7 +74,7 @@
 #define KC_OPT1_2_0 KC_J
 #define KC_OPT1_2_1 KC_C
 #define KC_OPT1_2_2 KC_Y
-#define KC_OPT1_2_3 KC_F
+#define KC_OPT1_2_3 KC_V
 #define KC_OPT1_2_4 KC_K
 #define KC_OPT1_2_5 KC_Z
 #define KC_OPT1_2_6 KC_M
