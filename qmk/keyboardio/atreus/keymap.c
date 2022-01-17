@@ -2,8 +2,8 @@
 #include "common/keymap.h"
 
 enum layer_names {
-  LAYER_BASE,
-  LAYER_APTe,
+  LAYER_OPT0,
+  LAYER_OPT1,
   LAYER_GAME,
   LAYER_NUMB,
   LAYER_SYMB,
@@ -11,18 +11,18 @@ enum layer_names {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [LAYER_BASE] = LAYOUT(
-    KC_BASE_0_0, KC_BASE_0_1, KC_BASE_0_2, KC_BASE_0_3, KC_BASE_0_4,                           KC_BASE_0_5, KC_BASE_0_6, KC_BASE_0_7, KC_BASE_0_8, KC_BASE_0_9,
-    KC_BASE_1_0, KC_BASE_1_1, KC_BASE_1_2, KC_BASE_1_3, KC_BASE_1_4,                           KC_BASE_1_5, KC_BASE_1_6, KC_BASE_1_7, KC_BASE_1_8, KC_BASE_1_9,
-    KC_BASE_2_0, KC_BASE_2_1, KC_BASE_2_2, KC_BASE_2_3, KC_BASE_2_4, KC_NO,       KC_NO,       KC_BASE_2_5, KC_BASE_2_6, KC_BASE_2_7, KC_BASE_2_8, KC_BASE_2_9,
-    KC_NO,       KC_NO,       KC_NO,       KC_BASE_3_0, KC_BASE_3_1, KC_BASE_3_2, KC_BASE_3_3, KC_BASE_3_4, KC_BASE_3_5, KC_NO,       KC_NO,       KC_NO
+  [LAYER_OPT0] = LAYOUT(
+    KC_OPT0_0_0, KC_OPT0_0_1, KC_OPT0_0_2, KC_OPT0_0_3, KC_OPT0_0_4,                           KC_OPT0_0_5, KC_OPT0_0_6, KC_OPT0_0_7, KC_OPT0_0_8, KC_OPT0_0_9,
+    KC_OPT0_1_0, KC_OPT0_1_1, KC_OPT0_1_2, KC_OPT0_1_3, KC_OPT0_1_4,                           KC_OPT0_1_5, KC_OPT0_1_6, KC_OPT0_1_7, KC_OPT0_1_8, KC_OPT0_1_9,
+    KC_OPT0_2_0, KC_OPT0_2_1, KC_OPT0_2_2, KC_OPT0_2_3, KC_OPT0_2_4, KC_NO,       KC_NO,       KC_OPT0_2_5, KC_OPT0_2_6, KC_OPT0_2_7, KC_OPT0_2_8, KC_OPT0_2_9,
+    KC_NO,       KC_NO,       KC_NO,       KC_OPT0_3_0, KC_OPT0_3_1, KC_OPT0_3_2, KC_OPT0_3_3, KC_OPT0_3_4, KC_OPT0_3_5, KC_NO,       KC_NO,       KC_NO
   ),
 
-  [LAYER_APTe] = LAYOUT(
-    KC_APTe_0_0, KC_APTe_0_1, KC_APTe_0_2, KC_APTe_0_3, KC_APTe_0_4,                           KC_APTe_0_5, KC_APTe_0_6, KC_APTe_0_7, KC_APTe_0_8, KC_APTe_0_9,
-    KC_APTe_1_0, KC_APTe_1_1, KC_APTe_1_2, KC_APTe_1_3, KC_APTe_1_4,                           KC_APTe_1_5, KC_APTe_1_6, KC_APTe_1_7, KC_APTe_1_8, KC_APTe_1_9,
-    KC_APTe_2_0, KC_APTe_2_1, KC_APTe_2_2, KC_APTe_2_3, KC_APTe_2_4, KC_NO,       KC_NO,       KC_APTe_2_5, KC_APTe_2_6, KC_APTe_2_7, KC_APTe_2_8, KC_APTe_2_9,
-    KC_NO,       KC_NO,       KC_NO,       KC_APTe_3_0, KC_APTe_3_1, KC_APTe_3_2, KC_APTe_3_3, KC_APTe_3_4, KC_APTe_3_5, KC_NO,       KC_NO,       KC_NO
+  [LAYER_OPT1] = LAYOUT(
+    KC_OPT1_0_0, KC_OPT1_0_1, KC_OPT1_0_2, KC_OPT1_0_3, KC_OPT1_0_4,                           KC_OPT1_0_5, KC_OPT1_0_6, KC_OPT1_0_7, KC_OPT1_0_8, KC_OPT1_0_9,
+    KC_OPT1_1_0, KC_OPT1_1_1, KC_OPT1_1_2, KC_OPT1_1_3, KC_OPT1_1_4,                           KC_OPT1_1_5, KC_OPT1_1_6, KC_OPT1_1_7, KC_OPT1_1_8, KC_OPT1_1_9,
+    KC_OPT1_2_0, KC_OPT1_2_1, KC_OPT1_2_2, KC_OPT1_2_3, KC_OPT1_2_4, KC_NO,       KC_NO,       KC_OPT1_2_5, KC_OPT1_2_6, KC_OPT1_2_7, KC_OPT1_2_8, KC_OPT1_2_9,
+    KC_NO,       KC_NO,       KC_NO,       KC_OPT1_3_0, KC_OPT1_3_1, KC_OPT1_3_2, KC_OPT1_3_3, KC_OPT1_3_4, KC_OPT1_3_5, KC_NO,       KC_NO,       KC_NO
   ),
 
   [LAYER_GAME] = LAYOUT(
