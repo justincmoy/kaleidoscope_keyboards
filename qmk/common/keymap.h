@@ -41,7 +41,7 @@
 #define KC_OPT0_2_8 KC_COMM
 #define KC_OPT0_2_9 KC_DOT
 
-#define KC_OPT0_3_0 LT(LAYER_MOUS, KC_ESC)
+#define KC_OPT0_3_0 KC_ESC
 #define KC_OPT0_3_1 LT(LAYER_SYMB, KC_TAB)
 #define KC_OPT0_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_OPT0_3_3 LSFT_T(KC_E)
@@ -215,10 +215,10 @@
 #define KC_NAVI_0_3 KC_NO
 #define KC_NAVI_0_4 KC_NO
 #define KC_NAVI_0_5 KC_NO
-#define KC_NAVI_0_6 KC_MS_L
-#define KC_NAVI_0_7 KC_MS_D
-#define KC_NAVI_0_8 KC_MS_U
-#define KC_NAVI_0_9 KC_MS_R
+#define KC_NAVI_0_6 KC_NO
+#define KC_NAVI_0_7 KC_NO
+#define KC_NAVI_0_8 KC_NO
+#define KC_NAVI_0_9 TG(LAYER_MOUS)
 
 #define KC_NAVI_1_0 KC_NO
 #define KC_NAVI_1_1 KC_NO
@@ -258,7 +258,7 @@
 #define KC_MOUS_0_6 KC_NO
 #define KC_MOUS_0_7 KC_BTN4
 #define KC_MOUS_0_8 KC_NO
-#define KC_MOUS_0_9 KC_NO
+#define KC_MOUS_0_9 TG(LAYER_MOUS)
 
 #define KC_MOUS_1_0 KC_NO
 #define KC_MOUS_1_1 KC_NO
