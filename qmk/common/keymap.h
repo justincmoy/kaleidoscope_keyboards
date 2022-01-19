@@ -41,7 +41,7 @@
 #define KC_OPT0_2_8 KC_COMM
 #define KC_OPT0_2_9 KC_DOT
 
-#define KC_OPT0_3_0 KC_ESC
+#define KC_OPT0_3_0 LT(LAYER_MOUS, KC_ESC)
 #define KC_OPT0_3_1 LT(LAYER_SYMB, KC_TAB)
 #define KC_OPT0_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_OPT0_3_3 LSFT_T(KC_E)
@@ -209,21 +209,21 @@
 #define KC_SYMB_3_4 KC_RPRN
 #define KC_SYMB_3_5 KC_THUMB_5
 
-#define KC_NAVI_0_0 KC_BTN4
-#define KC_NAVI_0_1 KC_BTN5
-#define KC_NAVI_0_2 KC_BTN1
-#define KC_NAVI_0_3 KC_BTN2
-#define KC_NAVI_0_4 KC_BTN3
+#define KC_NAVI_0_0 KC_NO
+#define KC_NAVI_0_1 KC_NO
+#define KC_NAVI_0_2 KC_NO
+#define KC_NAVI_0_3 KC_NO
+#define KC_NAVI_0_4 KC_NO
 #define KC_NAVI_0_5 KC_NO
-#define KC_NAVI_0_6 KC_NO
-#define KC_NAVI_0_7 KC_NO
-#define KC_NAVI_0_8 KC_NO
-#define KC_NAVI_0_9 KC_NO
+#define KC_NAVI_0_6 KC_MS_L
+#define KC_NAVI_0_7 KC_MS_D
+#define KC_NAVI_0_8 KC_MS_U
+#define KC_NAVI_0_9 KC_MS_R
 
-#define KC_NAVI_1_0 KC_MS_L
-#define KC_NAVI_1_1 KC_MS_U
-#define KC_NAVI_1_2 KC_MS_D
-#define KC_NAVI_1_3 KC_MS_R
+#define KC_NAVI_1_0 KC_NO
+#define KC_NAVI_1_1 KC_NO
+#define KC_NAVI_1_2 KC_NO
+#define KC_NAVI_1_3 KC_NO
 #define KC_NAVI_1_4 KC_NO
 #define KC_NAVI_1_5 KC_NO
 #define KC_NAVI_1_6 KC_LEFT
@@ -231,10 +231,10 @@
 #define KC_NAVI_1_8 KC_UP
 #define KC_NAVI_1_9 KC_RGHT
 
-#define KC_NAVI_2_0 KC_WH_L
-#define KC_NAVI_2_1 KC_WH_U
-#define KC_NAVI_2_2 KC_WH_D
-#define KC_NAVI_2_3 KC_WH_R
+#define KC_NAVI_2_0 KC_NO
+#define KC_NAVI_2_1 KC_NO
+#define KC_NAVI_2_2 KC_NO
+#define KC_NAVI_2_3 KC_NO
 #define KC_NAVI_2_4 KC_NO
 #define KC_NAVI_2_5 KC_INS
 #define KC_NAVI_2_6 KC_HOME
@@ -248,3 +248,43 @@
 #define KC_NAVI_3_3 KC_THUMB_3
 #define KC_NAVI_3_4 KC_THUMB_4
 #define KC_NAVI_3_5 KC_THUMB_5
+
+#define KC_MOUS_0_0 KC_NO
+#define KC_MOUS_0_1 KC_NO
+#define KC_MOUS_0_2 KC_NO
+#define KC_MOUS_0_3 KC_NO
+#define KC_MOUS_0_4 KC_NO
+#define KC_MOUS_0_5 KC_NO
+#define KC_MOUS_0_6 KC_NO
+#define KC_MOUS_0_7 KC_BTN4
+#define KC_MOUS_0_8 KC_NO
+#define KC_MOUS_0_9 KC_NO
+
+#define KC_MOUS_1_0 KC_NO
+#define KC_MOUS_1_1 KC_NO
+#define KC_MOUS_1_2 KC_NO
+#define KC_MOUS_1_3 KC_NO
+#define KC_MOUS_1_4 KC_NO
+#define KC_MOUS_1_5 KC_NO
+#define KC_MOUS_1_6 KC_MS_L
+#define KC_MOUS_1_7 KC_MS_D
+#define KC_MOUS_1_8 KC_MS_U
+#define KC_MOUS_1_9 KC_MS_R
+
+#define KC_MOUS_2_0 KC_NO
+#define KC_MOUS_2_1 KC_NO
+#define KC_MOUS_2_2 KC_NO
+#define KC_MOUS_2_3 KC_NO
+#define KC_MOUS_2_4 KC_NO
+#define KC_MOUS_2_5 KC_NO
+#define KC_MOUS_2_6 KC_WH_L
+#define KC_MOUS_2_7 KC_WH_D
+#define KC_MOUS_2_8 KC_WH_U
+#define KC_MOUS_2_9 KC_WH_R
+
+#define KC_MOUS_3_0 KC_THUMB_0
+#define KC_MOUS_3_1 KC_THUMB_1
+#define KC_MOUS_3_2 KC_THUMB_2
+#define KC_MOUS_3_3 KC_BTN1
+#define KC_MOUS_3_4 KC_BTN2
+#define KC_MOUS_3_5 KC_BTN5
