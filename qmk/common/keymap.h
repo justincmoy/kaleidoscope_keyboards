@@ -41,7 +41,7 @@
 #define KC_OPT0_2_8 KC_COMM
 #define KC_OPT0_2_9 KC_DOT
 
-#define KC_OPT0_3_0 KC_ESC
+#define KC_OPT0_3_0 LT(LAYER_MOUS, KC_ESC)
 #define KC_OPT0_3_1 LT(LAYER_SYMB, KC_TAB)
 #define KC_OPT0_3_2 LT(LAYER_NUMB, KC_SPC)
 #define KC_OPT0_3_3 LSFT_T(KC_E)
