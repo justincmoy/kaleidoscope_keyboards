@@ -7,14 +7,14 @@
 #define KC_THUMB_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_THUMB_5 KC_DEL
 
-// https://discord.com/channels/807843650717483049/807844118826975262/931002774248914954
-#define KC_OPT0_0_0 KC_X
-#define KC_OPT0_0_1 KC_W
-#define KC_OPT0_0_2 KC_G
-#define KC_OPT0_0_3 KC_P
+// AptHD: https://discord.com/channels/807843650717483049/807844118826975262/933589053612392459
+#define KC_OPT0_0_0 KC_W
+#define KC_OPT0_0_1 KC_C
+#define KC_OPT0_0_2 KC_Y
+#define KC_OPT0_0_3 KC_D
 #define KC_OPT0_0_4 KC_B
 #define KC_OPT0_0_5 KC_Q
-#define KC_OPT0_0_6 KC_F
+#define KC_OPT0_0_6 KC_L
 #define KC_OPT0_0_7 KC_U
 #define KC_OPT0_0_8 KC_QUOT
 #define KC_OPT0_0_9 KC_SCLN
@@ -23,19 +23,19 @@
 #define KC_OPT0_1_1 LALT_T(KC_S)
 #define KC_OPT0_1_2 LCTL_T(KC_T)
 #define KC_OPT0_1_3 LSFT_T(KC_H)
-#define KC_OPT0_1_4 KC_D
-#define KC_OPT0_1_5 KC_L
+#define KC_OPT0_1_4 KC_K
+#define KC_OPT0_1_5 KC_J
 #define KC_OPT0_1_6 LSFT_T(KC_N)
 #define KC_OPT0_1_7 LCTL_T(KC_A)
 #define KC_OPT0_1_8 LALT_T(KC_O)
 #define KC_OPT0_1_9 LGUI_T(KC_I)
 
-#define KC_OPT0_2_0 KC_J
-#define KC_OPT0_2_1 KC_C
-#define KC_OPT0_2_2 KC_Y
-#define KC_OPT0_2_3 KC_V
-#define KC_OPT0_2_4 KC_K
-#define KC_OPT0_2_5 KC_Z
+#define KC_OPT0_2_0 KC_Z
+#define KC_OPT0_2_1 KC_V
+#define KC_OPT0_2_2 KC_G
+#define KC_OPT0_2_3 KC_F
+#define KC_OPT0_2_4 KC_P
+#define KC_OPT0_2_5 KC_X
 #define KC_OPT0_2_6 KC_M
 #define KC_OPT0_2_7 KC_SLSH
 #define KC_OPT0_2_8 KC_COMM
