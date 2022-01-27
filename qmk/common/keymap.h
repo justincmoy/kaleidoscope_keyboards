@@ -48,44 +48,44 @@
 #define KC_OPT0_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_OPT0_3_5 KC_DEL
 
-// AptHD: https://discord.com/channels/807843650717483049/807844118826975262/933589053612392459
-#define KC_OPT1_0_0 KC_W
-#define KC_OPT1_0_1 KC_C
-#define KC_OPT1_0_2 KC_Y
-#define KC_OPT1_0_3 KC_D
-#define KC_OPT1_0_4 KC_B
-#define KC_OPT1_0_5 KC_Q
-#define KC_OPT1_0_6 KC_L
-#define KC_OPT1_0_7 KC_U
+// Hands Down Gold
+#define KC_OPT1_0_0 KC_J
+#define KC_OPT1_0_1 KC_F
+#define KC_OPT1_0_2 KC_M
+#define KC_OPT1_0_3 KC_P
+#define KC_OPT1_0_4 KC_V
+#define KC_OPT1_0_5 KC_SCLN
+#define KC_OPT1_0_6 KC_DOT
+#define KC_OPT1_0_7 KC_SLSH
 #define KC_OPT1_0_8 KC_QUOT
-#define KC_OPT1_0_9 KC_SCLN
+#define KC_OPT1_0_9 KC_GRV
 
 #define KC_OPT1_1_0 LGUI_T(KC_R)
 #define KC_OPT1_1_1 LALT_T(KC_S)
-#define KC_OPT1_1_2 LCTL_T(KC_T)
-#define KC_OPT1_1_3 LSFT_T(KC_H)
-#define KC_OPT1_1_4 KC_K
-#define KC_OPT1_1_5 KC_J
-#define KC_OPT1_1_6 LSFT_T(KC_N)
-#define KC_OPT1_1_7 LCTL_T(KC_A)
-#define KC_OPT1_1_8 LALT_T(KC_O)
-#define KC_OPT1_1_9 LGUI_T(KC_I)
+#define KC_OPT1_1_2 LCTL_T(KC_N)
+#define KC_OPT1_1_3 LSFT_T(KC_D)
+#define KC_OPT1_1_4 KC_W
+#define KC_OPT1_1_5 KC_COMM
+#define KC_OPT1_1_6 LSFT_T(KC_A)
+#define KC_OPT1_1_7 LCTL_T(KC_E)
+#define KC_OPT1_1_8 LALT_T(KC_I)
+#define KC_OPT1_1_9 LGUI_T(KC_H)
 
-#define KC_OPT1_2_0 KC_Z
-#define KC_OPT1_2_1 KC_V
-#define KC_OPT1_2_2 KC_G
-#define KC_OPT1_2_3 KC_F
-#define KC_OPT1_2_4 KC_P
-#define KC_OPT1_2_5 KC_X
-#define KC_OPT1_2_6 KC_M
-#define KC_OPT1_2_7 KC_SLSH
-#define KC_OPT1_2_8 KC_COMM
-#define KC_OPT1_2_9 KC_DOT
+#define KC_OPT1_2_0 KC_X
+#define KC_OPT1_2_1 KC_G
+#define KC_OPT1_2_2 KC_L
+#define KC_OPT1_2_3 KC_C
+#define KC_OPT1_2_4 KC_B
+#define KC_OPT1_2_5 KC_MINS
+#define KC_OPT1_2_6 KC_U
+#define KC_OPT1_2_7 KC_O
+#define KC_OPT1_2_8 KC_Y
+#define KC_OPT1_2_9 KC_K
 
 #define KC_OPT1_3_0 LT(LAYER_MOUS, KC_ESC)
 #define KC_OPT1_3_1 LT(LAYER_SYMB, KC_TAB)
-#define KC_OPT1_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_OPT1_3_3 LSFT_T(KC_E)
+#define KC_OPT1_3_2 LT(LAYER_NUMB, KC_T)
+#define KC_OPT1_3_3 LSFT_T(KC_SPC)
 #define KC_OPT1_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_OPT1_3_5 KC_DEL
 

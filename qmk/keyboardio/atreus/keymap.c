@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "common/keymap.h"
+#include "common/combos.h"
 
 enum layer_names {
   LAYER_OPT0,
