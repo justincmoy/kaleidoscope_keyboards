@@ -1,9 +1,9 @@
 #pragma once
 
 #define KC_THUMB_0 KC_ESC
-#define KC_THUMB_1 KC_TAB
-#define KC_THUMB_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_THUMB_3 LT(LAYER_SYMB, KC_ENT)
+#define KC_THUMB_1 LT(LAYER_MOUS, KC_TAB)
+#define KC_THUMB_2 LT(LAYER_NUMB, KC_T)
+#define KC_THUMB_3 LSFT_T(KC_SPC)
 #define KC_THUMB_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_THUMB_5 KC_DEL
 
@@ -47,12 +47,12 @@
 #define KC_OPT0_2_8 KC_Y
 #define KC_OPT0_2_9 KC_K
 
-#define KC_OPT0_3_0 LT(LAYER_MOUS, KC_ESC)
-#define KC_OPT0_3_1 LT(LAYER_SYMB, KC_TAB)
-#define KC_OPT0_3_2 LT(LAYER_NUMB, KC_T)
-#define KC_OPT0_3_3 LSFT_T(KC_SPC)
-#define KC_OPT0_3_4 LT(LAYER_NAVI, KC_BSPC)
-#define KC_OPT0_3_5 KC_DEL
+#define KC_OPT0_3_0 KC_THUMB_0
+#define KC_OPT0_3_1 KC_THUMB_1
+#define KC_OPT0_3_2 KC_THUMB_2
+#define KC_OPT0_3_3 KC_THUMB_3
+#define KC_OPT0_3_4 KC_THUMB_4
+#define KC_OPT0_3_5 KC_THUMB_5
 
 // Hands Down Gold
 #define KC_OPT1_0_0 KC_J
@@ -88,12 +88,12 @@
 #define KC_OPT1_2_8 KC_Y
 #define KC_OPT1_2_9 KC_K
 
-#define KC_OPT1_3_0 LT(LAYER_MOUS, KC_ESC)
-#define KC_OPT1_3_1 LT(LAYER_SYMB, KC_TAB)
-#define KC_OPT1_3_2 LT(LAYER_NUMB, KC_T)
-#define KC_OPT1_3_3 LSFT_T(KC_SPC)
-#define KC_OPT1_3_4 LT(LAYER_NAVI, KC_BSPC)
-#define KC_OPT1_3_5 KC_DEL
+#define KC_OPT1_3_0 KC_THUMB_0
+#define KC_OPT1_3_1 KC_THUMB_1
+#define KC_OPT1_3_2 KC_THUMB_2
+#define KC_OPT1_3_3 KC_THUMB_3
+#define KC_OPT1_3_4 KC_THUMB_4
+#define KC_OPT1_3_5 KC_THUMB_5
 
 #define KC_GAME_0_0 KC_TAB
 #define KC_GAME_0_1 KC_Q
@@ -129,7 +129,7 @@
 #define KC_GAME_2_9 KC_Z
 
 #define KC_GAME_3_0 KC_ESC
-#define KC_GAME_3_1 LT(LAYER_NUMB, KC_NO)
+#define KC_GAME_3_1 LT(LAYER_MOUS, KC_NO)
 #define KC_GAME_3_2 KC_SPC
 #define KC_GAME_3_3 LSFT_T(KC_ENT)
 #define KC_GAME_3_4 LT(LAYER_NAVI, KC_BSPC)
@@ -141,9 +141,9 @@
 #define KC_NUMB_0_3 KC_NO
 #define KC_NUMB_0_4 KC_NO
 #define KC_NUMB_0_5 KC_LBRC
-#define KC_NUMB_0_6 KC_7
-#define KC_NUMB_0_7 KC_8
-#define KC_NUMB_0_8 KC_9
+#define KC_NUMB_0_6 KC_BSLS
+#define KC_NUMB_0_7 KC_ENT
+#define KC_NUMB_0_8 KC_EQL
 #define KC_NUMB_0_9 KC_RBRC
 
 #define KC_NUMB_1_0 KC_LGUI
@@ -151,69 +151,29 @@
 #define KC_NUMB_1_2 KC_LCTL
 #define KC_NUMB_1_3 KC_LSFT
 #define KC_NUMB_1_4 KC_NO
-#define KC_NUMB_1_5 KC_BSLS
-#define KC_NUMB_1_6 KC_4
-#define KC_NUMB_1_7 KC_5
-#define KC_NUMB_1_8 KC_6
-#define KC_NUMB_1_9 KC_GRV
+#define KC_NUMB_1_5 KC_1
+#define KC_NUMB_1_6 KC_2
+#define KC_NUMB_1_7 KC_3
+#define KC_NUMB_1_8 KC_4
+#define KC_NUMB_1_9 KC_5
 
 #define KC_NUMB_2_0 KC_NO
 #define KC_NUMB_2_1 KC_NO
 #define KC_NUMB_2_2 KC_NO
-#define KC_NUMB_2_3 KC_TOGGLE_OPT1
-#define KC_NUMB_2_4 TG(LAYER_GAME)
-#define KC_NUMB_2_5 KC_EQL
-#define KC_NUMB_2_6 KC_1
-#define KC_NUMB_2_7 KC_2
-#define KC_NUMB_2_8 KC_3
-#define KC_NUMB_2_9 KC_MINS
+#define KC_NUMB_2_3 KC_NO
+#define KC_NUMB_2_4 KC_NO
+#define KC_NUMB_2_5 KC_6
+#define KC_NUMB_2_6 KC_7
+#define KC_NUMB_2_7 KC_8
+#define KC_NUMB_2_8 KC_9
+#define KC_NUMB_2_9 KC_0
 
 #define KC_NUMB_3_0 KC_THUMB_0
 #define KC_NUMB_3_1 KC_THUMB_1
 #define KC_NUMB_3_2 KC_THUMB_2
-#define KC_NUMB_3_3 KC_ENT
-#define KC_NUMB_3_4 KC_0
+#define KC_NUMB_3_3 KC_THUMB_3
+#define KC_NUMB_3_4 KC_THUMB_4
 #define KC_NUMB_3_5 KC_THUMB_5
-
-#define KC_SYMB_0_0 KC_NO
-#define KC_SYMB_0_1 KC_NO
-#define KC_SYMB_0_2 KC_NO
-#define KC_SYMB_0_3 KC_NO
-#define KC_SYMB_0_4 KC_NO
-#define KC_SYMB_0_5 KC_LCBR
-#define KC_SYMB_0_6 KC_AMPR
-#define KC_SYMB_0_7 KC_ASTR
-#define KC_SYMB_0_8 KC_LPRN
-#define KC_SYMB_0_9 KC_RCBR
-
-#define KC_SYMB_1_0 KC_LGUI
-#define KC_SYMB_1_1 KC_LALT
-#define KC_SYMB_1_2 KC_LCTL
-#define KC_SYMB_1_3 KC_LSFT
-#define KC_SYMB_1_4 KC_NO
-#define KC_SYMB_1_5 KC_PIPE
-#define KC_SYMB_1_6 KC_DLR
-#define KC_SYMB_1_7 KC_PERC
-#define KC_SYMB_1_8 KC_CIRC
-#define KC_SYMB_1_9 KC_TILD
-
-#define KC_SYMB_2_0 KC_NO
-#define KC_SYMB_2_1 KC_NO
-#define KC_SYMB_2_2 KC_NO
-#define KC_SYMB_2_3 KC_TOGGLE_OPT1
-#define KC_SYMB_2_4 TG(LAYER_GAME)
-#define KC_SYMB_2_5 KC_PLUS
-#define KC_SYMB_2_6 KC_EXLM
-#define KC_SYMB_2_7 KC_AT
-#define KC_SYMB_2_8 KC_HASH
-#define KC_SYMB_2_9 KC_UNDS
-
-#define KC_SYMB_3_0 KC_THUMB_0
-#define KC_SYMB_3_1 KC_THUMB_1
-#define KC_SYMB_3_2 KC_THUMB_2
-#define KC_SYMB_3_3 KC_THUMB_3
-#define KC_SYMB_3_4 KC_RPRN
-#define KC_SYMB_3_5 KC_THUMB_5
 
 #define KC_NAVI_0_0 KC_NO
 #define KC_NAVI_0_1 KC_NO
@@ -280,8 +240,8 @@
 #define KC_MOUS_2_0 KC_NO
 #define KC_MOUS_2_1 KC_NO
 #define KC_MOUS_2_2 KC_NO
-#define KC_MOUS_2_3 KC_NO
-#define KC_MOUS_2_4 KC_NO
+#define KC_MOUS_2_3 KC_TOGGLE_OPT1
+#define KC_MOUS_2_4 TG(LAYER_GAME)
 #define KC_MOUS_2_5 KC_NO
 #define KC_MOUS_2_6 KC_WH_L
 #define KC_MOUS_2_7 KC_WH_D

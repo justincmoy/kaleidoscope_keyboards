@@ -11,7 +11,6 @@ enum layer_names {
 
   LAYER_GAME,
   LAYER_NUMB,
-  LAYER_SYMB,
   LAYER_NAVI,
   LAYER_MOUS,
 };
@@ -45,13 +44,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NUMB_1_0, KC_NUMB_1_1, KC_NUMB_1_2, KC_NUMB_1_3, KC_NUMB_1_4,                           KC_NUMB_1_5, KC_NUMB_1_6, KC_NUMB_1_7, KC_NUMB_1_8, KC_NUMB_1_9,
     KC_NUMB_2_0, KC_NUMB_2_1, KC_NUMB_2_2, KC_NUMB_2_3, KC_NUMB_2_4, KC_NO,       KC_NO,       KC_NUMB_2_5, KC_NUMB_2_6, KC_NUMB_2_7, KC_NUMB_2_8, KC_NUMB_2_9,
     KC_NO,       KC_NO,       KC_NO,       KC_NUMB_3_0, KC_NUMB_3_1, KC_NUMB_3_2, KC_NUMB_3_3, KC_NUMB_3_4, KC_NUMB_3_5, KC_NO,       KC_NO,       KC_NO
-  ),
-
-  [LAYER_SYMB] = LAYOUT(
-    KC_SYMB_0_0, KC_SYMB_0_1, KC_SYMB_0_2, KC_SYMB_0_3, KC_SYMB_0_4,                           KC_SYMB_0_5, KC_SYMB_0_6, KC_SYMB_0_7, KC_SYMB_0_8, KC_SYMB_0_9,
-    KC_SYMB_1_0, KC_SYMB_1_1, KC_SYMB_1_2, KC_SYMB_1_3, KC_SYMB_1_4,                           KC_SYMB_1_5, KC_SYMB_1_6, KC_SYMB_1_7, KC_SYMB_1_8, KC_SYMB_1_9,
-    KC_SYMB_2_0, KC_SYMB_2_1, KC_SYMB_2_2, KC_SYMB_2_3, KC_SYMB_2_4, KC_NO,       KC_NO,       KC_SYMB_2_5, KC_SYMB_2_6, KC_SYMB_2_7, KC_SYMB_2_8, KC_SYMB_2_9,
-    KC_NO,       KC_NO,       KC_NO,       KC_SYMB_3_0, KC_SYMB_3_1, KC_SYMB_3_2, KC_SYMB_3_3, KC_SYMB_3_4, KC_SYMB_3_5, KC_NO,       KC_NO,       KC_NO
   ),
 
   [LAYER_NAVI] = LAYOUT(
