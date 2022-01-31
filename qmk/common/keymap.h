@@ -7,44 +7,50 @@
 #define KC_THUMB_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_THUMB_5 KC_DEL
 
-// AptHD: https://discord.com/channels/807843650717483049/807844118826975262/933589053612392459
-#define KC_OPT0_0_0 KC_W
-#define KC_OPT0_0_1 KC_C
-#define KC_OPT0_0_2 KC_Y
-#define KC_OPT0_0_3 KC_D
-#define KC_OPT0_0_4 KC_B
-#define KC_OPT0_0_5 KC_Q
-#define KC_OPT0_0_6 KC_L
-#define KC_OPT0_0_7 KC_U
+#ifdef ENABLE_LAYOUT_OPTION1
+#define KC_TOGGLE_OPT1 TG(LAYER_OPT1)
+#else
+#define KC_TOGGLE_OPT1 KC_NO
+#endif
+
+// Hands Down Gold
+#define KC_OPT0_0_0 KC_J
+#define KC_OPT0_0_1 KC_F
+#define KC_OPT0_0_2 KC_M
+#define KC_OPT0_0_3 KC_P
+#define KC_OPT0_0_4 KC_V
+#define KC_OPT0_0_5 KC_SCLN
+#define KC_OPT0_0_6 KC_DOT
+#define KC_OPT0_0_7 KC_SLSH
 #define KC_OPT0_0_8 KC_QUOT
-#define KC_OPT0_0_9 KC_SCLN
+#define KC_OPT0_0_9 KC_GRV
 
 #define KC_OPT0_1_0 LGUI_T(KC_R)
 #define KC_OPT0_1_1 LALT_T(KC_S)
-#define KC_OPT0_1_2 LCTL_T(KC_T)
-#define KC_OPT0_1_3 LSFT_T(KC_H)
-#define KC_OPT0_1_4 KC_K
-#define KC_OPT0_1_5 KC_J
-#define KC_OPT0_1_6 LSFT_T(KC_N)
-#define KC_OPT0_1_7 LCTL_T(KC_A)
-#define KC_OPT0_1_8 LALT_T(KC_O)
-#define KC_OPT0_1_9 LGUI_T(KC_I)
+#define KC_OPT0_1_2 LCTL_T(KC_N)
+#define KC_OPT0_1_3 LSFT_T(KC_D)
+#define KC_OPT0_1_4 KC_W
+#define KC_OPT0_1_5 KC_COMM
+#define KC_OPT0_1_6 LSFT_T(KC_A)
+#define KC_OPT0_1_7 LCTL_T(KC_E)
+#define KC_OPT0_1_8 LALT_T(KC_I)
+#define KC_OPT0_1_9 LGUI_T(KC_H)
 
-#define KC_OPT0_2_0 KC_Z
-#define KC_OPT0_2_1 KC_V
-#define KC_OPT0_2_2 KC_G
-#define KC_OPT0_2_3 KC_F
-#define KC_OPT0_2_4 KC_P
-#define KC_OPT0_2_5 KC_X
-#define KC_OPT0_2_6 KC_M
-#define KC_OPT0_2_7 KC_SLSH
-#define KC_OPT0_2_8 KC_COMM
-#define KC_OPT0_2_9 KC_DOT
+#define KC_OPT0_2_0 KC_X
+#define KC_OPT0_2_1 KC_G
+#define KC_OPT0_2_2 KC_L
+#define KC_OPT0_2_3 KC_C
+#define KC_OPT0_2_4 KC_B
+#define KC_OPT0_2_5 KC_MINS
+#define KC_OPT0_2_6 KC_U
+#define KC_OPT0_2_7 KC_O
+#define KC_OPT0_2_8 KC_Y
+#define KC_OPT0_2_9 KC_K
 
 #define KC_OPT0_3_0 LT(LAYER_MOUS, KC_ESC)
 #define KC_OPT0_3_1 LT(LAYER_SYMB, KC_TAB)
-#define KC_OPT0_3_2 LT(LAYER_NUMB, KC_SPC)
-#define KC_OPT0_3_3 LSFT_T(KC_E)
+#define KC_OPT0_3_2 LT(LAYER_NUMB, KC_T)
+#define KC_OPT0_3_3 LSFT_T(KC_SPC)
 #define KC_OPT0_3_4 LT(LAYER_NAVI, KC_BSPC)
 #define KC_OPT0_3_5 KC_DEL
 
@@ -154,7 +160,7 @@
 #define KC_NUMB_2_0 KC_NO
 #define KC_NUMB_2_1 KC_NO
 #define KC_NUMB_2_2 KC_NO
-#define KC_NUMB_2_3 TG(LAYER_OPT1)
+#define KC_NUMB_2_3 KC_TOGGLE_OPT1
 #define KC_NUMB_2_4 TG(LAYER_GAME)
 #define KC_NUMB_2_5 KC_EQL
 #define KC_NUMB_2_6 KC_1
@@ -194,7 +200,7 @@
 #define KC_SYMB_2_0 KC_NO
 #define KC_SYMB_2_1 KC_NO
 #define KC_SYMB_2_2 KC_NO
-#define KC_SYMB_2_3 TG(LAYER_OPT1)
+#define KC_SYMB_2_3 KC_TOGGLE_OPT1
 #define KC_SYMB_2_4 TG(LAYER_GAME)
 #define KC_SYMB_2_5 KC_PLUS
 #define KC_SYMB_2_6 KC_EXLM
@@ -218,7 +224,7 @@
 #define KC_NAVI_0_6 KC_NO
 #define KC_NAVI_0_7 KC_NO
 #define KC_NAVI_0_8 KC_NO
-#define KC_NAVI_0_9 TG(LAYER_MOUS)
+#define KC_NAVI_0_9 KC_NO
 
 #define KC_NAVI_1_0 KC_NO
 #define KC_NAVI_1_1 KC_NO
@@ -258,7 +264,7 @@
 #define KC_MOUS_0_6 KC_NO
 #define KC_MOUS_0_7 KC_BTN4
 #define KC_MOUS_0_8 KC_NO
-#define KC_MOUS_0_9 TG(LAYER_MOUS)
+#define KC_MOUS_0_9 KC_NO
 
 #define KC_MOUS_1_0 KC_NO
 #define KC_MOUS_1_1 KC_NO
