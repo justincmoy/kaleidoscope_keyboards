@@ -1,6 +1,8 @@
 #pragma once
 
+#ifndef NO_DEBUG
 #define NO_DEBUG
+#endif
 
 #define MOUSEKEY_INTERVAL 16
 #define MOUSEKEY_TIME_TO_MAX 60
