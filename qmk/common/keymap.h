@@ -54,6 +54,19 @@
 #define KC_OPT0_3_4 KC_THUMB_4
 #define KC_OPT0_3_5 KC_THUMB_5
 
+#ifdef ENABLE_LAYOUT_HOME_ROW
+#define TG_HR_0 TG(LAYER_HR_0)
+#define KC_HR_0_1_0 KC_R
+#define KC_HR_0_1_1 KC_S
+#define KC_HR_0_1_2 LT(LAYER_HR_1, KC_N)
+#define KC_HR_0_1_3 LT(LAYER_HR_2, KC_D)
+#define KC_HR_0_1_6 LT(LAYER_HR_2, KC_A)
+#define KC_HR_0_1_7 LT(LAYER_HR_1, KC_E)
+#define KC_HR_0_1_8 KC_I
+#define KC_HR_0_1_9 KC_H
+#endif
+
+#ifdef ENABLE_LAYOUT_OPTION1
 // Hands Down Gold
 #define KC_OPT1_0_0 KC_J
 #define KC_OPT1_0_1 KC_F
@@ -94,6 +107,7 @@
 #define KC_OPT1_3_3 KC_THUMB_3
 #define KC_OPT1_3_4 KC_THUMB_4
 #define KC_OPT1_3_5 KC_THUMB_5
+#endif
 
 #define KC_GAME_0_0 KC_TAB
 #define KC_GAME_0_1 KC_Q

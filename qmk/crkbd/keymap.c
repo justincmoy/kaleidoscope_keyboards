@@ -1,6 +1,4 @@
-#include QMK_KEYBOARD_H
-#include "common/keymap.h"
-#include "common/combos.h"
+#define ENABLE_LAYOUT_HOME_ROW
 
 enum layer_names {
   LAYER_OPT0,
@@ -14,21 +12,16 @@ enum layer_names {
   LAYER_NAVI,
   LAYER_MOUS,
 
+#ifdef ENABLE_LAYOUT_HOME_ROW
   LAYER_HR_0,
   LAYER_HR_1,
   LAYER_HR_2,
+#endif
 };
 
-#define TG_HR_0 TG(LAYER_HR_0)
-#define KC_HR_0_1_0 KC_R
-#define KC_HR_0_1_1 KC_S
-#define KC_HR_0_1_2 LT(LAYER_HR_1, KC_N)
-#define KC_HR_0_1_3 LT(LAYER_HR_2, KC_D)
-#define KC_HR_0_1_6 LT(LAYER_HR_2, KC_A)
-#define KC_HR_0_1_7 LT(LAYER_HR_1, KC_E)
-#define KC_HR_0_1_8 KC_I
-#define KC_HR_0_1_9 KC_H
-
+#include QMK_KEYBOARD_H
+#include "common/keymap.h"
+#include "common/combos.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_OPT0] = LAYOUT_split_3x5_3(
@@ -75,6 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               KC_MOUS_3_0, KC_MOUS_3_1, KC_MOUS_3_2, KC_MOUS_3_3, KC_MOUS_3_4, KC_MOUS_3_5
   ),
 
+#ifdef ENABLE_LAYOUT_HOME_ROW
   [LAYER_HR_0] = LAYOUT_split_3x5_3(
     KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
     KC_HR_0_1_0, KC_HR_0_1_1, KC_HR_0_1_2, KC_HR_0_1_3, KC_NO      , KC_NO      , KC_HR_0_1_6, KC_HR_0_1_7, KC_HR_0_1_8, KC_HR_0_1_9,
@@ -95,4 +89,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
                               KC_NO      , KC_NO      , KC_OPT0_3_2, KC_OPT0_3_3, KC_NO      , KC_NO
   ),
+#endif
 };
