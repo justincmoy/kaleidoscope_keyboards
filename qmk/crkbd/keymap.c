@@ -13,7 +13,22 @@ enum layer_names {
   LAYER_NUMB,
   LAYER_NAVI,
   LAYER_MOUS,
+
+  LAYER_HR_0,
+  LAYER_HR_1,
+  LAYER_HR_2,
 };
+
+#define TG_HR_0 TG(LAYER_HR_0)
+#define KC_HR_0_1_0 KC_R
+#define KC_HR_0_1_1 KC_S
+#define KC_HR_0_1_2 LT(LAYER_HR_1, KC_N)
+#define KC_HR_0_1_3 LT(LAYER_HR_2, KC_D)
+#define KC_HR_0_1_6 LT(LAYER_HR_2, KC_A)
+#define KC_HR_0_1_7 LT(LAYER_HR_1, KC_E)
+#define KC_HR_0_1_8 KC_I
+#define KC_HR_0_1_9 KC_H
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_OPT0] = LAYOUT_split_3x5_3(
@@ -56,7 +71,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_MOUS] = LAYOUT_split_3x5_3(
     KC_MOUS_0_0, KC_MOUS_0_1, KC_MOUS_0_2, KC_MOUS_0_3, KC_MOUS_0_4, KC_MOUS_0_5, KC_MOUS_0_6, KC_MOUS_0_7, KC_MOUS_0_8, KC_MOUS_0_9,
     KC_MOUS_1_0, KC_MOUS_1_1, KC_MOUS_1_2, KC_MOUS_1_3, KC_MOUS_1_4, KC_MOUS_1_5, KC_MOUS_1_6, KC_MOUS_1_7, KC_MOUS_1_8, KC_MOUS_1_9,
-    KC_MOUS_2_0, KC_MOUS_2_1, KC_MOUS_2_2, KC_MOUS_2_3, KC_MOUS_2_4, KC_MOUS_2_5, KC_MOUS_2_6, KC_MOUS_2_7, KC_MOUS_2_8, KC_MOUS_2_9,
+    TG_HR_0    , KC_MOUS_2_1, KC_MOUS_2_2, KC_MOUS_2_3, KC_MOUS_2_4, KC_MOUS_2_5, KC_MOUS_2_6, KC_MOUS_2_7, KC_MOUS_2_8, KC_MOUS_2_9,
                               KC_MOUS_3_0, KC_MOUS_3_1, KC_MOUS_3_2, KC_MOUS_3_3, KC_MOUS_3_4, KC_MOUS_3_5
+  ),
+
+  [LAYER_HR_0] = LAYOUT_split_3x5_3(
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+    KC_HR_0_1_0, KC_HR_0_1_1, KC_HR_0_1_2, KC_HR_0_1_3, KC_NO      , KC_NO      , KC_HR_0_1_6, KC_HR_0_1_7, KC_HR_0_1_8, KC_HR_0_1_9,
+    TG_HR_0    , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+                              KC_NO      , KC_NO      , KC_OPT0_3_2, KC_OPT0_3_3, KC_NO      , KC_NO
+  ),
+
+  [LAYER_HR_1] = LAYOUT_split_3x5_3(
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+    KC_OPT0_2_0, KC_OPT0_2_1, KC_OPT0_2_2, KC_OPT0_2_3, KC_NO      , KC_NO      , KC_OPT0_2_6, KC_OPT0_2_7, KC_OPT0_2_8, KC_OPT0_2_9,
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+                              KC_NO      , KC_NO      , KC_OPT0_3_2, KC_OPT0_3_3, KC_NO      , KC_NO
+  ),
+
+  [LAYER_HR_2] = LAYOUT_split_3x5_3(
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+    KC_OPT0_0_0, KC_OPT0_0_1, KC_OPT0_0_2, KC_OPT0_0_3, KC_NO      , KC_NO      , KC_OPT0_0_6, KC_OPT0_0_7, KC_OPT0_0_8, KC_OPT0_0_9,
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+                              KC_NO      , KC_NO      , KC_OPT0_3_2, KC_OPT0_3_3, KC_NO      , KC_NO
   ),
 };
