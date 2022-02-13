@@ -18,6 +18,8 @@ enum layer_names {
   LAYER_HR_2,
   LAYER_HR_3,
   LAYER_HR_4,
+  LAYER_HR_5,
+  LAYER_HR_6,
 #endif
 };
 
@@ -104,6 +106,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_HR_4_1_6, KC_HR_4_1_7, KC_HR_4_1_8, KC_HR_4_1_9,
     KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
                               KC_NO      , KC_NO      , KC_HR_3_3_2, KC_OPT0_3_3, KC_NO      , KC_NO
+  ),
+
+  [LAYER_HR_5] = LAYOUT_split_3x5_3(
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+    KC_HR_5_1_0, KC_HR_5_1_1, KC_HR_5_1_2, KC_HR_5_1_3, KC_NO      , KC_NO      , KC_HR_5_1_6, KC_HR_5_1_7, KC_HR_5_1_8, KC_HR_5_1_9,
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+                              KC_NO      , KC_NO      , KC_HR_5_3_2, KC_HR_5_3_3, KC_NO      , KC_NO
+  ),
+
+  [LAYER_HR_6] = LAYOUT_split_3x5_3(
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+    KC_HR_6_1_0, KC_HR_6_1_1, KC_HR_6_1_2, KC_HR_6_1_3, KC_NO      , KC_NO      , KC_HR_6_1_6, KC_HR_6_1_7, KC_HR_6_1_8, KC_HR_6_1_9,
+    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+                              KC_NO      , KC_NO      , KC_HR_5_3_2, KC_OPT0_3_3, KC_NO      , KC_NO
   ),
 #endif
 };
