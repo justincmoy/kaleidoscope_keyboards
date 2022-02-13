@@ -4,6 +4,9 @@
 #define NO_DEBUG
 #endif
 
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+
 #define MOUSEKEY_INTERVAL 16
 #define MOUSEKEY_TIME_TO_MAX 60
 #define MOUSEKEY_DELAY 100
