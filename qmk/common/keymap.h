@@ -58,12 +58,27 @@
 #define TG_HR_0 TG(LAYER_HR_0)
 #define KC_HR_0_1_0 KC_R
 #define KC_HR_0_1_1 KC_S
-#define KC_HR_0_1_2 LT(LAYER_HR_1, KC_N)
+#define KC_HR_0_1_2 LT(LAYER_HR_3, KC_N)
 #define KC_HR_0_1_3 LT(LAYER_HR_2, KC_D)
 #define KC_HR_0_1_6 LT(LAYER_HR_2, KC_A)
-#define KC_HR_0_1_7 LT(LAYER_HR_1, KC_E)
+#define KC_HR_0_1_7 KC_E
 #define KC_HR_0_1_8 KC_I
 #define KC_HR_0_1_9 KC_H
+
+#define KC_HR_0_3_2 LT(LAYER_HR_1, KC_T)
+
+#define KC_HR_3_1_5 KC_1
+#define KC_HR_3_1_6 KC_2
+#define KC_HR_3_1_7 KC_3
+#define KC_HR_3_1_8 KC_4
+#define KC_HR_3_1_9 KC_5
+#define KC_HR_3_3_2 LT(LAYER_HR_4, KC_T)
+
+#define KC_HR_4_1_5 KC_6
+#define KC_HR_4_1_6 KC_7
+#define KC_HR_4_1_7 KC_8
+#define KC_HR_4_1_8 KC_9
+#define KC_HR_4_1_9 KC_0
 #endif
 
 #ifdef ENABLE_LAYOUT_OPTION1
