@@ -25,7 +25,6 @@ enum combos {
 #endif
 
   COMBO_2_4,
-  COMBO_2_5,
   COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
@@ -56,7 +55,6 @@ const uint16_t PROGMEM combo_4_5[] = {KC_HR_4_1_6, KC_HR_4_1_7, COMBO_END};
 #endif
 
 const uint16_t PROGMEM combo_2_4[] = {KC_OPT0_2_2, KC_OPT0_2_3, COMBO_END};
-const uint16_t PROGMEM combo_2_5[] = {KC_OPT0_2_6, KC_OPT0_2_7, COMBO_END};
 
 combo_t key_combos[] = {
   [COMBO_Q] = COMBO(combo_q, KC_Q),
@@ -85,5 +83,4 @@ combo_t key_combos[] = {
 #endif
 
   [COMBO_2_4] = COMBO(combo_2_4, KC_OPT0_2_4),
-  [COMBO_2_5] = COMBO(combo_2_5, KC_OPT0_2_5),
 };
