@@ -74,23 +74,24 @@
 #define KC_HR_3_1_1 OSM(MOD_LALT)
 #define KC_HR_3_1_2 OSM(MOD_LCTL)
 #define KC_HR_3_1_3 OSM(MOD_LSFT)
-#define KC_HR_3_1_5 KC_1
 #define KC_HR_3_1_6 KC_2
 #define KC_HR_3_1_7 KC_3
 #define KC_HR_3_1_8 KC_4
 #define KC_HR_3_1_9 KC_5
 
 #define KC_HR_3_3_2 LT(LAYER_HR_4, KC_T)
+#define KC_HR_3_3_3 KC_1
 
 #define KC_HR_4_1_0 KC_LBRC
 #define KC_HR_4_1_1 KC_BSLS
 #define KC_HR_4_1_2 KC_EQL
 #define KC_HR_4_1_3 KC_RBRC
-#define KC_HR_4_1_5 KC_6
 #define KC_HR_4_1_6 KC_7
 #define KC_HR_4_1_7 KC_8
 #define KC_HR_4_1_8 KC_9
 #define KC_HR_4_1_9 KC_0
+
+#define KC_HR_4_3_3 KC_6
 
 #define KC_HR_5_1_0 KC_LEFT
 #define KC_HR_5_1_1 KC_UP
