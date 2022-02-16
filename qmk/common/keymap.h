@@ -70,6 +70,8 @@
 
 #define KC_HR_1_3_3 LT(LAYER_HR_2, KC_MINS)
 
+#define KC_HR_2_3_2 KC_V
+
 #define KC_HR_3_1_0 OSM(MOD_LGUI)
 #define KC_HR_3_1_1 OSM(MOD_LALT)
 #define KC_HR_3_1_2 OSM(MOD_LCTL)
