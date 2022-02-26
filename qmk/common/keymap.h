@@ -67,8 +67,8 @@
 #define KC_HR_0_1_8 LT(LAYER_HR_4, KC_I)
 #define KC_HR_0_1_9 LT(LAYER_HR_1, KC_H)
 
-#define KC_HR_0_3_2 KC_T
-#define KC_HR_0_3_3 KC_SPC
+#define KC_HR_0_3_2 TD(TD_HR_0_3_2)
+#define KC_HR_0_3_3 TD(TD_HR_0_3_3)
 
 #define KC_HR_1_1_0 TD(TD_X_J)
 #define KC_HR_1_1_1 TD(TD_G_F)

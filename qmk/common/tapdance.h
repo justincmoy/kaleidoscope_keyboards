@@ -9,18 +9,20 @@ enum {
   TD_Y_QUOT,
   TD_K_GRV,
   TD_MINS_SCLN,
+  TD_HR_0_3_2,
+  TD_HR_0_3_3,
 };
 
-qk_tap_dance_action_t tap_dance_actions[] = {
-  [TD_X_J] = ACTION_TAP_DANCE_DOUBLE(KC_X, KC_J),
-  [TD_G_F] = ACTION_TAP_DANCE_DOUBLE(KC_G, KC_F),
-  [TD_L_M] = ACTION_TAP_DANCE_DOUBLE(KC_L, KC_M),
-  [TD_C_P] = ACTION_TAP_DANCE_DOUBLE(KC_C, KC_P),
-  [TD_B_V] = ACTION_TAP_DANCE_DOUBLE(KC_B, KC_V),
-  [TD_U_DOT] = ACTION_TAP_DANCE_DOUBLE(KC_U, KC_DOT),
-  [TD_O_SLSH] = ACTION_TAP_DANCE_DOUBLE(KC_O, KC_SLSH),
-  [TD_Y_QUOT] = ACTION_TAP_DANCE_DOUBLE(KC_Y, KC_QUOT),
-  [TD_K_GRV] = ACTION_TAP_DANCE_DOUBLE(KC_K, KC_GRV),
-  [TD_MINS_SCLN] = ACTION_TAP_DANCE_DOUBLE(KC_MINS, KC_SCLN),
-};
+typedef enum {
+  TD_NONE,
+  TD_SINGLE_TAP,
+  TD_SINGLE_HOLD,
+  TD_DOUBLE_HOLD,
+  TD_DOUBLE_TAP,
+  TD_UNKNOWN,
+} td_state_t;
 
+typedef struct {
+  bool is_press_action;
+  td_state_t state;
+} td_tap_t;
