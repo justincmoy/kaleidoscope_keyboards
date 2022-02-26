@@ -56,19 +56,19 @@
 
 #ifdef ENABLE_LAYOUT_HOME_ROW
 #define TG_HR_0 TG(LAYER_HR_0)
-#define KC_HR_0_1_0 LT(LAYER_HR_4, KC_R)
-#define KC_HR_0_1_1 KC_S
+#define KC_HR_0_1_0 LT(LAYER_HR_1, KC_R)
+#define KC_HR_0_1_1 LT(LAYER_HR_4, KC_S)
 #define KC_HR_0_1_2 LT(LAYER_HR_2, KC_N)
-#define KC_HR_0_1_3 KC_D
+#define KC_HR_0_1_3 LSFT_T(KC_D)
 #define KC_HR_0_1_4 KC_W
 #define KC_HR_0_1_5 KC_COMM
-#define KC_HR_0_1_6 KC_A
+#define KC_HR_0_1_6 LSFT_T(KC_A)
 #define KC_HR_0_1_7 LT(LAYER_HR_2, KC_E)
-#define KC_HR_0_1_8 KC_I
-#define KC_HR_0_1_9 LT(LAYER_HR_4, KC_H)
+#define KC_HR_0_1_8 LT(LAYER_HR_4, KC_I)
+#define KC_HR_0_1_9 LT(LAYER_HR_1, KC_H)
 
-#define KC_HR_0_3_2 LT(LAYER_HR_1, KC_T)
-#define KC_HR_0_3_3 LSFT_T(KC_SPC)
+#define KC_HR_0_3_2 KC_T
+#define KC_HR_0_3_3 KC_SPC
 
 #define KC_HR_1_1_0 TD(TD_X_J)
 #define KC_HR_1_1_1 TD(TD_G_F)
