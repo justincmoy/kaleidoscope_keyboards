@@ -74,15 +74,13 @@
 #define KC_HR_1_1_1 TD(TD_G_F)
 #define KC_HR_1_1_2 TD(TD_L_M)
 #define KC_HR_1_1_3 TD(TD_C_P)
-#define KC_HR_1_1_4 TD(TD_B_V)
-#define KC_HR_1_1_5 TD(TD_MINS_SCLN)
 #define KC_HR_1_1_6 TD(TD_U_DOT)
 #define KC_HR_1_1_7 TD(TD_O_SLSH)
 #define KC_HR_1_1_8 TD(TD_Y_QUOT)
 #define KC_HR_1_1_9 TD(TD_K_GRV)
 
-#define KC_HR_1_3_2 KC_HR_0_3_2
-#define KC_HR_1_3_3 KC_HR_0_3_3
+#define KC_HR_1_3_2 TD(TD_B_V)
+#define KC_HR_1_3_3 TD(TD_MINS_SCLN)
 
 #define KC_HR_2_1_0 OSM(MOD_LGUI)
 #define KC_HR_2_1_1 OSM(MOD_LALT)

@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
     KC_HR_1_1_0, KC_HR_1_1_1, KC_HR_1_1_2, KC_HR_1_1_3, KC_NO      , KC_NO      , KC_HR_1_1_6, KC_HR_1_1_7, KC_HR_1_1_8, KC_HR_1_1_9,
     KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
-                              KC_NO      , KC_NO      , KC_HR_0_3_2, KC_HR_1_3_3, KC_NO      , KC_NO
+                              KC_NO      , KC_NO      , KC_HR_1_3_2, KC_HR_1_3_3, KC_NO      , KC_NO
   ),
 
   [LAYER_HR_2] = LAYOUT_split_3x5_3(

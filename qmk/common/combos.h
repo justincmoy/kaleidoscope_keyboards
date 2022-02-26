@@ -18,8 +18,6 @@ enum combos {
   COMBO_HR_ENTER_RIGHT,
   COMBO_1_4,
   COMBO_1_5,
-  COMBO_2_4,
-  COMBO_2_5,
   COMBO_HR_Q,
   COMBO_HR_Z,
 #endif
@@ -47,8 +45,6 @@ const uint16_t PROGMEM combo_hr_enter_left[] = {KC_HR_0_1_0, KC_HR_0_1_3, COMBO_
 const uint16_t PROGMEM combo_hr_enter_right[] = {KC_HR_0_1_6, KC_HR_0_1_9, COMBO_END};
 const uint16_t PROGMEM combo_1_4[] = {KC_HR_0_1_2, KC_HR_0_1_3, COMBO_END};
 const uint16_t PROGMEM combo_1_5[] = {KC_HR_0_1_6, KC_HR_0_1_7, COMBO_END};
-const uint16_t PROGMEM combo_2_4[] = {KC_HR_1_1_2, KC_HR_1_1_3, COMBO_END};
-const uint16_t PROGMEM combo_2_5[] = {KC_HR_1_1_6, KC_HR_1_1_7, COMBO_END};
 const uint16_t PROGMEM combo_hr_q[] = {KC_HR_1_1_7, KC_HR_1_1_8, COMBO_END};
 const uint16_t PROGMEM combo_hr_z[] = {KC_HR_1_1_1, KC_HR_1_1_2, COMBO_END};
 #endif
@@ -73,8 +69,6 @@ combo_t key_combos[] = {
   [COMBO_HR_ENTER_RIGHT] = COMBO(combo_hr_enter_right, KC_ENT),
   [COMBO_1_4] = COMBO(combo_1_4, KC_HR_0_1_4),
   [COMBO_1_5] = COMBO(combo_1_5, KC_HR_0_1_5),
-  [COMBO_2_4] = COMBO(combo_2_4, KC_HR_1_1_4),
-  [COMBO_2_5] = COMBO(combo_2_5, KC_HR_1_1_5),
   [COMBO_HR_Q] = COMBO(combo_hr_q, KC_Q),
   [COMBO_HR_Z] = COMBO(combo_hr_z, KC_Z),
 #endif
