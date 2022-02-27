@@ -14,7 +14,6 @@ td_state_t cur_dance(qk_tap_dance_state_t *state) {
 }
 
 static td_tap_t hr_0_3_2_tap_state = {
-  .is_press_action = true,
   .state = TD_NONE,
 };
 
@@ -38,8 +37,29 @@ void hr_0_3_2_reset(qk_tap_dance_state_t *state, void *user_data) {
     hr_0_3_2_tap_state.state = TD_NONE;
 }
 
+void tapA_shiftA_tapB_shiftB(qk_tap_dance_state_t *state, td_tapA_shiftA_tapB_shiftB_t *tap_state) {
+  tap_state->state = cur_dance(state);
+  switch (tap_state->state) {
+    case TD_SINGLE_TAP: register_code(tap_state->keys[0]); break;
+    case TD_SINGLE_HOLD: register_code16(S(tap_state->keys[0])); break;
+    case TD_DOUBLE_TAP: register_code(tap_state->keys[1]); break;
+    case TD_DOUBLE_HOLD: register_code16(S(tap_state->keys[1])); break;
+    default: break;
+  }
+}
+
+void reset_tapA_shiftA_tapB_shiftB(td_tapA_shiftA_tapB_shiftB_t *tap_state) {
+  switch (tap_state->state) {
+    case TD_SINGLE_TAP: unregister_code(tap_state->keys[0]); break;
+    case TD_SINGLE_HOLD: unregister_code16(S(tap_state->keys[0])); break;
+    case TD_DOUBLE_TAP: unregister_code(tap_state->keys[1]); break;
+    case TD_DOUBLE_HOLD: unregister_code16(S(tap_state->keys[1])); break;
+    default: break;
+  }
+  tap_state->state = TD_NONE;
+}
+
 static td_tap_t hr_0_3_3_tap_state = {
-  .is_press_action = true,
   .state = TD_NONE,
 };
 
@@ -65,166 +85,82 @@ void hr_0_3_3_reset(qk_tap_dance_state_t *state, void *user_data) {
     hr_0_3_3_tap_state.state = TD_NONE;
 }
 
-static td_tap_t hr_2_1_0_tap_state = {
-  .is_press_action = true,
+static td_tapA_shiftA_tapB_shiftB_t hr_2_1_0_tap_state = {
   .state = TD_NONE,
+  .keys = {KC_1, KC_LBRC},
 };
 
 void hr_2_1_0_finished(qk_tap_dance_state_t *state, void *user_data) {
-    hr_2_1_0_tap_state.state = cur_dance(state);
-    switch (hr_2_1_0_tap_state.state) {
-      case TD_SINGLE_TAP: register_code(KC_1); break;
-      case TD_SINGLE_HOLD: register_code16(S(KC_1)); break;
-      case TD_DOUBLE_TAP: register_code(KC_LBRC); break;
-      case TD_DOUBLE_HOLD: register_code16(S(KC_LBRC)); break;
-      default: break;
-    }
+  tapA_shiftA_tapB_shiftB(state, &hr_2_1_0_tap_state);
 }
 
 void hr_2_1_0_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (hr_2_1_0_tap_state.state) {
-      case TD_SINGLE_TAP: unregister_code(KC_1); break;
-      case TD_SINGLE_HOLD: unregister_code16(S(KC_1)); break;
-      case TD_DOUBLE_TAP: unregister_code(KC_LBRC); break;
-      case TD_DOUBLE_HOLD: unregister_code16(S(KC_LBRC)); break;
-      default: break;
-    }
-    hr_2_1_0_tap_state.state = TD_NONE;
+  reset_tapA_shiftA_tapB_shiftB(&hr_2_1_0_tap_state);
 }
 
-static td_tap_t hr_2_1_2_tap_state = {
-  .is_press_action = true,
+static td_tapA_shiftA_tapB_shiftB_t hr_2_1_2_tap_state = {
   .state = TD_NONE,
+  .keys = {KC_3, KC_BSLS},
 };
 
 void hr_2_1_2_finished(qk_tap_dance_state_t *state, void *user_data) {
-    hr_2_1_2_tap_state.state = cur_dance(state);
-    switch (hr_2_1_2_tap_state.state) {
-      case TD_SINGLE_TAP: register_code(KC_3); break;
-      case TD_SINGLE_HOLD: register_code16(S(KC_3)); break;
-      case TD_DOUBLE_TAP: register_code(KC_BSLS); break;
-      case TD_DOUBLE_HOLD: register_code16(S(KC_BSLS)); break;
-      default: break;
-    }
+  tapA_shiftA_tapB_shiftB(state, &hr_2_1_2_tap_state);
 }
 
 void hr_2_1_2_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (hr_2_1_2_tap_state.state) {
-      case TD_SINGLE_TAP: unregister_code(KC_3); break;
-      case TD_SINGLE_HOLD: unregister_code16(S(KC_3)); break;
-      case TD_DOUBLE_TAP: unregister_code(KC_BSLS); break;
-      case TD_DOUBLE_HOLD: unregister_code16(S(KC_BSLS)); break;
-      default: break;
-    }
-    hr_2_1_2_tap_state.state = TD_NONE;
+  reset_tapA_shiftA_tapB_shiftB(&hr_2_1_2_tap_state);
 }
 
-static td_tap_t hr_2_1_7_tap_state = {
-  .is_press_action = true,
+static td_tapA_shiftA_tapB_shiftB_t hr_2_1_7_tap_state = {
   .state = TD_NONE,
+  .keys = {KC_8, KC_EQL},
 };
 
 void hr_2_1_7_finished(qk_tap_dance_state_t *state, void *user_data) {
-    hr_2_1_7_tap_state.state = cur_dance(state);
-    switch (hr_2_1_7_tap_state.state) {
-      case TD_SINGLE_TAP: register_code(KC_8); break;
-      case TD_SINGLE_HOLD: register_code16(S(KC_8)); break;
-      case TD_DOUBLE_TAP: register_code(KC_EQL); break;
-      case TD_DOUBLE_HOLD: register_code16(S(KC_EQL)); break;
-      default: break;
-    }
+  tapA_shiftA_tapB_shiftB(state, &hr_2_1_7_tap_state);
 }
 
 void hr_2_1_7_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (hr_2_1_7_tap_state.state) {
-      case TD_SINGLE_TAP: unregister_code(KC_8); break;
-      case TD_SINGLE_HOLD: unregister_code16(S(KC_8)); break;
-      case TD_DOUBLE_TAP: unregister_code(KC_EQL); break;
-      case TD_DOUBLE_HOLD: unregister_code16(S(KC_EQL)); break;
-      default: break;
-    }
-    hr_2_1_7_tap_state.state = TD_NONE;
+  reset_tapA_shiftA_tapB_shiftB(&hr_2_1_7_tap_state);
 }
 
-static td_tap_t hr_2_1_3_tap_state = {
-  .is_press_action = true,
+static td_tapA_shiftA_tapB_shiftB_t hr_2_1_3_tap_state = {
   .state = TD_NONE,
+  .keys = {KC_4, KC_5},
 };
 
 void hr_2_1_3_finished(qk_tap_dance_state_t *state, void *user_data) {
-    hr_2_1_3_tap_state.state = cur_dance(state);
-    switch (hr_2_1_3_tap_state.state) {
-      case TD_SINGLE_TAP: register_code(KC_4); break;
-      case TD_SINGLE_HOLD: register_code16(S(KC_4)); break;
-      case TD_DOUBLE_TAP: register_code(KC_5); break;
-      case TD_DOUBLE_HOLD: register_code16(S(KC_5)); break;
-      default: break;
-    }
+  tapA_shiftA_tapB_shiftB(state, &hr_2_1_3_tap_state);
 }
 
 void hr_2_1_3_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (hr_2_1_3_tap_state.state) {
-      case TD_SINGLE_TAP: unregister_code(KC_4); break;
-      case TD_SINGLE_HOLD: unregister_code16(S(KC_4)); break;
-      case TD_DOUBLE_TAP: unregister_code(KC_5); break;
-      case TD_DOUBLE_HOLD: unregister_code16(S(KC_5)); break;
-      default: break;
-    }
-    hr_2_1_3_tap_state.state = TD_NONE;
+  reset_tapA_shiftA_tapB_shiftB(&hr_2_1_3_tap_state);
 }
 
-static td_tap_t hr_2_1_6_tap_state = {
-  .is_press_action = true,
+static td_tapA_shiftA_tapB_shiftB_t hr_2_1_6_tap_state = {
   .state = TD_NONE,
+  .keys = {KC_7, KC_6},
 };
 
 void hr_2_1_6_finished(qk_tap_dance_state_t *state, void *user_data) {
-    hr_2_1_6_tap_state.state = cur_dance(state);
-    switch (hr_2_1_6_tap_state.state) {
-      case TD_SINGLE_TAP: register_code(KC_7); break;
-      case TD_SINGLE_HOLD: register_code16(S(KC_7)); break;
-      case TD_DOUBLE_TAP: register_code(KC_6); break;
-      case TD_DOUBLE_HOLD: register_code16(S(KC_6)); break;
-      default: break;
-    }
+  tapA_shiftA_tapB_shiftB(state, &hr_2_1_6_tap_state);
 }
 
 void hr_2_1_6_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (hr_2_1_6_tap_state.state) {
-      case TD_SINGLE_TAP: unregister_code(KC_7); break;
-      case TD_SINGLE_HOLD: unregister_code16(S(KC_7)); break;
-      case TD_DOUBLE_TAP: unregister_code(KC_6); break;
-      case TD_DOUBLE_HOLD: unregister_code16(S(KC_6)); break;
-      default: break;
-    }
-    hr_2_1_6_tap_state.state = TD_NONE;
+  reset_tapA_shiftA_tapB_shiftB(&hr_2_1_6_tap_state);
 }
 
-static td_tap_t hr_2_1_9_tap_state = {
-  .is_press_action = true,
+static td_tapA_shiftA_tapB_shiftB_t hr_2_1_9_tap_state = {
   .state = TD_NONE,
+  .keys = {KC_0, KC_RBRC},
 };
 
 void hr_2_1_9_finished(qk_tap_dance_state_t *state, void *user_data) {
-    hr_2_1_9_tap_state.state = cur_dance(state);
-    switch (hr_2_1_9_tap_state.state) {
-      case TD_SINGLE_TAP: register_code(KC_0); break;
-      case TD_SINGLE_HOLD: register_code16(S(KC_0)); break;
-      case TD_DOUBLE_TAP: register_code(KC_RBRC); break;
-      case TD_DOUBLE_HOLD: register_code16(S(KC_RBRC)); break;
-      default: break;
-    }
+  tapA_shiftA_tapB_shiftB(state, &hr_2_1_9_tap_state);
 }
 
 void hr_2_1_9_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (hr_2_1_9_tap_state.state) {
-      case TD_SINGLE_TAP: unregister_code(KC_0); break;
-      case TD_SINGLE_HOLD: unregister_code16(S(KC_0)); break;
-      case TD_DOUBLE_TAP: unregister_code(KC_RBRC); break;
-      case TD_DOUBLE_HOLD: unregister_code16(S(KC_RBRC)); break;
-      default: break;
-    }
-    hr_2_1_9_tap_state.state = TD_NONE;
+  reset_tapA_shiftA_tapB_shiftB(&hr_2_1_9_tap_state);
 }
 
 qk_tap_dance_action_t tap_dance_actions[] = {

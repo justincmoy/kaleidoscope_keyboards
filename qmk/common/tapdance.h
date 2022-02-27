@@ -29,6 +29,10 @@ typedef enum {
 } td_state_t;
 
 typedef struct {
-  bool is_press_action;
   td_state_t state;
 } td_tap_t;
+
+typedef struct {
+  td_state_t state;
+  uint16_t keys[2];
+} td_tapA_shiftA_tapB_shiftB_t;
