@@ -11,6 +11,12 @@ enum {
   TD_MINS_SCLN,
   TD_HR_0_3_2,
   TD_HR_0_3_3,
+  TD_HR_2_1_0,
+  TD_HR_2_1_2,
+  TD_HR_2_1_3,
+  TD_HR_2_1_6,
+  TD_HR_2_1_7,
+  TD_HR_2_1_9,
 };
 
 typedef enum {
