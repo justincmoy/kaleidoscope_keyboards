@@ -1,7 +1,12 @@
 #pragma once
 
 #define KC_THUMB_0 KC_ESC
+
+#ifdef ENABLE_LAYOUT_HOME_ROW
+#define KC_THUMB_1 LT(LAYER_HR_4, KC_TAB)
+#else
 #define KC_THUMB_1 LT(LAYER_MOUS, KC_TAB)
+#endif
 
 #ifdef ENABLE_LAYOUT_HOME_ROW
 #define KC_THUMB_2 LT(LAYER_HR_2, KC_T)
