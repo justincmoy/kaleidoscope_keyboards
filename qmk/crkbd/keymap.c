@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_HR_4] = LAYOUT_split_3x5_3(
     KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
     KC_HR_4_1_0, KC_HR_4_1_1, KC_HR_4_1_2, KC_HR_4_1_3, KC_NO      , KC_NO      , KC_HR_4_1_6, KC_HR_4_1_7, KC_HR_4_1_8, KC_HR_4_1_9,
-    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
+    TG_HR_0    , KC_NO      , KC_NO      , KC_MOUS_2_3, KC_MOUS_2_4, KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
                               KC_NO      , KC_NO      , KC_HR_4_3_2, KC_HR_4_3_3, KC_NO      , KC_NO
   ),
 #else
