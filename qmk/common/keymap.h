@@ -2,9 +2,25 @@
 
 #define KC_THUMB_0 KC_ESC
 #define KC_THUMB_1 LT(LAYER_MOUS, KC_TAB)
+
+#ifdef ENABLE_LAYOUT_HOME_ROW
+#define KC_THUMB_2 LT(LAYER_HR_2, KC_T)
+#else
 #define KC_THUMB_2 LT(LAYER_NUMB, KC_T)
-#define KC_THUMB_3 LSFT_T(KC_SPC)
+#endif
+
+#ifdef ENABLE_LAYOUT_HOME_ROW
+#define KC_THUMB_3 LT(LAYER_HR_3, KC_SPC)
+#else
+#define KC_THUMB_3 KC_SPC
+#endif
+
+#ifdef ENABLE_LAYOUT_HOME_ROW
+#define KC_THUMB_4 KC_BSPC
+#else
 #define KC_THUMB_4 LT(LAYER_NAVI, KC_BSPC)
+#endif
+
 #define KC_THUMB_5 KC_DEL
 
 #ifdef ENABLE_LAYOUT_OPTION1
@@ -201,7 +217,7 @@
 #define KC_GAME_3_1 LT(LAYER_MOUS, KC_NO)
 #define KC_GAME_3_2 KC_SPC
 #define KC_GAME_3_3 LSFT_T(KC_ENT)
-#define KC_GAME_3_4 LT(LAYER_NAVI, KC_BSPC)
+#define KC_GAME_3_4 KC_BSPC
 #define KC_GAME_3_5 KC_DEL
 
 #define KC_NUMB_0_0 KC_NO
