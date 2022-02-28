@@ -119,18 +119,6 @@
 
 #define KC_HR_4_3_2 TG(LAYER_HR_4)
 #define KC_HR_4_3_3 KC_BTN1
-
-#define KC_HR_5_1_0 KC_LBRC
-#define KC_HR_5_1_1 KC_BSLS
-#define KC_HR_5_1_2 KC_EQL
-#define KC_HR_5_1_3 KC_RBRC
-#define KC_HR_5_1_6 KC_7
-#define KC_HR_5_1_7 KC_8
-#define KC_HR_5_1_8 KC_9
-#define KC_HR_5_1_9 KC_0
-
-#define KC_HR_5_3_2 KC_HR_2_3_2
-#define KC_HR_5_3_3 KC_6
 #endif
 
 #ifdef ENABLE_LAYOUT_OPTION1
