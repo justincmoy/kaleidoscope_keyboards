@@ -111,7 +111,7 @@
 #define KC_HR_4_1_0 KC_HOME
 #define KC_HR_4_1_1 KC_PGUP
 #define KC_HR_4_1_2 KC_PGDN
-#define KC_HR_4_1_3 KC_END
+#define KC_HR_4_1_3 KC_BTN2
 #define KC_HR_4_1_6 KC_MS_L
 #define KC_HR_4_1_7 KC_MS_D
 #define KC_HR_4_1_8 KC_MS_U
