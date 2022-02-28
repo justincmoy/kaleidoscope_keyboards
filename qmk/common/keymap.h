@@ -219,7 +219,13 @@
 #define KC_GAME_2_9 KC_Z
 
 #define KC_GAME_3_0 KC_ESC
+
+#ifdef ENABLE_LAYOUT_HOME_ROW
+#define KC_GAME_3_1 LT(LAYER_HR_4, KC_NO)
+#else
 #define KC_GAME_3_1 LT(LAYER_MOUS, KC_NO)
+#endif
+
 #define KC_GAME_3_2 KC_SPC
 #define KC_GAME_3_3 LSFT_T(KC_ENT)
 #define KC_GAME_3_4 KC_BSPC

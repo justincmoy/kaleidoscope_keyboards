@@ -17,9 +17,8 @@ enum layer_names {
 #else
   LAYER_NUMB,
   LAYER_NAVI,
-#endif
-
   LAYER_MOUS,
+#endif
 };
 
 #include QMK_KEYBOARD_H
@@ -100,7 +99,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NAVI_2_0, KC_NAVI_2_1, KC_NAVI_2_2, KC_NAVI_2_3, KC_NAVI_2_4, KC_NAVI_2_5, KC_NAVI_2_6, KC_NAVI_2_7, KC_NAVI_2_8, KC_NAVI_2_9,
                               KC_NAVI_3_0, KC_NAVI_3_1, KC_NAVI_3_2, KC_NAVI_3_3, KC_NAVI_3_4, KC_NAVI_3_5
   ),
-#endif
 
   [LAYER_MOUS] = LAYOUT_split_3x5_3(
     KC_MOUS_0_0, KC_MOUS_0_1, KC_MOUS_0_2, KC_MOUS_0_3, KC_MOUS_0_4, KC_MOUS_0_5, KC_MOUS_0_6, KC_MOUS_0_7, KC_MOUS_0_8, KC_MOUS_0_9,
@@ -108,4 +106,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TG_HR_0    , KC_MOUS_2_1, KC_MOUS_2_2, KC_MOUS_2_3, KC_MOUS_2_4, KC_MOUS_2_5, KC_MOUS_2_6, KC_MOUS_2_7, KC_MOUS_2_8, KC_MOUS_2_9,
                               KC_MOUS_3_0, KC_MOUS_3_1, KC_MOUS_3_2, KC_MOUS_3_3, KC_MOUS_3_4, KC_MOUS_3_5
   ),
+#endif
 };
