@@ -67,7 +67,7 @@ void hr_0_3_3_finished(qk_tap_dance_state_t *state, void *user_data) {
     hr_0_3_3_tap_state.state = cur_dance(state);
     switch (hr_0_3_3_tap_state.state) {
       case TD_SINGLE_TAP: register_code(KC_SPC); break;
-      case TD_SINGLE_HOLD: layer_on(LAYER_HR_3); break;
+      case TD_SINGLE_HOLD: layer_on(LAYER_HR_1); break;
       case TD_DOUBLE_TAP: register_code(KC_COMM); break;
       case TD_DOUBLE_HOLD: register_code16(S(KC_COMM)); break;
       default: break;
@@ -77,7 +77,7 @@ void hr_0_3_3_finished(qk_tap_dance_state_t *state, void *user_data) {
 void hr_0_3_3_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (hr_0_3_3_tap_state.state) {
       case TD_SINGLE_TAP: unregister_code(KC_SPC); break;
-      case TD_SINGLE_HOLD: layer_off(LAYER_HR_3); break;
+      case TD_SINGLE_HOLD: layer_off(LAYER_HR_1); break;
       case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
       case TD_DOUBLE_HOLD: unregister_code16(S(KC_COMM)); break;
       default: break;

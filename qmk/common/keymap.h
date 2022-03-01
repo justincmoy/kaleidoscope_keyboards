@@ -81,7 +81,7 @@
 #define TG_HR_0 TG(LAYER_HR_0)
 #define KC_HR_0_1_0 LT(LAYER_HR_1, KC_R)
 #define KC_HR_0_1_1 KC_S
-#define KC_HR_0_1_2 KC_N
+#define KC_HR_0_1_2 LT(LAYER_HR_3, KC_N)
 #define KC_HR_0_1_3 LSFT_T(KC_D)
 #define KC_HR_0_1_4 KC_W
 #define KC_HR_0_1_5 KC_COMM
@@ -119,7 +119,7 @@
 
 #define KC_HR_3_1_0 OSM(MOD_LGUI)
 #define KC_HR_3_1_1 OSM(MOD_LALT)
-#define KC_HR_3_1_2 OSM(MOD_LCTL)
+#define KC_HR_3_1_2 KC_USED
 #define KC_HR_3_1_3 OSM(MOD_LSFT)
 #define KC_HR_3_1_6 KC_LEFT
 #define KC_HR_3_1_7 KC_DOWN
@@ -127,7 +127,7 @@
 #define KC_HR_3_1_9 KC_RIGHT
 
 #define KC_HR_3_3_2 KC_NO
-#define KC_HR_3_3_3 KC_USED
+#define KC_HR_3_3_3 OSM(MOD_LCTL)
 
 #define KC_HR_4_1_0 KC_HOME
 #define KC_HR_4_1_1 KC_PGUP
