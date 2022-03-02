@@ -13,11 +13,11 @@ enum layer_names {
   LAYER_HR_1,
   LAYER_HR_2,
   LAYER_HR_3,
-  LAYER_HR_4,
+  LAYER_HR_4
 #else
   LAYER_NUMB,
   LAYER_NAVI,
-  LAYER_MOUS,
+  LAYER_MOUS
 #endif
 };
 
@@ -25,6 +25,7 @@ enum layer_names {
 #include "common/tapdance.c"
 #include "common/keymap.h"
 #include "common/combos.h"
+#include "keymap.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_OPT0] = LAYOUT_split_3x5_3(
@@ -58,25 +59,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               KC_NO      , KC_NO      , KC_HR_0_3_2, KC_HR_0_3_3, KC_NO      , KC_NO
   ),
 
-  [LAYER_HR_1] = LAYOUT_split_3x5_3(
-    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
-    KC_HR_1_1_0, KC_HR_1_1_1, KC_HR_1_1_2, KC_HR_1_1_3, KC_NO      , KC_NO      , KC_HR_1_1_6, KC_HR_1_1_7, KC_HR_1_1_8, KC_HR_1_1_9,
-    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
-                              KC_NO      , KC_NO      , KC_HR_1_3_2, KC_HR_1_3_3, KC_NO      , KC_NO
+  [LAYER_HR_1] = LAYOUT_HOME_ROW(
+    KC_HR_1_1_0, KC_HR_1_1_1, KC_HR_1_1_2, KC_HR_1_1_3, KC_HR_1_3_2, KC_HR_1_3_3, KC_HR_1_1_6, KC_HR_1_1_7, KC_HR_1_1_8, KC_HR_1_1_9
   ),
 
-  [LAYER_HR_2] = LAYOUT_split_3x5_3(
-    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
-    KC_HR_2_1_0, KC_HR_2_1_1, KC_HR_2_1_2, KC_HR_2_1_3, KC_NO      , KC_NO      , KC_HR_2_1_6, KC_HR_2_1_7, KC_HR_2_1_8, KC_HR_2_1_9,
-    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
-                              KC_NO      , KC_NO      , KC_HR_2_3_2, KC_HR_2_3_3, KC_NO      , KC_NO
+  [LAYER_HR_2] = LAYOUT_HOME_ROW(
+    KC_HR_2_1_0, KC_HR_2_1_1, KC_HR_2_1_2, KC_HR_2_1_3, KC_HR_2_3_2, KC_HR_2_3_3, KC_HR_2_1_6, KC_HR_2_1_7, KC_HR_2_1_8, KC_HR_2_1_9
   ),
 
-  [LAYER_HR_3] = LAYOUT_split_3x5_3(
-    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
-    KC_HR_3_1_0, KC_HR_3_1_1, KC_HR_3_1_2, KC_HR_3_1_3, KC_NO      , KC_NO      , KC_HR_3_1_6, KC_HR_3_1_7, KC_HR_3_1_8, KC_HR_3_1_9,
-    KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
-                              KC_NO      , KC_NO      , KC_HR_3_3_2, KC_HR_3_3_3, KC_NO      , KC_NO
+  [LAYER_HR_3] = LAYOUT_HOME_ROW(
+    KC_HR_3_1_0, KC_HR_3_1_1, KC_HR_3_1_2, KC_HR_3_1_3, KC_HR_3_3_2, KC_HR_3_3_3, KC_HR_3_1_6, KC_HR_3_1_7, KC_HR_3_1_8, KC_HR_3_1_9
   ),
 
   [LAYER_HR_4] = LAYOUT_split_3x5_3(
@@ -84,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_HR_4_1_0, KC_HR_4_1_1, KC_HR_4_1_2, KC_HR_4_1_3, KC_NO      , KC_NO      , KC_HR_4_1_6, KC_HR_4_1_7, KC_HR_4_1_8, KC_HR_4_1_9,
     TG_HR_0    , KC_NO      , KC_NO      , KC_MOUS_2_3, KC_MOUS_2_4, KC_NO      , KC_NO      , KC_NO      , KC_NO      , KC_NO      ,
                               KC_NO      , KC_NO      , KC_HR_4_3_2, KC_HR_4_3_3, KC_NO      , KC_NO
-  ),
+  )
 #else
   [LAYER_NUMB] = LAYOUT_split_3x5_3(
     KC_NUMB_0_0, KC_NUMB_0_1, KC_NUMB_0_2, KC_NUMB_0_3, KC_NUMB_0_4, KC_NUMB_0_5, KC_NUMB_0_6, KC_NUMB_0_7, KC_NUMB_0_8, KC_NUMB_0_9,
@@ -105,6 +97,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_MOUS_1_0, KC_MOUS_1_1, KC_MOUS_1_2, KC_MOUS_1_3, KC_MOUS_1_4, KC_MOUS_1_5, KC_MOUS_1_6, KC_MOUS_1_7, KC_MOUS_1_8, KC_MOUS_1_9,
     TG_HR_0    , KC_MOUS_2_1, KC_MOUS_2_2, KC_MOUS_2_3, KC_MOUS_2_4, KC_MOUS_2_5, KC_MOUS_2_6, KC_MOUS_2_7, KC_MOUS_2_8, KC_MOUS_2_9,
                               KC_MOUS_3_0, KC_MOUS_3_1, KC_MOUS_3_2, KC_MOUS_3_3, KC_MOUS_3_4, KC_MOUS_3_5
-  ),
+  )
 #endif
 };
