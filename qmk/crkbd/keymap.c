@@ -1,4 +1,5 @@
 #define ENABLE_LAYOUT_HOME_ROW
+#define ENABLE_LAYOUT_OPTION1
 
 enum layer_names {
   LAYER_OPT0,
