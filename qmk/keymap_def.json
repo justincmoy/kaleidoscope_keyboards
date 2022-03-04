@@ -1,0 +1,84 @@
+{
+  "keys": [
+    "kLP", "kLR", "kLM", "kLI", "kLT", "kRT", "kRI", "kRM", "kRR", "kRP"
+  ],
+  "parameters": {
+    "layout_function_name": "LAYOUT_HOME_ROW",
+    "chord_timeout": 100,
+    "dance_timeout": 200,
+    "leader_timeout": 750,
+    "tap_timeout": 50,
+    "command_max_length": 5,
+    "leader_max_length": 5,
+    "dynamic_macro_max_length": 20,
+    "string_max_length": 16,
+    "long_press_multiplier": 2,
+    "default_pseudolayer": "ASETNIOP"
+  },
+  "layers": [
+    {
+      "type": "auto"
+    }
+  ],
+  "chord_sets": [
+    {
+      "name": "asetniop",
+      "chords": [
+        ["kLP"], ["kLR"], ["kLM"], ["kLI"], ["kRI"], ["kRM"], ["kRR"], ["kRP"],
+        ["kLP", "kLR", "kLM", "kLI"], ["kRI", "kRM", "kRR", "kRP"],
+        ["kLP", "kLI", "kRI", "kRP"],
+        ["kLR", "kLM", "kRM", "kRR"],
+        ["kLP", "kLR"], ["kLR", "kLM"], ["kLM", "kLI"], ["kLI", "kRI"], ["kRI", "kRM"], ["kRM", "kRR"], ["kRR", "kRP"],
+        ["kLP", "kLM"], ["kLR", "kLI"], ["kLM", "kRI"], ["kLI", "kRM"], ["kRI", "kRR"], ["kRM", "kRP"],
+        ["kLP", "kLI"], ["kLR", "kRI"], ["kLM", "kRM"], ["kLI", "kRR"], ["kRI", "kRP"],
+        ["kLP", "kRI"], ["kLR", "kRM"], ["kLM", "kRR"], ["kLI", "kRP"],
+        ["kLP", "kRM"], ["kLR", "kRR"], ["kLM", "kRP"],
+        ["kLP", "kRR"], ["kLR", "kRP"],
+        ["kLP", "kRP"],
+        ["kLT"],
+        ["kLT", "kLT"],
+        ["kLI", "kRI", "kRM"], ["kLI", "kRM", "kRR"], ["kLI", "kRI", "kRR"], ["kLI", "kRI", "kRM", "kRP"],
+        ["kLM", "kRI", "kRM"], ["kLM", "kRM", "kRR"], ["kLM", "kRI", "kRR"], ["kLM", "kRI", "kRM", "kRP"],
+        ["kLP", "kLR", "kLM"], ["kLR", "kLM", "kLI"], ["kRI", "kRM", "kRR"], ["kRM", "kRR", "kRP"],
+        ["kRM", "kLM", "kLI"],
+        ["kLM", "kLI", "kRI", "kRM"], ["kLP", "kLR", "kRR", "kRP"],
+        ["kLP", "kLR", "kLM", "kLI", "kRI", "kRM", "kRR", "kRP"]
+      ]
+    }
+  ],
+  "pseudolayers": [
+    {
+      "name": "ASETNIOP",
+      "chords": [
+        {
+          "type": "chord_set",
+          "set": "asetniop",
+          "keycodes": [
+            "AS(A)", "AS(S)", "AS(E)", "AS(T)", "AS(N)", "AS(I)", "AS(O)", "AS(P)",
+            "TAB", "ENTER",
+            "CLEAR",
+            "CAPS",
+            "AS(W)", "AS(D)", "AS(R)", "AS(B)", "AS(H)", "AS(L)", "AS(;)",
+            "AS(X)", "AS(C)", "AS(Y)", "AS(V)", "AS(U)",  "LGUI",
+            "AS(F)", "AS(J)", "AS(,)", "AS(G)", "AS(M)",
+            "AS(Q)", "AS(K)", "AS(-)", "BSPC",
+            "AS(Z)", "AS(.)", "AS(')",
+            "AS([)", "AS(])",
+            "AS(/)",
+            "AS(SPACE)",
+            "AS(ENTER)",
+            "O(KC_LSFT)", "O(KC_LCTL)", "O(KC_LALT)", "O(KC_LGUI)",
+            "O(KC_RSFT)", "O(KC_RCTL)", "O(KC_RALT)", "O(KC_RGUI)",
+            "AS(GRV)", "AS(BSLS)", "AS(=)", "ESC",
+            "INS",
+            "LEAD", "LOCK",
+            "RESET"
+          ]
+        }
+      ]
+    }
+  ],
+  "leader_sequences": [],
+  "extra_dependencies": ["keymap.h"],
+  "extra_code": []
+}
