@@ -7,10 +7,10 @@
   ],
   "parameters": {
     "layout_function_name": "LAYOUT_HOME_ROW_FULL",
-    "chord_timeout": 100,
+    "chord_timeout": 60,
     "dance_timeout": 200,
     "leader_timeout": 750,
-    "tap_timeout": 50,
+    "tap_timeout": 30,
     "command_max_length": 5,
     "leader_max_length": 5,
     "dynamic_macro_max_length": 20,
@@ -52,7 +52,9 @@
         ["kL0"], ["kR0"],
 
         ["kT0"], ["kT1"], ["kT2"], ["kT3"],
-        ["kT1", "k24"]
+        ["kT1", "k24"],
+
+        ["kRT", "kLP"], ["kRT", "kLR"], ["kRT", "kLM"], ["kRT", "kLI"]
       ]
     },
     {
@@ -120,7 +122,9 @@
             "AS(W)", "AS(,)",
 
             "ESC", "TAB", "BSPC", "DEL",
-            "DF(game)"
+            "DF(game)",
+
+            "O(KC_LGUI)", "O(KC_LALT)", "O(KC_LCTL)", "O(KC_LSFT)"
           ]
         }
       ]
@@ -158,7 +162,7 @@
           "type": "chord_set",
           "set": "asetniop_nav",
           "keycodes": [
-            "O(KC_LGUI)", "O(KC_LALT)", "O(KC_LCTL)", "O(KC_LSFT)", "LEFT", "DOWN", "UP", "RIGHT"
+            "HOME", "PGUP", "PGDN", "END", "LEFT", "DOWN", "UP", "RIGHT"
           ]
         }
       ]
