@@ -109,7 +109,7 @@
             "AS([)", "AS(])",
             "AS(/)",
             "AS(T)", "KL(SPACE, asetniop_nav)",
-            "KL(ENTER, asetniop_123)",
+            "KL(BSPC, asetniop_123)",
             "AS(GRV)", "AS(BSLS)", "AS(=)", "ESC",
             "INS",
             "LEAD", "LOCK",
