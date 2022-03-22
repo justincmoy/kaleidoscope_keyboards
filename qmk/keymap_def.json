@@ -7,15 +7,15 @@
   ],
   "parameters": {
     "layout_function_name": "LAYOUT_HOME_ROW_FULL",
-    "chord_timeout": 60,
+    "chord_timeout": 40,
     "dance_timeout": 200,
     "leader_timeout": 750,
-    "tap_timeout": 30,
+    "tap_timeout": 15,
     "command_max_length": 5,
     "leader_max_length": 5,
     "dynamic_macro_max_length": 20,
     "string_max_length": 16,
-    "long_press_multiplier": 2,
+    "long_press_multiplier": 3,
     "default_pseudolayer": "ASETNIOP"
   },
   "layers": [
@@ -97,7 +97,7 @@
           "type": "chord_set",
           "set": "asetniop",
           "keycodes": [
-            "AS(R)", "AS(S)", "AS(N)", "AS(D)", "AS(A)", "AS(E)", "AS(I)", "AS(H)",
+            "KM(R, LGUI)", "KM(S, LALT)", "KM(N, LCTL)", "D", "A", "KM(E, RCTL)", "KM(I, RALT)", "KM(H, RGUI)",
             "TAB", "ENTER",
             "CLEAR",
             "CAPS",
@@ -108,7 +108,7 @@
             "AS(Z)", "AS(.)", "AS(')",
             "AS([)", "AS(])",
             "AS(/)",
-            "AS(T)", "KL(SPACE, asetniop_nav)",
+            "KL(T, asetniop_nav)", "KM(SPACE, LSFT)",
             "KL(BSPC, asetniop_123)",
             "AS(GRV)", "AS(BSLS)", "AS(=)", "ESC",
             "INS",
