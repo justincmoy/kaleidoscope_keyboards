@@ -97,7 +97,7 @@
           "type": "chord_set",
           "set": "asetniop",
           "keycodes": [
-            "KM(R, LGUI)", "KM(S, LALT)", "KM(N, LCTL)", "D", "A", "KM(E, RCTL)", "KM(I, RALT)", "KM(H, RGUI)",
+            "R", "S", "N", "D", "A", "E", "I", "H",
             "TAB", "ENTER",
             "CLEAR",
             "CAPS",
