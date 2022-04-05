@@ -61,7 +61,9 @@
       "name": "asetniop_123",
       "chords": [
        ["kLP"], ["kLR"], ["kLM"], ["kLI"], ["kRI"], ["kRM"], ["kRR"], ["kRP"],
-       ["kLM", "kLI"], ["kRI", "kRM"]
+       ["kLM", "kLI"], ["kRI", "kRM"],
+       ["kLP", "kLI", "kRI", "kRP"],
+       ["kRT"]
       ]
     },
     {
@@ -99,7 +101,7 @@
           "keycodes": [
             "R", "S", "N", "D", "A", "E", "I", "H",
             "TAB", "ENTER",
-            "CLEAR",
+            "DF(asetniop_123)",
             "CAPS",
             "AS(W)", "AS(L)", "AS(P)", "AS(B)", "DF(asetniop_mouse)", "AS(O)", "AS(;)",
             "AS(X)", "AS(C)", "AS(J)", "AS(V)", "AS(U)",  "LGUI",
@@ -109,7 +111,7 @@
             "AS([)", "AS(])",
             "AS(/)",
             "KL(T, asetniop_nav)", "KM(SPACE, LSFT)",
-            "KL(BSPC, asetniop_123)",
+            "BSPC",
             "AS(GRV)", "AS(BSLS)", "AS(=)", "ESC",
             "INS",
             "LEAD", "LOCK",
@@ -137,7 +139,9 @@
           "set": "asetniop_123",
           "keycodes": [
             "AS(1)", "AS(2)", "AS(3)", "AS(4)", "AS(7)", "AS(8)", "AS(9)", "AS(0)",
-            "AS(5)", "AS(6)"
+            "AS(5)", "AS(6)",
+            "DF(ASETNIOP)",
+            "LSFT"
           ]
         }
       ]
