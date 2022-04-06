@@ -62,8 +62,8 @@
       "chords": [
        ["kLP"], ["kLR"], ["kLM"], ["kLI"], ["kRI"], ["kRM"], ["kRR"], ["kRP"],
        ["kLM", "kLI"], ["kRI", "kRM"],
-       ["kLP", "kLI", "kRI", "kRP"],
-       ["kRT"]
+       ["kLT"], ["kRT"],
+       ["kLT", "kRT"]
       ]
     },
     {
@@ -140,8 +140,8 @@
           "keycodes": [
             "AS(1)", "AS(2)", "AS(3)", "AS(4)", "AS(7)", "AS(8)", "AS(9)", "AS(0)",
             "AS(5)", "AS(6)",
-            "DF(ASETNIOP)",
-            "LSFT"
+            "DF(ASETNIOP)", "LSFT",
+            "BSPC"
           ]
         }
       ]
