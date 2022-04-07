@@ -9,10 +9,10 @@
     "layout_function_name": "LAYOUT_HOME_ROW_FULL",
     "chord_timeout": 40,
     "dance_timeout": 200,
-    "leader_timeout": 750,
+    "leader_timeout": 500,
     "tap_timeout": 15,
     "command_max_length": 5,
-    "leader_max_length": 5,
+    "leader_max_length": 1,
     "dynamic_macro_max_length": 20,
     "string_max_length": 16,
     "long_press_multiplier": 3,
@@ -41,7 +41,6 @@
         ["kLT"], ["kRT"],
         ["kLT", "kRT"],
         ["kLP", "kLR", "kLM"], ["kLR", "kLM", "kLI"], ["kRI", "kRM", "kRR"], ["kRM", "kRR", "kRP"],
-        ["kRM", "kLM", "kLI"],
         ["kLM", "kLI", "kRI", "kRM"], ["kLP", "kLR", "kRR", "kRP"],
         ["kLP", "kLR", "kLM", "kLI", "kRI", "kRM", "kRR", "kRP"],
 
@@ -113,7 +112,6 @@
             "KL(T, asetniop_nav)", "KM(SPACE, LSFT)",
             "BSPC",
             "GRV", "BSLS", "=", "ESC",
-            "INS",
             "LEAD", "LOCK",
             "RESET",
 
@@ -188,7 +186,13 @@
       ]
     }
   ],
-  "leader_sequences": [],
+  "leader_sequences": [
+    {
+      "name": "ls_vim_cwd",
+      "function": "void ls_vim_cwd(void) { SEND_STRING(\"%:p:h\"); }",
+      "sequence": ["KC_SCLN"]
+    }
+  ],
   "extra_dependencies": ["keymap.h"],
   "extra_code": []
 }
