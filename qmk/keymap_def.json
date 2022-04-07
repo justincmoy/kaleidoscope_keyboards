@@ -53,7 +53,10 @@
         ["kT0"], ["kT1"], ["kT2"], ["kT3"],
         ["kT1", "k24"],
 
-        ["kRT", "kLP"], ["kRT", "kLR"], ["kRT", "kLM"], ["kRT", "kLI"]
+        ["kRT", "kLP"], ["kRT", "kLR"], ["kRT", "kLM"], ["kRT", "kLI"],
+
+        ["kLT", "kLP"], ["kLT", "kLR"], ["kLT", "kLM"], ["kLT", "kLI"],
+        ["kLT", "kRI"], ["kLT", "kRM"], ["kLT", "kRR"], ["kLT", "kRP"]
       ]
     },
     {
@@ -70,12 +73,6 @@
       "chords": [
        ["kLP"], ["kLR"], ["kLM"], ["kLI"], ["kRI"], ["kRM"], ["kRR"], ["kRP"],
        ["kLT"], ["kRT"]
-      ]
-    },
-    {
-      "name": "asetniop_nav",
-      "chords": [
-       ["kLP"], ["kLR"], ["kLM"], ["kLI"], ["kRI"], ["kRM"], ["kRR"], ["kRP"]
       ]
     },
     {
@@ -109,7 +106,7 @@
             "Z", ".", "'",
             "[", "]",
             "/",
-            "KL(T, asetniop_nav)", "KM(SPACE, LSFT)",
+            "T", "KM(SPACE, LSFT)",
             "BSPC",
             "GRV", "BSLS", "=", "ESC",
             "LEAD", "LOCK",
@@ -124,7 +121,10 @@
             "ESC", "TAB", "BSPC", "DEL",
             "DF(game)",
 
-            "O(KC_LGUI)", "O(KC_LALT)", "O(KC_LCTL)", "O(KC_LSFT)"
+            "O(KC_LGUI)", "O(KC_LALT)", "O(KC_LCTL)", "O(KC_LSFT)",
+
+            "HOME", "PGUP", "PGDN", "END",
+            "LEFT", "DOWN", "UP", "RIGHT"
           ]
         }
       ]
@@ -153,18 +153,6 @@
           "keycodes": [
             "HOME", "PGUP", "PGDN", "BTN2", "MS_L", "MS_D", "MS_U", "MS_R",
             "DF(ASETNIOP)", "BTN1"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "asetniop_nav",
-      "chords": [
-        {
-          "type": "chord_set",
-          "set": "asetniop_nav",
-          "keycodes": [
-            "HOME", "PGUP", "PGDN", "END", "LEFT", "DOWN", "UP", "RIGHT"
           ]
         }
       ]
