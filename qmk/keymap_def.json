@@ -167,7 +167,7 @@
             "TAB", "Q", "W", "E", "R",
             "LSFT", "A", "S", "D", "F",
             "LCTL", "Z", "X", "C", "V",
-            "ESC", "TAB", "SPACE",
+            "ESC", "MO(asetniop_123)", "SPACE",
             "DF(ASETNIOP)"
           ]
         }
