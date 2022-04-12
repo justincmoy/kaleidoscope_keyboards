@@ -56,7 +56,11 @@
         ["kRT", "kLP"], ["kRT", "kLR"], ["kRT", "kLM"], ["kRT", "kLI"],
 
         ["kLT", "kLP"], ["kLT", "kLR"], ["kLT", "kLM"], ["kLT", "kLI"],
-        ["kLT", "kRI"], ["kLT", "kRM"], ["kLT", "kRR"], ["kLT", "kRP"]
+        ["kLT", "kRI"], ["kLT", "kRM"], ["kLT", "kRR"], ["kLT", "kRP"],
+
+        ["kRI", "kRP", "kLP"], ["kRI", "kRP", "kLR"], ["kRI", "kRP", "kLM"], ["kRI", "kRP", "kLI"],
+        ["kLP", "kLI", "kRI"], ["kLP", "kLI", "kRM"], ["kLP", "kLI", "kRR"], ["kLP", "kLI", "kRP"],
+        ["kRI", "kRP", "kLM", "kLI"], ["kLP", "kLI", "kRI", "kRM"]
       ]
     },
     {
@@ -124,7 +128,11 @@
             "O(KC_LGUI)", "O(KC_LALT)", "O(KC_LCTL)", "O(KC_LSFT)",
 
             "HOME", "PGUP", "PGDN", "END",
-            "LEFT", "DOWN", "UP", "RIGHT"
+            "LEFT", "DOWN", "UP", "RIGHT",
+
+            "1", "2", "3", "4",
+            "7", "8", "9", "0",
+            "5", "6"
           ]
         }
       ]
