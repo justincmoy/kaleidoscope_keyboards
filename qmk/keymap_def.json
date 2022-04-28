@@ -1,18 +1,21 @@
 {
   "keys": [
-    "kLP", "kLR", "kLM", "kLI", "kLT", "kRT", "kRI", "kRM", "kRR", "kRP"
+    "k00", "k01", "k02", "k03", "k04", "k05", "k06", "k07", "k08", "k09",
+    "kLP", "kLR", "kLM", "kLI", "kLT", "kRT", "kRI", "kRM", "kRR", "kRP",
+    "k20", "k21", "k22", "k23", "k24", "k25", "k26", "k27", "k28", "k29",
+    "kL0", "kR0", "kT0", "kT1", "kT2", "kT3"
   ],
   "parameters": {
-    "layout_function_name": "LAYOUT_HOME_ROW",
-    "chord_timeout": 100,
+    "layout_function_name": "LAYOUT_HOME_ROW_FULL",
+    "chord_timeout": 40,
     "dance_timeout": 200,
-    "leader_timeout": 750,
-    "tap_timeout": 50,
+    "leader_timeout": 500,
+    "tap_timeout": 15,
     "command_max_length": 5,
-    "leader_max_length": 5,
+    "leader_max_length": 1,
     "dynamic_macro_max_length": 20,
     "string_max_length": 16,
-    "long_press_multiplier": 2,
+    "long_press_multiplier": 3,
     "default_pseudolayer": "ASETNIOP"
   },
   "layers": [
@@ -35,14 +38,56 @@
         ["kLP", "kRM"], ["kLR", "kRR"], ["kLM", "kRP"],
         ["kLP", "kRR"], ["kLR", "kRP"],
         ["kLP", "kRP"],
-        ["kRT"],
+        ["kLT"], ["kRT"],
         ["kLT", "kRT"],
-        ["kLI", "kRI", "kRM"], ["kLI", "kRM", "kRR"], ["kLI", "kRI", "kRR"], ["kLI", "kRI", "kRM", "kRP"],
-        ["kLM", "kRI", "kRM"], ["kLM", "kRM", "kRR"], ["kLM", "kRI", "kRR"], ["kLM", "kRI", "kRM", "kRP"],
         ["kLP", "kLR", "kLM"], ["kLR", "kLM", "kLI"], ["kRI", "kRM", "kRR"], ["kRM", "kRR", "kRP"],
-        ["kRM", "kLM", "kLI"],
         ["kLM", "kLI", "kRI", "kRM"], ["kLP", "kLR", "kRR", "kRP"],
-        ["kLP", "kLR", "kLM", "kLI", "kRI", "kRM", "kRR", "kRP"]
+        ["kLP", "kLR", "kLM", "kLI", "kRI", "kRM", "kRR", "kRP"],
+
+        ["k00"], ["k01"], ["k02"], ["k03"], ["k04"], ["k05"], ["k06"], ["k07"], ["k08"], ["k09"],
+        ["k01", "k02"],
+        ["k20"], ["k21"], ["k22"], ["k23"], ["k24"], ["k25"], ["k26"], ["k27"], ["k28"], ["k29"],
+        ["k27", "k28"],
+        ["kL0"], ["kR0"],
+
+        ["kT0"], ["kT1"], ["kT2"], ["kT3"],
+        ["kT1", "k24"],
+
+        ["kRT", "kLP"], ["kRT", "kLR"], ["kRT", "kLM"], ["kRT", "kLI"],
+
+        ["kLT", "kLP"], ["kLT", "kLR"], ["kLT", "kLM"], ["kLT", "kLI"],
+        ["kLT", "kRI"], ["kLT", "kRM"], ["kLT", "kRR"], ["kLT", "kRP"],
+
+        ["kRI", "kRP", "kLP"], ["kRI", "kRP", "kLR"], ["kRI", "kRP", "kLM"], ["kRI", "kRP", "kLI"],
+        ["kLP", "kLI", "kRI"], ["kLP", "kLI", "kRM"], ["kLP", "kLI", "kRR"], ["kLP", "kLI", "kRP"],
+        ["kRI", "kRP", "kLM", "kLI"], ["kLP", "kLI", "kRI", "kRM"]
+      ]
+    },
+    {
+      "name": "asetniop_123",
+      "chords": [
+       ["kLP"], ["kLR"], ["kLM"], ["kLI"], ["kRI"], ["kRM"], ["kRR"], ["kRP"],
+       ["kLM", "kLI"], ["kRI", "kRM"],
+       ["kLT"], ["kRT"],
+       ["kLT", "kRT"]
+      ]
+    },
+    {
+      "name": "asetniop_mouse",
+      "chords": [
+       ["kLP"], ["kLR"], ["kLM"], ["kLI"], ["kRI"], ["kRM"], ["kRR"], ["kRP"],
+       ["kLT"], ["kRT"]
+      ]
+    },
+    {
+      "name": "game",
+      "chords": [
+        ["k00"], ["k01"], ["k02"], ["k03"], ["k04"],
+        ["kLP"], ["kLR"], ["kLM"], ["kLI"], ["kL0"],
+        ["k20"], ["k21"], ["k22"], ["k23"], ["k24"],
+
+        ["kT0"], ["kT1"], ["kLT"],
+        ["kT1", "k24"]
       ]
     }
   ],
@@ -54,31 +99,96 @@
           "type": "chord_set",
           "set": "asetniop",
           "keycodes": [
-            "AS(A)", "AS(S)", "AS(E)", "AS(T)", "AS(N)", "AS(I)", "AS(O)", "AS(P)",
+            "R", "S", "N", "D", "A", "E", "I", "H",
             "TAB", "ENTER",
-            "CLEAR",
+            "DF(asetniop_123)",
             "CAPS",
-            "AS(W)", "AS(D)", "AS(R)", "AS(B)", "AS(H)", "AS(L)", "AS(;)",
-            "AS(X)", "AS(C)", "AS(Y)", "AS(V)", "AS(U)",  "LGUI",
-            "AS(F)", "AS(J)", "AS(,)", "AS(G)", "AS(M)",
-            "AS(Q)", "AS(K)", "AS(-)", "BSPC",
-            "AS(Z)", "AS(.)", "AS(')",
-            "AS([)", "AS(])",
-            "AS(/)",
-            "AS(SPACE)",
-            "AS(ENTER)",
-            "O(KC_LSFT)", "O(KC_LCTL)", "O(KC_LALT)", "O(KC_LGUI)",
-            "O(KC_RSFT)", "O(KC_RCTL)", "O(KC_RALT)", "O(KC_RGUI)",
-            "AS(GRV)", "AS(BSLS)", "AS(=)", "ESC",
-            "INS",
+            "W", "L", "P", "B", "DF(asetniop_mouse)", "O", ";",
+            "X", "C", "J", "V", "U",  "LGUI",
+            "F", "G", ",", "Y", "M",
+            "Q", "K", "-", "DEL",
+            "Z", ".", "'",
+            "[", "]",
+            "/",
+            "T", "KM(SPACE, LSFT)",
+            "BSPC",
+            "GRV", "BSLS", "=", "ESC",
             "LEAD", "LOCK",
-            "RESET"
+            "RESET",
+
+            "J", "F", "M", "P", "V", ";", ".", "/", "'", "GRV",
+            "Z",
+            "X", "G", "L", "C", "B", "-", "U", "O", "Y", "K",
+            "Q",
+            "W", ",",
+
+            "ESC", "TAB", "BSPC", "DEL",
+            "DF(game)",
+
+            "O(KC_LGUI)", "O(KC_LALT)", "O(KC_LCTL)", "O(KC_LSFT)",
+
+            "HOME", "PGUP", "PGDN", "END",
+            "LEFT", "DOWN", "UP", "RIGHT",
+
+            "1", "2", "3", "4",
+            "7", "8", "9", "0",
+            "5", "6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asetniop_123",
+      "chords": [
+        {
+          "type": "chord_set",
+          "set": "asetniop_123",
+          "keycodes": [
+            "1", "2", "3", "4", "7", "8", "9", "0",
+            "5", "6",
+            "DF(ASETNIOP)", "LSFT",
+            "BSPC"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asetniop_mouse",
+      "chords": [
+        {
+          "type": "chord_set",
+          "set": "asetniop_mouse",
+          "keycodes": [
+            "HOME", "PGUP", "PGDN", "BTN2", "MS_L", "MS_D", "MS_U", "MS_R",
+            "DF(ASETNIOP)", "BTN1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "game",
+      "chords": [
+        {
+          "type": "chord_set",
+          "set": "game",
+          "keycodes": [
+            "TAB", "Q", "W", "E", "R",
+            "LSFT", "A", "S", "D", "F",
+            "LCTL", "Z", "X", "C", "V",
+            "ESC", "MO(asetniop_123)", "SPACE",
+            "DF(ASETNIOP)"
           ]
         }
       ]
     }
   ],
-  "leader_sequences": [],
+  "leader_sequences": [
+    {
+      "name": "ls_vim_cwd",
+      "function": "void ls_vim_cwd(void) { SEND_STRING(\"%:p:h\"); }",
+      "sequence": ["KC_SCLN"]
+    }
+  ],
   "extra_dependencies": ["keymap.h"],
   "extra_code": []
 }

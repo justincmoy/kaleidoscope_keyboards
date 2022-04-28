@@ -12,10 +12,12 @@ if [ ! -d "$SCRIPT_DIR/qmk/$1" ]; then
 	exit 1
 fi
 
+pushd "$SCRIPT_DIR/../qmk_firmware/users/dennytom/chording_engine/"
+python parser.py "$SCRIPT_DIR/qmk/keymap_def.json" "$SCRIPT_DIR/qmk/$1/keymap.c"
+popd
+
 rm -r "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
 mkdir "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
-cp -r "$SCRIPT_DIR/qmk/common" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
 cp -r $SCRIPT_DIR/qmk/$1/* "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
 cp "$SCRIPT_DIR/qmk/common/config.h" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
-# rsync -r "$SCRIPT_DIR/../artsey-qmk" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy" --exclude ".git"
 qmk flash -kb "$1" -km "justincmoy"
