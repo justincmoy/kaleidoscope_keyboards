@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 if [ "$#" -ne 1 ]; then
@@ -13,7 +15,7 @@ if [ ! -d "$SCRIPT_DIR/qmk/$1" ]; then
 fi
 
 pushd "$SCRIPT_DIR/../buttery_engine/"
-python my_parser.py "$SCRIPT_DIR/qmk/keymap_def.json"
+python my_parser.py "$SCRIPT_DIR/qmk/keymap_def.yaml"
 popd
 
 rm -r "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
