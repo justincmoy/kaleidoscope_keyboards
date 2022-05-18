@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -r "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
+
 set -e
 
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -18,8 +20,7 @@ pushd "$SCRIPT_DIR/../buttery_engine/"
 python my_parser.py "$SCRIPT_DIR/qmk/keymap_def.yaml"
 popd
 
-rm -r "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
-mkdir "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
+mkdir -p "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
 cp -r $SCRIPT_DIR/qmk/$1/* "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
 cp "$SCRIPT_DIR/qmk/common/config.h" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
 cp "$SCRIPT_DIR/../buttery_engine/keymap.c" "$SCRIPT_DIR/../qmk_firmware/keyboards/$1/keymaps/justincmoy"
