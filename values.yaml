@@ -1,0 +1,145 @@
+base00: &key_j
+  kaleidoscope: Key_J
+  qmk: KC_J
+base01: &key_f
+  kaleidoscope: Key_F
+  qmk: KC_F
+base02: &key_m
+  kaleidoscope: Key_M
+  qmk: KC_M
+base03: &key_p
+  kaleidoscope: Key_P
+  qmk: KC_P
+base04: &key_v
+  kaleidoscope: Key_V
+  qmk: KC_V
+base05:
+  kaleidoscope: Key_Semicolon
+  qmk: KC_SEMICOLON
+base06:
+  kaleidoscope: Key_Period
+  qmk: KC_DOT
+base07:
+  kaleidoscope: Key_Slash
+  qmk: KC_SLASH
+base08:
+  kaleidoscope: Key_Quote
+  qmk: KC_QUOTE
+base09:
+  kaleidoscope: Key_Backtick
+  qmk: KC_GRAVE
+
+base10: &key_r
+  kaleidoscope: Key_R
+  qmk: KC_R
+base11: &key_s
+  kaleidoscope: Key_S
+  qmk: KC_S
+base12: &key_n
+  kaleidoscope: Key_N
+  qmk: KC_N
+base13: &key_d
+  kaleidoscope: Key_D
+  qmk: KC_D
+base14: &key_w
+  kaleidoscope: Key_W
+  qmk: KC_W
+base15:
+  kaleidoscope: Key_Comma
+  qmk: KC_COMMA
+base16: &key_a
+  kaleidoscope: Key_A
+  qmk: KC_A
+base17: &key_e
+  kaleidoscope: Key_E
+  qmk: KC_E
+base18: &key_i
+  kaleidoscope: Key_I
+  qmk: KC_I
+base19: &key_h
+  kaleidoscope: Key_H
+  qmk: KC_H
+
+base20: &key_x
+  kaleidoscope: Key_X
+  qmk: KC_X
+base21: &key_g
+  kaleidoscope: Key_G
+  qmk: KC_G
+base22: &key_l
+  kaleidoscope: Key_L
+  qmk: KC_L
+base23: &key_c
+  kaleidoscope: Key_C
+  qmk: KC_C
+base24: &key_b
+  kaleidoscope: Key_B
+  qmk: KC_B
+base25:
+  kaleidoscope: Key_Minus
+  qmk: KC_MINUS
+base26: &key_u
+  kaleidoscope: Key_U
+  qmk: KC_U
+base27: &key_o
+  kaleidoscope: Key_O
+  qmk: KC_O
+base28: &key_y
+  kaleidoscope: Key_Y
+  qmk: KC_Y
+base29: &key_k
+  kaleidoscope: Key_K
+  qmk: KC_K
+
+baset0: &key_esc
+  kaleidoscope: Key_Esc
+  qmk: KC_ESCAPE
+baset1: << *key_tab
+baset1: &key_tab
+  kaleidoscope: Key_Tab
+  qmk: KC_TAB
+baset2: &key_t
+  kaleidoscope: Key_T
+  qmk: KC_T
+baset3:
+  kaleidoscope: SFT_T(Space)
+  qmk: KM(SPACE, LSFT) # MOD_LSFT(KC_SPACE)
+baset4:
+  kaleidoscope: Key_Backspace
+  qmk: KC_BACKSPACE
+baset5:
+  kaleidoscope: Key_Delete
+  qmk: KC_DELETE
+
+game00: << *key_tab
+game01:
+  kaleidoscope: Key_Q
+  qmk: KC_Q
+game02: << *key_w
+game03: << *key_e
+game04: << *key_r
+
+game10:
+  kaleidoscope: Key_LShift
+  qmk: KC_LEFT_SHIFT
+game11: << *key_a
+game12: << *key_s
+game13: << *key_d
+game14: << *key_f
+
+game20:
+  kaleidoscope: Key_LCtrl
+  qmk: KC_LEFT_CTRL
+game21:
+  kaleidoscope: Key_Z
+  qmk: KC_Z
+game22: << *key_x
+game23: << *key_c
+game24: << *key_v
+
+gamet0: << *key_esc
+# TODO: number
+gamet1: << *key_tab
+gamet2:
+  kaleidoscope: Key_Space
+  qmk: KC_SPACE

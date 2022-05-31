@@ -1,0 +1,367 @@
+---
+keys:
+  - k00
+  - k01
+  - k02
+  - k03
+  - k04
+  - k05
+  - k06
+  - k07
+  - k08
+  - k09
+  - kLP
+  - kLR
+  - kLM
+  - kLI
+  - kLT
+  - kRT
+  - kRI
+  - kRM
+  - kRR
+  - kRP
+  - k20
+  - k21
+  - k22
+  - k23
+  - k24
+  - k25
+  - k26
+  - k27
+  - k28
+  - k29
+  - kL0
+  - kR0
+  - kT0
+  - kT1
+  - kT2
+  - kT3
+parameters:
+  layout_function_name: LAYOUT_HOME_ROW_FULL
+  chord_timeout: 40
+  dance_timeout: 200
+  leader_timeout: 500
+  tap_timeout: 15
+  command_max_length: 5
+  leader_max_length: 1
+  dynamic_macro_max_length: 20
+  string_max_length: 16
+  long_press_multiplier: 5
+  default_pseudolayer: ASETNIOP
+layers:
+  - type: auto
+pseudolayers:
+  - name: ASETNIOP
+    chords:
+      - type: chord_set_with_keycode
+        set: asetniop
+        keycodes:
+          - chord: [kLP]
+            keycode: {{#base10}}{{> qmk_key }}{{/base10}}
+          - chord: [kLR]
+            keycode: {{#base11}}{{> qmk_key }}{{/base11}}
+          - chord: [kLM]
+            keycode: {{#base12}}{{> qmk_key }}{{/base12}}
+          - chord: [kLI]
+            keycode: {{#base13}}{{> qmk_key }}{{/base13}}
+          - chord: [kRI]
+            keycode: {{#base16}}{{> qmk_key }}{{/base16}}
+          - chord: [kRM]
+            keycode: {{#base17}}{{> qmk_key }}{{/base17}}
+          - chord: [kRR]
+            keycode: {{#base18}}{{> qmk_key }}{{/base18}}
+          - chord: [kRP]
+            keycode: {{#base19}}{{> qmk_key }}{{/base19}}
+          - chord: [kLP, kLR, kLM, kLI]
+            keycode: TAB
+          - chord: [kRI, kRM, kRR, kRP]
+            keycode: ENTER
+          - chord: [kLP, kLI, kRI, kRP]
+            keycode: DF(asetniop_123)
+          - chord: [kLR, kLM, kRM, kRR]
+            keycode: CAPS
+          - chord: [kLP, kLR]
+            keycode: W
+          - chord: [kLR, kLM]
+            keycode: L
+          - chord: [kLM, kLI]
+            keycode: P
+          - chord: [kLI, kRI]
+            keycode: B
+          - chord: [kRI, kRM]
+            keycode: DF(asetniop_mouse)
+          - chord: [kRM, kRR]
+            keycode: O
+          - chord: [kRR, kRP]
+            keycode: ";"
+          - chord: [kLP, kLM]
+            keycode: X
+          - chord: [kLR, kLI]
+            keycode: C
+          - chord: [kLM, kRI]
+            keycode: J
+          - chord: [kLI, kRM]
+            keycode: V
+          - chord: [kRI, kRR]
+            keycode: U
+          - chord: [kRM, kRP]
+            keycode: LGUI
+          - chord: [kLP, kLI]
+            keycode: F
+          - chord: [kLR, kRI]
+            keycode: G
+          - chord: [kLM, kRM]
+            keycode: ","
+          - chord: [kLI, kRR]
+            keycode: Y
+          - chord: [kRI, kRP]
+            keycode: M
+          - chord: [kLP, kRI]
+            keycode: Q
+          - chord: [kLR, kRM]
+            keycode: K
+          - chord: [kLM, kRR]
+            keycode: "-"
+          - chord: [kLI, kRP]
+            keycode: DEL
+          - chord: [kLP, kRM]
+            keycode: Z
+          - chord: [kLR, kRR]
+            keycode: "."
+          - chord: [kLM, kRP]
+            keycode: "'"
+          - chord: [kLP, kRR]
+            keycode: "["
+          - chord: [kLR, kRP]
+            keycode: "]"
+          - chord: [kLP, kRP]
+            keycode: "/"
+          - chord: [kLT]
+            keycode: T
+          - chord: [kRT]
+            keycode: KM(SPACE, LSFT)
+          - chord: [kLT, kRT]
+            keycode: BSPC
+          - chord: [kLP, kLR, kLM]
+            keycode: GRV
+          - chord: [kLR, kLM, kLI]
+            keycode: BSLS
+          - chord: [kRI, kRM, kRR]
+            keycode: "="
+          - chord: [kRM, kRR, kRP]
+            keycode: ESC
+          - chord: [kLM, kLI, kRI, kRM]
+            keycode: LEAD
+          - chord: [kLP, kLR, kRR, kRP]
+            keycode: LOCK
+          - chord: [kLP, kLR, kLM, kLI, kRI, kRM, kRR, kRP]
+            keycode: RESET
+          - chord: [k00]
+            keycode: J
+          - chord: [k01]
+            keycode: F
+          - chord: [k02]
+            keycode: M
+          - chord: [k03]
+            keycode: P
+          - chord: [k04]
+            keycode: V
+          - chord: [k05]
+            keycode: ";"
+          - chord: [k06]
+            keycode: "."
+          - chord: [k07]
+            keycode: "/"
+          - chord: [k08]
+            keycode: "'"
+          - chord: [k09]
+            keycode: GRV
+          - chord: [k01, k02]
+            keycode: Z
+          - chord: [k20]
+            keycode: X
+          - chord: [k21]
+            keycode: G
+          - chord: [k22]
+            keycode: L
+          - chord: [k23]
+            keycode: C
+          - chord: [k24]
+            keycode: B
+          - chord: [k25]
+            keycode: "-"
+          - chord: [k26]
+            keycode: U
+          - chord: [k27]
+            keycode: O
+          - chord: [k28]
+            keycode: Y
+          - chord: [k29]
+            keycode: K
+          - chord: [k27, k28]
+            keycode: Q
+          - chord: [kL0]
+            keycode: W
+          - chord: [kR0]
+            keycode: ","
+          - chord: [kT0]
+            keycode: ESC
+          - chord: [kT1]
+            keycode: TAB
+          - chord: [kT2]
+            keycode: BSPC
+          - chord: [kT3]
+            keycode: DEL
+          - chord: [kT1, k24]
+            keycode: DF(game)
+          - chord: [kRT, kLP]
+            keycode: O(KC_LGUI)
+          - chord: [kRT, kLR]
+            keycode: O(KC_LALT)
+          - chord: [kRT, kLM]
+            keycode: O(KC_LCTL)
+          - chord: [kRT, kLI]
+            keycode: O(KC_LSFT)
+          - chord: [kLT, kLP]
+            keycode: HOME
+          - chord: [kLT, kLR]
+            keycode: PGUP
+          - chord: [kLT, kLM]
+            keycode: PGDN
+          - chord: [kLT, kLI]
+            keycode: END
+          - chord: [kLT, kRI]
+            keycode: LEFT
+          - chord: [kLT, kRM]
+            keycode: DOWN
+          - chord: [kLT, kRR]
+            keycode: UP
+          - chord: [kLT, kRP]
+            keycode: RIGHT
+          - chord: [kRI, kRP, kLP]
+            keycode: '1'
+          - chord: [kRI, kRP, kLR]
+            keycode: '2'
+          - chord: [kRI, kRP, kLM]
+            keycode: '3'
+          - chord: [kRI, kRP, kLI]
+            keycode: '4'
+          - chord: [kLP, kLI, kRI]
+            keycode: '7'
+          - chord: [kLP, kLI, kRM]
+            keycode: '8'
+          - chord: [kLP, kLI, kRR]
+            keycode: '9'
+          - chord: [kLP, kLI, kRP]
+            keycode: '0'
+          - chord: [kRI, kRP, kLM, kLI]
+            keycode: '5'
+          - chord: [kLP, kLI, kRI, kRM]
+            keycode: '6'
+  - name: asetniop_123
+    chords:
+      - type: chord_set_with_keycode
+        set: asetniop_123
+        keycodes:
+          - chord: [kLP]
+            keycode: '1'
+          - chord: [kLR]
+            keycode: '2'
+          - chord: [kLM]
+            keycode: '3'
+          - chord: [kLI]
+            keycode: '4'
+          - chord: [kRI]
+            keycode: '7'
+          - chord: [kRM]
+            keycode: '8'
+          - chord: [kRR]
+            keycode: '9'
+          - chord: [kRP]
+            keycode: '0'
+          - chord: [kLM, kLI]
+            keycode: '5'
+          - chord: [kRI, kRM]
+            keycode: '6'
+          - chord: [kLT]
+            keycode: DF(ASETNIOP)
+          - chord: [kRT]
+            keycode: LSFT
+          - chord: [kLT, kRT]
+            keycode: BSPC
+  - name: asetniop_mouse
+    chords:
+      - type: chord_set_with_keycode
+        set: asetniop_mouse
+        keycodes:
+          - chord: [kLP]
+            keycode: HOME
+          - chord: [kLR]
+            keycode: PGUP
+          - chord: [kLM]
+            keycode: PGDN
+          - chord: [kLI]
+            keycode: BTN2
+          - chord: [kRI]
+            keycode: MS_L
+          - chord: [kRM]
+            keycode: MS_D
+          - chord: [kRR]
+            keycode: MS_U
+          - chord: [kRP]
+            keycode: MS_R
+          - chord: [kLT]
+            keycode: DF(ASETNIOP)
+          - chord: [kRT]
+            keycode: BTN1
+  - name: game
+    chords:
+      - type: chord_set_with_keycode
+        set: game
+        keycodes:
+          - chord: [k00]
+            keycode: TAB
+          - chord: [k01]
+            keycode: Q
+          - chord: [k02]
+            keycode: W
+          - chord: [k03]
+            keycode: E
+          - chord: [k04]
+            keycode: R
+          - chord: [kLP]
+            keycode: LSFT
+          - chord: [kLR]
+            keycode: A
+          - chord: [kLM]
+            keycode: S
+          - chord: [kLI]
+            keycode: D
+          - chord: [kL0]
+            keycode: F
+          - chord: [k20]
+            keycode: LCTL
+          - chord: [k21]
+            keycode: Z
+          - chord: [k22]
+            keycode: X
+          - chord: [k23]
+            keycode: C
+          - chord: [k24]
+            keycode: V
+          - chord: [kT0]
+            keycode: ESC
+          - chord: [kT1]
+            keycode: MO(asetniop_123)
+          - chord: [kLT]
+            keycode: SPACE
+          - chord: [kT1, k24]
+            keycode: DF(ASETNIOP)
+leader_sequences:
+  - name: ls_vim_cwd
+    function: void ls_vim_cwd(void) { SEND_STRING("%:p:h"); }
+    sequence:
+      - KC_SCLN
+extra_dependencies:
+  - keymap.h
+extra_code: []

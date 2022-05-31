@@ -1,0 +1,131 @@
+#include "Kaleidoscope.h"
+#include "kaleidoscope/layers.h"
+#include "Kaleidoscope-Macros.h"
+#include "Kaleidoscope-MouseKeys.h"
+#include "Kaleidoscope-Qukeys.h"
+
+#include "keymap.h"
+
+enum {
+  MACRO_LOCK_GAME
+};
+
+enum {
+  BASE,
+  GAME
+};
+
+KEYMAPS(
+  [BASE] = KEYMAP(
+    {{#base00}}{{> kaleidoscope_key }}{{/base00}},
+    {{#base01}}{{> kaleidoscope_key }}{{/base01}},
+    {{#base02}}{{> kaleidoscope_key }}{{/base02}},
+    {{#base03}}{{> kaleidoscope_key }}{{/base03}},
+    {{#base04}}{{> kaleidoscope_key }}{{/base04}},
+    {{#base05}}{{> kaleidoscope_key }}{{/base05}},
+    {{#base06}}{{> kaleidoscope_key }}{{/base06}},
+    {{#base07}}{{> kaleidoscope_key }}{{/base07}},
+    {{#base08}}{{> kaleidoscope_key }}{{/base08}},
+    {{#base09}}{{> kaleidoscope_key }}{{/base09}},
+
+    {{#base10}}{{> kaleidoscope_key }}{{/base10}},
+    {{#base11}}{{> kaleidoscope_key }}{{/base11}},
+    {{#base12}}{{> kaleidoscope_key }}{{/base12}},
+    {{#base13}}{{> kaleidoscope_key }}{{/base13}},
+    {{#base14}}{{> kaleidoscope_key }}{{/base14}},
+    {{#base15}}{{> kaleidoscope_key }}{{/base15}},
+    {{#base16}}{{> kaleidoscope_key }}{{/base16}},
+    {{#base17}}{{> kaleidoscope_key }}{{/base17}},
+    {{#base18}}{{> kaleidoscope_key }}{{/base18}},
+    {{#base19}}{{> kaleidoscope_key }}{{/base19}},
+
+    {{#base20}}{{> kaleidoscope_key }}{{/base20}},
+    {{#base21}}{{> kaleidoscope_key }}{{/base21}},
+    {{#base22}}{{> kaleidoscope_key }}{{/base22}},
+    {{#base23}}{{> kaleidoscope_key }}{{/base23}},
+    {{#base24}}{{> kaleidoscope_key }}{{/base24}},
+    XXX, XXX,
+    {{#base25}}{{> kaleidoscope_key }}{{/base25}},
+    {{#base26}}{{> kaleidoscope_key }}{{/base26}},
+    {{#base27}}{{> kaleidoscope_key }}{{/base27}},
+    {{#base28}}{{> kaleidoscope_key }}{{/base28}},
+    {{#base29}}{{> kaleidoscope_key }}{{/base29}},
+
+    XXX, XXX, XXX,
+    {{#baset0}}{{> kaleidoscope_key }}{{/baset0}},
+    {{#baset1}}{{> kaleidoscope_key }}{{/baset1}},
+    {{#baset2}}{{> kaleidoscope_key }}{{/baset2}},
+    {{#baset3}}{{> kaleidoscope_key }}{{/baset3}},
+    {{#baset4}}{{> kaleidoscope_key }}{{/baset4}},
+    {{#baset5}}{{> kaleidoscope_key }}{{/baset5}},
+    XXX, XXX, M(MACRO_LOCK_GAME)
+  ),
+
+  // TODO: Equals, Backslash, LeftBracket, RightBracket
+
+  [GAME] = KEYMAP(
+    {{#game00}}{{> kaleidoscope_key }}{{/game00}},
+    {{#game01}}{{> kaleidoscope_key }}{{/game01}},
+    {{#game02}}{{> kaleidoscope_key }}{{/game02}},
+    {{#game03}}{{> kaleidoscope_key }}{{/game03}},
+    {{#game04}}{{> kaleidoscope_key }}{{/game04}},
+    XXX, XXX, XXX, XXX, XXX,
+
+    {{#game10}}{{> kaleidoscope_key }}{{/game10}},
+    {{#game11}}{{> kaleidoscope_key }}{{/game11}},
+    {{#game12}}{{> kaleidoscope_key }}{{/game12}},
+    {{#game13}}{{> kaleidoscope_key }}{{/game13}},
+    {{#game14}}{{> kaleidoscope_key }}{{/game14}},
+    XXX, XXX, XXX, XXX, XXX,
+
+    {{#game20}}{{> kaleidoscope_key }}{{/game20}},
+    {{#game21}}{{> kaleidoscope_key }}{{/game21}},
+    {{#game22}}{{> kaleidoscope_key }}{{/game22}},
+    {{#game23}}{{> kaleidoscope_key }}{{/game23}},
+    {{#game24}}{{> kaleidoscope_key }}{{/game24}},
+    XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    XXX, XXX, XXX,
+    {{#gamet0}}{{> kaleidoscope_key }}{{/gamet0}},
+    {{#gamet1}}{{> kaleidoscope_key }}{{/gamet1}},
+    {{#gamet2}}{{> kaleidoscope_key }}{{/gamet2}},
+    XXX, XXX, XXX,
+    XXX, XXX, M(MACRO_LOCK_GAME)
+  )
+)
+
+KALEIDOSCOPE_INIT_PLUGINS(
+  Qukeys,
+  Macros,
+  MouseKeys
+);
+
+const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
+  switch (macroIndex) {
+  case MACRO_LOCK_GAME:
+    if (keyToggledOn(keyState)) {
+      if (Layer.isActive(GAME)) {
+        Layer.deactivate(GAME);
+      } else {
+        Layer.activate(GAME);
+      }
+    }
+    break;
+  default:
+    break;
+  }
+
+  return MACRO_NONE;
+}
+
+void setup() {
+  Kaleidoscope.setup();
+  MouseKeys.accelDelay = 30;
+  MouseKeys.accelSpeed = 5;
+  MouseKeys.setSpeedLimit(60);
+}
+
+void loop() {
+  Kaleidoscope.loop();
+}
