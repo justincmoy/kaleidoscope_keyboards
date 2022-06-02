@@ -99,10 +99,10 @@ KALEIDOSCOPE_INIT_PLUGINS(
   MouseKeys
 );
 
-const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
+const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
   switch (macroIndex) {
   case MACRO_LOCK_GAME:
-    if (keyToggledOn(keyState)) {
+    if (keyToggledOn(event.state)) {
       if (Layer.isActive(GAME)) {
         Layer.deactivate(GAME);
       } else {
