@@ -72,6 +72,10 @@ pseudolayers:
             keycode: {{#base18}}{{> qmk_key }}{{/base18}}
           - chord: [kRP]
             keycode: {{#base19}}{{> qmk_key }}{{/base19}}
+{{#chords}}
+          - chord: {{qmk_keys}}
+            keycode: {{> qmk_key}}
+{{/chords}}
           - chord: [kLP, kLR, kLM, kLI]
             keycode: TAB
           - chord: [kRI, kRM, kRR, kRP]
