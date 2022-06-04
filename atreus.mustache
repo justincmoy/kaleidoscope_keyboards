@@ -129,6 +129,9 @@ void setup() {
   MouseKeys.accelDelay = 30;
   MouseKeys.accelSpeed = 5;
   MouseKeys.setSpeedLimit(60);
+  QUKEYS(
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), Key_LeftShift)
+  );
 }
 
 void loop() {

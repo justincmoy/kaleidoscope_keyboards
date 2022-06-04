@@ -101,7 +101,7 @@ baset2: &key_t
   kaleidoscope: Key_T
   qmk: KC_T
 baset3:
-  kaleidoscope: SFT_T(Space)
+  kaleidoscope: Key_Space # Qukeys
   qmk: KM(SPACE, LSFT) # MOD_LSFT(KC_SPACE)
 baset4:
   kaleidoscope: Key_Backspace
