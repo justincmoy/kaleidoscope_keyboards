@@ -95,8 +95,9 @@ KEYMAPS(
 )
 
 USE_SIMPLE_CHORDS(
-  {.length = 2, .keys = {R1C10, R1C11}, .action = Key_Semicolon},
-  {.length = 2, .keys = {R3C5, R3C6}, .action = Key_Backspace}
+{{#chords}}
+  {.length = {{length}}, .keys = {{kaleidoscope_keys}}, .action = {{kaleidoscope}}}{{^last}},{{/last}}
+{{/chords}}
 );
 
 KALEIDOSCOPE_INIT_PLUGINS(
