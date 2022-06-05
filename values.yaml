@@ -19,13 +19,13 @@ base05: &key_semicolon
 base06: &key_period
   kaleidoscope: Key_Period
   qmk: KC_DOT
-base07:
+base07: &key_slash
   kaleidoscope: Key_Slash
   qmk: KC_SLASH
 base08: &key_quote
   kaleidoscope: Key_Quote
   qmk: KC_QUOTE
-base09:
+base09: &key_backtick
   kaleidoscope: Key_Backtick
   qmk: KC_GRAVE
 
@@ -111,7 +111,7 @@ baset5: &key_delete
   qmk: KC_DELETE
 
 game00: *key_tab
-game01:
+game01: &key_q
   kaleidoscope: Key_Q
   qmk: KC_Q
 game02: *key_w
@@ -230,8 +230,7 @@ chords:
     num_keys: 2
     atreus_keys: "{R1C8, R1C11}"
     qmk_keys: "[kRI, kRP]"
-  - kaleidoscope: "Key_Q"
-    qmk: "KC_Q"
+  - << : *key_q
     num_keys: 2
     atreus_keys: "{R1C0, R1C8}"
     qmk_keys: "[kLP, kRI]"
@@ -269,7 +268,18 @@ chords:
     num_keys: 2
     atreus_keys: "{R1C1, R1C11}"
     qmk_keys: "[kLR, kRP]"
-
+  - << : *key_slash
+    num_keys: 2
+    atreus_keys: "{R1C0, R1C11}"
+    qmk_keys: "[kLP, kRP]"
+  - << : *key_backspace
+    num_keys: 2
+    atreus_keys: "{R3C5, R3C6}"
+    qmk_keys: "[kLT, kRT]"
+  - << : *key_backtick
+    num_keys: 3
+    atreus_keys: "{R1C0, R1C1, R1C2}"
+    qmk_keys: "[kLP, kLR, kLM]"
   - kaleidoscope: Key_Backslash
     qmk: KC_BACKSLASH
     num_keys: 3
@@ -280,9 +290,107 @@ chords:
     num_keys: 3
     atreus_keys: "{R1C8, R1C9, R1C10}"
     qmk_keys: "[kRI, kRM, kRR]"
-  - << : *key_backspace
+  - << : *key_esc
+    num_keys: 3
+    atreus_keys: "{R1C9, R1C10, R1C11}"
+    qmk_keys: "[kRM, kRR, kRP]"
+  - << : *key_z
     num_keys: 2
-    atreus_keys: "{R3C5, R3C6}"
-    qmk_keys: "[kLT, kRT]"
+    atreus_keys: "{R0C1, R0C2}"
+    qmk_keys: "[k01, k02]"
+  - << : *key_q
+    num_keys: 2
+    atreus_keys: "{R2C9, R2C10}"
+    qmk_keys: "[k27, k28]"
+  - kaleidoscope: "Key_Home"
+    qmk: "KC_HOME"
+    num_keys: 2
+    atreus_keys: "{R3C5, R1C0}"
+    qmk_keys: "[kLT, kLP]"
+  - kaleidoscope: "Key_PageUp"
+    qmk: "KC_PAGE_UP"
+    num_keys: 2
+    atreus_keys: "{R3C5, R1C1}"
+    qmk_keys: "[kLT, kLR]"
+  - kaleidoscope: "Key_PageDown"
+    qmk: "KC_PAGE_DOWN"
+    num_keys: 2
+    atreus_keys: "{R3C5, R1C2}"
+    qmk_keys: "[kLT, kLM]"
+  - kaleidoscope: "Key_End"
+    qmk: "KC_END"
+    num_keys: 2
+    atreus_keys: "{R3C5, R1C3}"
+    qmk_keys: "[kLT, kLI]"
+  - kaleidoscope: "Key_LeftArrow"
+    qmk: "KC_LEFT"
+    num_keys: 2
+    atreus_keys: "{R3C5, R1C8}"
+    qmk_keys: "[kLT, kRI]"
+  - kaleidoscope: "Key_DownArrow"
+    qmk: "KC_DOWN"
+    num_keys: 2
+    atreus_keys: "{R3C5, R1C9}"
+    qmk_keys: "[kLT, kRM]"
+  - kaleidoscope: "Key_UpArrow"
+    qmk: "KC_UP"
+    num_keys: 2
+    atreus_keys: "{R3C5, R1C10}"
+    qmk_keys: "[kLT, kRR]"
+  - kaleidoscope: "Key_RightArrow"
+    qmk: "KC_RIGHT"
+    num_keys: 2
+    atreus_keys: "{R3C5, R1C11}"
+    qmk_keys: "[kLT, kRP]"
+  - kaleidoscope: "Key_1"
+    qmk: "KC_1"
+    num_keys: 3
+    atreus_keys: "{R1C8, R1C11, R1C0}"
+    qmk_keys: "[kRI, kRP, kLP]"
+  - kaleidoscope: "Key_2"
+    qmk: "KC_2"
+    num_keys: 3
+    atreus_keys: "{R1C8, R1C11, R1C1}"
+    qmk_keys: "[kRI, kRP, kLR]"
+  - kaleidoscope: "Key_3"
+    qmk: "KC_3"
+    num_keys: 3
+    atreus_keys: "{R1C8, R1C11, R1C2}"
+    qmk_keys: "[kRI, kRP, kLM]"
+  - kaleidoscope: "Key_4"
+    qmk: "KC_4"
+    num_keys: 3
+    atreus_keys: "{R1C8, R1C11, R1C3}"
+    qmk_keys: "[kRI, kRP, kLI]"
+  - kaleidoscope: "Key_5"
+    qmk: "KC_5"
+    num_keys: 4
+    atreus_keys: "{R1C8, R1C11, R1C2, R1C3}"
+    qmk_keys: "[kRI, kRP, kLM, kLI]"
+  - kaleidoscope: "Key_6"
+    qmk: "KC_6"
+    num_keys: 4
+    atreus_keys: "{R1C0, R1C3, R1C8, R1C9}"
+    qmk_keys: "[kLP, kLI, kRI, kRM]"
+  - kaleidoscope: "Key_7"
+    qmk: "KC_7"
+    num_keys: 3
+    atreus_keys: "{R1C0, R1C3, R1C8}"
+    qmk_keys: "[kLP, kLI, kRI]"
+  - kaleidoscope: "Key_8"
+    qmk: "KC_8"
+    num_keys: 3
+    atreus_keys: "{R1C0, R1C3, R1C9}"
+    qmk_keys: "[kLP, kLI, kRM]"
+  - kaleidoscope: "Key_9"
+    qmk: "KC_9"
+    num_keys: 3
+    atreus_keys: "{R1C0, R1C3, R1C10}"
+    qmk_keys: "[kLP, kLI, kRR]"
+  - kaleidoscope: "Key_0"
+    qmk: "KC_0"
+    num_keys: 3
+    atreus_keys: "{R1C0, R1C3, R1C11}"
+    qmk_keys: "[kLP, kLI, kRP]"
 
     last: true

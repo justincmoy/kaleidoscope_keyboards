@@ -77,28 +77,18 @@ pseudolayers:
             keycode: {{> qmk_key}}
 {{/chords}}
 
-          - chord: [kLP, kRP]
-            keycode: "/"
           - chord: [kLT]
             keycode: T
           - chord: [kRT]
             keycode: KM(SPACE, LSFT)
-          - chord: [kLT, kRT]
-            keycode: BSPC
-          - chord: [kLP, kLR, kLM]
-            keycode: GRV
-          - chord: [kLR, kLM, kLI]
-            keycode: BSLS
-          - chord: [kRI, kRM, kRR]
-            keycode: "="
-          - chord: [kRM, kRR, kRP]
-            keycode: ESC
+
           - chord: [kLM, kLI, kRI, kRM]
             keycode: LEAD
           - chord: [kLP, kLR, kRR, kRP]
             keycode: LOCK
           - chord: [kLP, kLR, kLM, kLI, kRI, kRM, kRR, kRP]
             keycode: RESET
+
           - chord: [k00]
             keycode: J
           - chord: [k01]
@@ -119,8 +109,6 @@ pseudolayers:
             keycode: "'"
           - chord: [k09]
             keycode: GRV
-          - chord: [k01, k02]
-            keycode: Z
           - chord: [k20]
             keycode: X
           - chord: [k21]
@@ -141,8 +129,6 @@ pseudolayers:
             keycode: Y
           - chord: [k29]
             keycode: K
-          - chord: [k27, k28]
-            keycode: Q
           - chord: [kL0]
             keycode: W
           - chord: [kR0]
@@ -155,8 +141,10 @@ pseudolayers:
             keycode: BSPC
           - chord: [kT3]
             keycode: DEL
+
           - chord: [kT1, k24]
             keycode: DF(game)
+
           - chord: [kRT, kLP]
             keycode: O(KC_LGUI)
           - chord: [kRT, kLR]
@@ -165,42 +153,6 @@ pseudolayers:
             keycode: O(KC_LCTL)
           - chord: [kRT, kLI]
             keycode: O(KC_LSFT)
-          - chord: [kLT, kLP]
-            keycode: HOME
-          - chord: [kLT, kLR]
-            keycode: PGUP
-          - chord: [kLT, kLM]
-            keycode: PGDN
-          - chord: [kLT, kLI]
-            keycode: END
-          - chord: [kLT, kRI]
-            keycode: LEFT
-          - chord: [kLT, kRM]
-            keycode: DOWN
-          - chord: [kLT, kRR]
-            keycode: UP
-          - chord: [kLT, kRP]
-            keycode: RIGHT
-          - chord: [kRI, kRP, kLP]
-            keycode: '1'
-          - chord: [kRI, kRP, kLR]
-            keycode: '2'
-          - chord: [kRI, kRP, kLM]
-            keycode: '3'
-          - chord: [kRI, kRP, kLI]
-            keycode: '4'
-          - chord: [kLP, kLI, kRI]
-            keycode: '7'
-          - chord: [kLP, kLI, kRM]
-            keycode: '8'
-          - chord: [kLP, kLI, kRR]
-            keycode: '9'
-          - chord: [kLP, kLI, kRP]
-            keycode: '0'
-          - chord: [kRI, kRP, kLM, kLI]
-            keycode: '5'
-          - chord: [kLP, kLI, kRI, kRM]
-            keycode: '6'
   - name: asetniop_123
     chords:
       - type: chord_set_with_keycode
