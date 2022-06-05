@@ -16,13 +16,13 @@ base04: &key_v
 base05: &key_semicolon
   kaleidoscope: Key_Semicolon
   qmk: KC_SEMICOLON
-base06:
+base06: &key_period
   kaleidoscope: Key_Period
   qmk: KC_DOT
 base07:
   kaleidoscope: Key_Slash
   qmk: KC_SLASH
-base08:
+base08: &key_quote
   kaleidoscope: Key_Quote
   qmk: KC_QUOTE
 base09:
@@ -44,7 +44,7 @@ base13: &key_d
 base14: &key_w
   kaleidoscope: Key_W
   qmk: KC_W
-base15:
+base15: &key_comma
   kaleidoscope: Key_Comma
   qmk: KC_COMMA
 base16: &key_a
@@ -75,7 +75,7 @@ base23: &key_c
 base24: &key_b
   kaleidoscope: Key_B
   qmk: KC_B
-base25:
+base25: &key_minus
   kaleidoscope: Key_Minus
   qmk: KC_MINUS
 base26: &key_u
@@ -106,7 +106,7 @@ baset3:
 baset4: &key_backspace
   kaleidoscope: Key_Backspace
   qmk: KC_BACKSPACE
-baset5:
+baset5: &key_delete
   kaleidoscope: Key_Delete
   qmk: KC_DELETE
 
@@ -129,7 +129,7 @@ game14: *key_f
 game20:
   kaleidoscope: Key_LCtrl
   qmk: KC_LEFT_CTRL
-game21:
+game21: &key_z
   kaleidoscope: Key_Z
   qmk: KC_Z
 game22: *key_x
@@ -144,32 +144,145 @@ gamet2:
   qmk: KC_SPACE
 
 chords:
+  - << : *key_tab
+    num_keys: 4
+    atreus_keys: "{R1C0, R1C1, R1C2, R1C3}"
+    qmk_keys: "[kLP, kLR, kLM, kLI]"
+  - kaleidoscope: Key_Enter
+    qmk: KC_ENTER
+    num_keys: 4
+    atreus_keys: "{R1C8, R1C9, R1C10, R1C11}"
+    qmk_keys: "[kRI, kRM, kRR, kRP]"
+  - kaleidoscope: "" # TODO
+    qmk: "DF(asetniop_123)"
+    qmk_keys: "[kLP, kLI, kRI, kRP]"
+  - kaleidoscope: "" # TODO
+    qmk: "CAPS"
+    qmk_keys: "[kLR, kLM, kRM, kRR]"
+  - << : *key_w
+    num_keys: 2
+    atreus_keys: "{R1C0, R1C1}"
+    qmk_keys: "[kLP, kLR]"
+  - << : *key_l
+    num_keys: 2
+    atreus_keys: "{R1C1, R1C2}"
+    qmk_keys: "[kLR, kLM]"
+  - << : *key_p
+    num_keys: 2
+    atreus_keys: "{R1C2, R1C3}"
+    qmk_keys: "[kLM, kLI]"
+  - << : *key_b
+    num_keys: 2
+    atreus_keys: "{R1C3, R1C8}"
+    qmk_keys: "[kLI, kRI]"
+  - kaleidoscope: "" # TODO
+    qmk: "DF(asetniop_mouse)"
+    qmk_keys: "[kRI, kRM]"
+  - << : *key_o
+    num_keys: 2
+    atreus_keys: "{R1C9, R1C10}"
+    qmk_keys: "[kRM, kRR]"
   - << : *key_semicolon
-    length: 2
+    num_keys: 2
     atreus_keys: "{R1C10, R1C11}"
     qmk_keys: "[kRR, kRP]"
-  - << : *key_backspace
-    length: 2
-    atreus_keys: "{R3C5, R3C6}"
-    qmk_keys: "[kLT, kRT]"
-  - kaleidoscope: Key_Equals
-    qmk: KC_EQUAL
-    length: 3
-    atreus_keys: "{R1C8, R1C9, R1C10}"
-    qmk_keys: "[kRI, kRM, kRR]"
-  - kaleidoscope: Key_Backslash
-    qmk: KC_BACKSLASH
-    length: 3
-    atreus_keys: "{R1C1, R1C2, R1C3}"
-    qmk_keys: "[kLR, kLM, kLI]"
+  - << : *key_x
+    num_keys: 2
+    atreus_keys: "{R1C0, R1C2}"
+    qmk_keys: "[kLP, kLM]"
+  - << : *key_c
+    num_keys: 2
+    atreus_keys: "{R1C1, R1C3}"
+    qmk_keys: "[kLR, kLI]"
+  - << : *key_j
+    num_keys: 2
+    atreus_keys: "{R1C2, R1C8}"
+    qmk_keys: "[kLM, kRI]"
+  - << : *key_v
+    num_keys: 2
+    atreus_keys: "{R1C3, R1C9}"
+    qmk_keys: "[kLI, kRM]"
+  - << : *key_u
+    num_keys: 2
+    atreus_keys: "{R1C8, R1C10}"
+    qmk_keys: "[kRI, kRR]"
+  - kaleidoscope: "" # TODO
+    qmk: "LGUI"
+    num_keys: 2
+    qmk_keys: "[kRM, kRP]"
+  - << : *key_f
+    num_keys: 2
+    atreus_keys: "{R1C0, R1C3}"
+    qmk_keys: "[kLP, kLI]"
+  - << : *key_g
+    num_keys: 2
+    atreus_keys: "{R1C1, R1C8}"
+    qmk_keys: "[kLR, kRI]"
+  - << : *key_comma
+    num_keys: 2
+    atreus_keys: "{R1C2, R1C9}"
+    qmk_keys: "[kLM, kRM]"
+  - << : *key_y
+    num_keys: 2
+    atreus_keys: "{R1C3, R1C10}"
+    qmk_keys: "[kLI, kRR]"
+  - << : *key_m
+    num_keys: 2
+    atreus_keys: "{R1C8, R1C11}"
+    qmk_keys: "[kRI, kRP]"
+  - kaleidoscope: "Key_Q"
+    qmk: "KC_Q"
+    num_keys: 2
+    atreus_keys: "{R1C0, R1C8}"
+    qmk_keys: "[kLP, kRI]"
+  - << : *key_k
+    num_keys: 2
+    atreus_keys: "{R1C1, R1C9}"
+    qmk_keys: "[kLR, kRM]"
+  - << : *key_minus
+    num_keys: 2
+    atreus_keys: "{R1C2, R1C10}"
+    qmk_keys: "[kLM, kRR]"
+  - << : *key_delete
+    num_keys: 2
+    atreus_keys: "{R1C3, R1C11}"
+    qmk_keys: "[kLI, kRP]"
+  - << : *key_z
+    num_keys: 2
+    atreus_keys: "{R1C0, R1C9}"
+    qmk_keys: "[kLP, kRM]"
+  - << : *key_period
+    num_keys: 2
+    atreus_keys: "{R1C1, R1C10}"
+    qmk_keys: "[kLR, kRR]"
+  - << : *key_quote
+    num_keys: 2
+    atreus_keys: "{R1C2, R1C11}"
+    qmk_keys: "[kLM, kRP]"
   - kaleidoscope: Key_LeftBracket
     qmk: KC_LEFT_BRACKET
-    length: 2
+    num_keys: 2
     atreus_keys: "{R1C0, R1C10}"
     qmk_keys: "[kLP, kRR]"
   - kaleidoscope: Key_RightBracket
     qmk: KC_RIGHT_BRACKET
-    length: 2
+    num_keys: 2
     atreus_keys: "{R1C1, R1C11}"
     qmk_keys: "[kLR, kRP]"
+
+  - kaleidoscope: Key_Backslash
+    qmk: KC_BACKSLASH
+    num_keys: 3
+    atreus_keys: "{R1C1, R1C2, R1C3}"
+    qmk_keys: "[kLR, kLM, kLI]"
+  - kaleidoscope: Key_Equals
+    qmk: KC_EQUAL
+    num_keys: 3
+    atreus_keys: "{R1C8, R1C9, R1C10}"
+    qmk_keys: "[kRI, kRM, kRR]"
+  - << : *key_backspace
+    num_keys: 2
+    atreus_keys: "{R3C5, R3C6}"
+    qmk_keys: "[kLT, kRT]"
+
     last: true

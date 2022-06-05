@@ -96,7 +96,7 @@ KEYMAPS(
 
 USE_SIMPLE_CHORDS(
 {{#chords}}
-  {.length = {{length}}, .keys = {{atreus_keys}}, .action = {{kaleidoscope}}}{{^last}},{{/last}}
+  {{#atreus_keys}}{.length = {{num_keys}}, .keys = {{atreus_keys}}, .action = {{kaleidoscope}}}{{^last}},{{/last}}{{/atreus_keys}}
 {{/chords}}
 );
 
