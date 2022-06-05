@@ -392,5 +392,25 @@ chords:
     num_keys: 3
     atreus_keys: "{R1C0, R1C3, R1C11}"
     qmk_keys: "[kLP, kLI, kRP]"
+  - kaleidoscope: "OSM(LeftGui)"
+    qmk: "O(KC_LGUI)"
+    num_keys: 2
+    atreus_keys: "{R3C6, R1C0}"
+    qmk_keys: "[kRT, kLP]"
+  - kaleidoscope: "OSM(LeftAlt)"
+    qmk: "O(KC_LALT)"
+    num_keys: 2
+    atreus_keys: "{R3C6, R1C1}"
+    qmk_keys: "[kRT, kLR]"
+  - kaleidoscope: "OSM(LeftControl)"
+    qmk: "O(KC_LCTL)"
+    num_keys: 2
+    atreus_keys: "{R3C6, R1C2}"
+    qmk_keys: "[kRT, kLM]"
+  - kaleidoscope: "OSM(LeftShift)"
+    qmk: "O(KC_LSFT)"
+    num_keys: 2
+    atreus_keys: "{R3C6, R1C3}"
+    qmk_keys: "[kRT, kLI]"
 
     last: true

@@ -2,6 +2,7 @@
 #include "kaleidoscope/layers.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
+#include "Kaleidoscope-OneShot.h"
 #include "Kaleidoscope-SimpleChords.h"
 #include "Kaleidoscope-Qukeys.h"
 
@@ -103,6 +104,7 @@ USE_SIMPLE_CHORDS(
 KALEIDOSCOPE_INIT_PLUGINS(
   Qukeys,
   SimpleChords,
+  OneShot,
   Macros,
   MouseKeys
 );
@@ -133,6 +135,7 @@ void setup() {
   QUKEYS(
     kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), Key_LeftShift)
   );
+  SimpleChords.timeout_ = 30;
 }
 
 void loop() {
