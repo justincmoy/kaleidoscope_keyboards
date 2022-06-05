@@ -146,12 +146,12 @@ gamet2:
 chords:
   - << : *key_tab
     num_keys: 4
-    atreus_keys: "{R1C0, R1C1, R1C2, R1C3}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 1), KeyAddr(1, 2), KeyAddr(1, 3)}"
     qmk_keys: "[kLP, kLR, kLM, kLI]"
   - kaleidoscope: Key_Enter
     qmk: KC_ENTER
     num_keys: 4
-    atreus_keys: "{R1C8, R1C9, R1C10, R1C11}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 9), KeyAddr(1, 1)0, KeyAddr(1, 11)}"
     qmk_keys: "[kRI, kRM, kRR, kRP]"
   - kaleidoscope: "" # TODO
     qmk: "DF(asetniop_123)"
@@ -161,50 +161,50 @@ chords:
     qmk_keys: "[kLR, kLM, kRM, kRR]"
   - << : *key_w
     num_keys: 2
-    atreus_keys: "{R1C0, R1C1}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 1)}"
     qmk_keys: "[kLP, kLR]"
   - << : *key_l
     num_keys: 2
-    atreus_keys: "{R1C1, R1C2}"
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 2)}"
     qmk_keys: "[kLR, kLM]"
   - << : *key_p
     num_keys: 2
-    atreus_keys: "{R1C2, R1C3}"
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 3)}"
     qmk_keys: "[kLM, kLI]"
   - << : *key_b
     num_keys: 2
-    atreus_keys: "{R1C3, R1C8}"
+    atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 8)}"
     qmk_keys: "[kLI, kRI]"
   - kaleidoscope: "" # TODO
     qmk: "DF(asetniop_mouse)"
     qmk_keys: "[kRI, kRM]"
   - << : *key_o
     num_keys: 2
-    atreus_keys: "{R1C9, R1C10}"
+    atreus_keys: "{KeyAddr(1, 9), KeyAddr(1, 1)0}"
     qmk_keys: "[kRM, kRR]"
   - << : *key_semicolon
     num_keys: 2
-    atreus_keys: "{R1C10, R1C11}"
+    atreus_keys: "{KeyAddr(1, 1)0, KeyAddr(1, 11)}"
     qmk_keys: "[kRR, kRP]"
   - << : *key_x
     num_keys: 2
-    atreus_keys: "{R1C0, R1C2}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 2)}"
     qmk_keys: "[kLP, kLM]"
   - << : *key_c
     num_keys: 2
-    atreus_keys: "{R1C1, R1C3}"
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 3)}"
     qmk_keys: "[kLR, kLI]"
   - << : *key_j
     num_keys: 2
-    atreus_keys: "{R1C2, R1C8}"
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 8)}"
     qmk_keys: "[kLM, kRI]"
   - << : *key_v
     num_keys: 2
-    atreus_keys: "{R1C3, R1C9}"
+    atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 9)}"
     qmk_keys: "[kLI, kRM]"
   - << : *key_u
     num_keys: 2
-    atreus_keys: "{R1C8, R1C10}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 1)0}"
     qmk_keys: "[kRI, kRR]"
   - kaleidoscope: "" # TODO
     qmk: "LGUI"
@@ -212,205 +212,205 @@ chords:
     qmk_keys: "[kRM, kRP]"
   - << : *key_f
     num_keys: 2
-    atreus_keys: "{R1C0, R1C3}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3)}"
     qmk_keys: "[kLP, kLI]"
   - << : *key_g
     num_keys: 2
-    atreus_keys: "{R1C1, R1C8}"
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 8)}"
     qmk_keys: "[kLR, kRI]"
   - << : *key_comma
     num_keys: 2
-    atreus_keys: "{R1C2, R1C9}"
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 9)}"
     qmk_keys: "[kLM, kRM]"
   - << : *key_y
     num_keys: 2
-    atreus_keys: "{R1C3, R1C10}"
+    atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 1)0}"
     qmk_keys: "[kLI, kRR]"
   - << : *key_m
     num_keys: 2
-    atreus_keys: "{R1C8, R1C11}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11)}"
     qmk_keys: "[kRI, kRP]"
   - << : *key_q
     num_keys: 2
-    atreus_keys: "{R1C0, R1C8}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 8)}"
     qmk_keys: "[kLP, kRI]"
   - << : *key_k
     num_keys: 2
-    atreus_keys: "{R1C1, R1C9}"
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 9)}"
     qmk_keys: "[kLR, kRM]"
   - << : *key_minus
     num_keys: 2
-    atreus_keys: "{R1C2, R1C10}"
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 1)0}"
     qmk_keys: "[kLM, kRR]"
   - << : *key_delete
     num_keys: 2
-    atreus_keys: "{R1C3, R1C11}"
+    atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 11)}"
     qmk_keys: "[kLI, kRP]"
   - << : *key_z
     num_keys: 2
-    atreus_keys: "{R1C0, R1C9}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 9)}"
     qmk_keys: "[kLP, kRM]"
   - << : *key_period
     num_keys: 2
-    atreus_keys: "{R1C1, R1C10}"
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 1)0}"
     qmk_keys: "[kLR, kRR]"
   - << : *key_quote
     num_keys: 2
-    atreus_keys: "{R1C2, R1C11}"
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 11)}"
     qmk_keys: "[kLM, kRP]"
   - kaleidoscope: Key_LeftBracket
     qmk: KC_LEFT_BRACKET
     num_keys: 2
-    atreus_keys: "{R1C0, R1C10}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 1)0}"
     qmk_keys: "[kLP, kRR]"
   - kaleidoscope: Key_RightBracket
     qmk: KC_RIGHT_BRACKET
     num_keys: 2
-    atreus_keys: "{R1C1, R1C11}"
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 11)}"
     qmk_keys: "[kLR, kRP]"
   - << : *key_slash
     num_keys: 2
-    atreus_keys: "{R1C0, R1C11}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 11)}"
     qmk_keys: "[kLP, kRP]"
   - << : *key_backspace
     num_keys: 2
-    atreus_keys: "{R3C5, R3C6}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(3, 6)}"
     qmk_keys: "[kLT, kRT]"
   - << : *key_backtick
     num_keys: 3
-    atreus_keys: "{R1C0, R1C1, R1C2}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 1), KeyAddr(1, 2)}"
     qmk_keys: "[kLP, kLR, kLM]"
   - kaleidoscope: Key_Backslash
     qmk: KC_BACKSLASH
     num_keys: 3
-    atreus_keys: "{R1C1, R1C2, R1C3}"
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 2), KeyAddr(1, 3)}"
     qmk_keys: "[kLR, kLM, kLI]"
   - kaleidoscope: Key_Equals
     qmk: KC_EQUAL
     num_keys: 3
-    atreus_keys: "{R1C8, R1C9, R1C10}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 9), KeyAddr(1, 1)0}"
     qmk_keys: "[kRI, kRM, kRR]"
   - << : *key_esc
     num_keys: 3
-    atreus_keys: "{R1C9, R1C10, R1C11}"
+    atreus_keys: "{KeyAddr(1, 9), KeyAddr(1, 1)0, KeyAddr(1, 11)}"
     qmk_keys: "[kRM, kRR, kRP]"
   - << : *key_z
     num_keys: 2
-    atreus_keys: "{R0C1, R0C2}"
+    atreus_keys: "{KeyAddr(0, 1), KeyAddr(0, 2)}"
     qmk_keys: "[k01, k02]"
   - << : *key_q
     num_keys: 2
-    atreus_keys: "{R2C9, R2C10}"
+    atreus_keys: "{KeyAddr(2, 9), KeyAddr(2, 10)}"
     qmk_keys: "[k27, k28]"
   - kaleidoscope: "Key_Home"
     qmk: "KC_HOME"
     num_keys: 2
-    atreus_keys: "{R3C5, R1C0}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 0)}"
     qmk_keys: "[kLT, kLP]"
   - kaleidoscope: "Key_PageUp"
     qmk: "KC_PAGE_UP"
     num_keys: 2
-    atreus_keys: "{R3C5, R1C1}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 1)}"
     qmk_keys: "[kLT, kLR]"
   - kaleidoscope: "Key_PageDown"
     qmk: "KC_PAGE_DOWN"
     num_keys: 2
-    atreus_keys: "{R3C5, R1C2}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 2)}"
     qmk_keys: "[kLT, kLM]"
   - kaleidoscope: "Key_End"
     qmk: "KC_END"
     num_keys: 2
-    atreus_keys: "{R3C5, R1C3}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 3)}"
     qmk_keys: "[kLT, kLI]"
   - kaleidoscope: "Key_LeftArrow"
     qmk: "KC_LEFT"
     num_keys: 2
-    atreus_keys: "{R3C5, R1C8}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 8)}"
     qmk_keys: "[kLT, kRI]"
   - kaleidoscope: "Key_DownArrow"
     qmk: "KC_DOWN"
     num_keys: 2
-    atreus_keys: "{R3C5, R1C9}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 9)}"
     qmk_keys: "[kLT, kRM]"
   - kaleidoscope: "Key_UpArrow"
     qmk: "KC_UP"
     num_keys: 2
-    atreus_keys: "{R3C5, R1C10}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 1)0}"
     qmk_keys: "[kLT, kRR]"
   - kaleidoscope: "Key_RightArrow"
     qmk: "KC_RIGHT"
     num_keys: 2
-    atreus_keys: "{R3C5, R1C11}"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 11)}"
     qmk_keys: "[kLT, kRP]"
   - kaleidoscope: "Key_1"
     qmk: "KC_1"
     num_keys: 3
-    atreus_keys: "{R1C8, R1C11, R1C0}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 0)}"
     qmk_keys: "[kRI, kRP, kLP]"
   - kaleidoscope: "Key_2"
     qmk: "KC_2"
     num_keys: 3
-    atreus_keys: "{R1C8, R1C11, R1C1}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 1)}"
     qmk_keys: "[kRI, kRP, kLR]"
   - kaleidoscope: "Key_3"
     qmk: "KC_3"
     num_keys: 3
-    atreus_keys: "{R1C8, R1C11, R1C2}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 2)}"
     qmk_keys: "[kRI, kRP, kLM]"
   - kaleidoscope: "Key_4"
     qmk: "KC_4"
     num_keys: 3
-    atreus_keys: "{R1C8, R1C11, R1C3}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 3)}"
     qmk_keys: "[kRI, kRP, kLI]"
   - kaleidoscope: "Key_5"
     qmk: "KC_5"
     num_keys: 4
-    atreus_keys: "{R1C8, R1C11, R1C2, R1C3}"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 2), KeyAddr(1, 3)}"
     qmk_keys: "[kRI, kRP, kLM, kLI]"
   - kaleidoscope: "Key_6"
     qmk: "KC_6"
     num_keys: 4
-    atreus_keys: "{R1C0, R1C3, R1C8, R1C9}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 8), KeyAddr(1, 9)}"
     qmk_keys: "[kLP, kLI, kRI, kRM]"
   - kaleidoscope: "Key_7"
     qmk: "KC_7"
     num_keys: 3
-    atreus_keys: "{R1C0, R1C3, R1C8}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 8)}"
     qmk_keys: "[kLP, kLI, kRI]"
   - kaleidoscope: "Key_8"
     qmk: "KC_8"
     num_keys: 3
-    atreus_keys: "{R1C0, R1C3, R1C9}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 9)}"
     qmk_keys: "[kLP, kLI, kRM]"
   - kaleidoscope: "Key_9"
     qmk: "KC_9"
     num_keys: 3
-    atreus_keys: "{R1C0, R1C3, R1C10}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 1)0}"
     qmk_keys: "[kLP, kLI, kRR]"
   - kaleidoscope: "Key_0"
     qmk: "KC_0"
     num_keys: 3
-    atreus_keys: "{R1C0, R1C3, R1C11}"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 11)}"
     qmk_keys: "[kLP, kLI, kRP]"
   - kaleidoscope: "OSM(LeftGui)"
     qmk: "O(KC_LGUI)"
     num_keys: 2
-    atreus_keys: "{R3C6, R1C0}"
+    atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 0)}"
     qmk_keys: "[kRT, kLP]"
   - kaleidoscope: "OSM(LeftAlt)"
     qmk: "O(KC_LALT)"
     num_keys: 2
-    atreus_keys: "{R3C6, R1C1}"
+    atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 1)}"
     qmk_keys: "[kRT, kLR]"
   - kaleidoscope: "OSM(LeftControl)"
     qmk: "O(KC_LCTL)"
     num_keys: 2
-    atreus_keys: "{R3C6, R1C2}"
+    atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 2)}"
     qmk_keys: "[kRT, kLM]"
   - kaleidoscope: "OSM(LeftShift)"
     qmk: "O(KC_LSFT)"
     num_keys: 2
-    atreus_keys: "{R3C6, R1C3}"
+    atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 3)}"
     qmk_keys: "[kRT, kLI]"
 
     last: true
