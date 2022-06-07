@@ -138,7 +138,9 @@ game24: *key_v
 
 gamet0: *key_esc
 # TODO: number
-gamet1: *key_tab
+gamet1:
+  kaleidoscope: ShiftToLayer(NUM)
+  qmk: MO(asetniop_123)
 gamet2:
   kaleidoscope: Key_Space
   qmk: KC_SPACE

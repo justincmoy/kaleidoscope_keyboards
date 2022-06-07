@@ -205,41 +205,41 @@ pseudolayers:
         set: game
         keycodes:
           - chord: [k00]
-            keycode: TAB
+            keycode: {{#game00}}{{> qmk_key }}{{/game00}}
           - chord: [k01]
-            keycode: Q
+            keycode: {{#game01}}{{> qmk_key }}{{/game01}}
           - chord: [k02]
-            keycode: W
+            keycode: {{#game02}}{{> qmk_key }}{{/game02}}
           - chord: [k03]
-            keycode: E
+            keycode: {{#game03}}{{> qmk_key }}{{/game03}}
           - chord: [k04]
-            keycode: R
+            keycode: {{#game04}}{{> qmk_key }}{{/game04}}
           - chord: [kLP]
-            keycode: LSFT
+            keycode: {{#game10}}{{> qmk_key }}{{/game10}}
           - chord: [kLR]
-            keycode: A
+            keycode: {{#game11}}{{> qmk_key }}{{/game11}}
           - chord: [kLM]
-            keycode: S
+            keycode: {{#game12}}{{> qmk_key }}{{/game12}}
           - chord: [kLI]
-            keycode: D
+            keycode: {{#game13}}{{> qmk_key }}{{/game13}}
           - chord: [kL0]
-            keycode: F
+            keycode: {{#game14}}{{> qmk_key }}{{/game14}}
           - chord: [k20]
-            keycode: LCTL
+            keycode: {{#game20}}{{> qmk_key }}{{/game20}}
           - chord: [k21]
-            keycode: Z
+            keycode: {{#game21}}{{> qmk_key }}{{/game21}}
           - chord: [k22]
-            keycode: X
+            keycode: {{#game22}}{{> qmk_key }}{{/game22}}
           - chord: [k23]
-            keycode: C
+            keycode: {{#game23}}{{> qmk_key }}{{/game23}}
           - chord: [k24]
-            keycode: V
+            keycode: {{#game24}}{{> qmk_key }}{{/game24}}
           - chord: [kT0]
-            keycode: ESC
+            keycode: {{#gamet0}}{{> qmk_key }}{{/gamet0}}
           - chord: [kT1]
-            keycode: MO(asetniop_123)
+            keycode: {{#gamet1}}{{> qmk_key }}{{/gamet1}}
           - chord: [kLT]
-            keycode: SPACE
+            keycode: {{#gamet2}}{{> qmk_key }}{{/gamet2}}
           - chord: [kT1, k24]
             keycode: DF(ASETNIOP)
 leader_sequences:
