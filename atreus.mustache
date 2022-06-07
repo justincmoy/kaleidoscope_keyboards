@@ -12,6 +12,7 @@ enum {
 
 enum {
   BASE,
+  NUM,
   GAME
 };
 
@@ -59,6 +60,23 @@ KEYMAPS(
     {{#baset4}}{{> kaleidoscope_key }}{{/baset4}},
     {{#baset5}}{{> kaleidoscope_key }}{{/baset5}},
     XXX, XXX, M(MACRO_LOCK_GAME)
+  ),
+
+  [NUM] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    Key_1, Key_2, Key_3, Key_4, Key_5,
+    XXX, XXX, XXX, XXX, XXX,
+
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    XXX, XXX, XXX,
+    XXX, XXX, XXX,
+    XXX, XXX, XXX,
+    XXX, XXX, XXX
   ),
 
   [GAME] = KEYMAP(
