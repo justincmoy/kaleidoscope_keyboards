@@ -72,15 +72,14 @@ pseudolayers:
             keycode: {{#base18}}{{> qmk_key }}{{/base18}}
           - chord: [kRP]
             keycode: {{#base19}}{{> qmk_key }}{{/base19}}
+          - chord: [kLT]
+            keycode: {{#baset2}}{{> qmk_key }}{{/baset2}}
+          - chord: [kRT]
+            keycode: {{#baset3}}{{> qmk_key }}{{/baset3}}
 {{#chords}}
           - chord: {{qmk_keys}}
             keycode: {{> qmk_key}}
 {{/chords}}
-
-          - chord: [kLT]
-            keycode: T
-          - chord: [kRT]
-            keycode: KM(SPACE, LSFT)
 
           - chord: [kLM, kLI, kRI, kRM]
             keycode: LEAD
@@ -90,57 +89,57 @@ pseudolayers:
             keycode: RESET
 
           - chord: [k00]
-            keycode: J
+            keycode: {{#base00}}{{> qmk_key }}{{/base00}}
           - chord: [k01]
-            keycode: F
+            keycode: {{#base01}}{{> qmk_key }}{{/base01}}
           - chord: [k02]
-            keycode: M
+            keycode: {{#base02}}{{> qmk_key }}{{/base02}}
           - chord: [k03]
-            keycode: P
+            keycode: {{#base03}}{{> qmk_key }}{{/base03}}
           - chord: [k04]
-            keycode: V
+            keycode: {{#base04}}{{> qmk_key }}{{/base04}}
           - chord: [k05]
-            keycode: ";"
+            keycode: {{#base05}}{{> qmk_key }}{{/base05}}
           - chord: [k06]
-            keycode: "."
+            keycode: {{#base06}}{{> qmk_key }}{{/base06}}
           - chord: [k07]
-            keycode: "/"
+            keycode: {{#base07}}{{> qmk_key }}{{/base07}}
           - chord: [k08]
-            keycode: "'"
+            keycode: {{#base08}}{{> qmk_key }}{{/base08}}
           - chord: [k09]
-            keycode: GRV
+            keycode: {{#base09}}{{> qmk_key }}{{/base09}}
           - chord: [k20]
-            keycode: X
+            keycode: {{#base20}}{{> qmk_key }}{{/base20}}
           - chord: [k21]
-            keycode: G
+            keycode: {{#base21}}{{> qmk_key }}{{/base21}}
           - chord: [k22]
-            keycode: L
+            keycode: {{#base22}}{{> qmk_key }}{{/base22}}
           - chord: [k23]
-            keycode: C
+            keycode: {{#base23}}{{> qmk_key }}{{/base23}}
           - chord: [k24]
-            keycode: B
+            keycode: {{#base24}}{{> qmk_key }}{{/base24}}
           - chord: [k25]
-            keycode: "-"
+            keycode: {{#base25}}{{> qmk_key }}{{/base25}}
           - chord: [k26]
-            keycode: U
+            keycode: {{#base26}}{{> qmk_key }}{{/base26}}
           - chord: [k27]
-            keycode: O
+            keycode: {{#base27}}{{> qmk_key }}{{/base27}}
           - chord: [k28]
-            keycode: Y
+            keycode: {{#base28}}{{> qmk_key }}{{/base28}}
           - chord: [k29]
-            keycode: K
+            keycode: {{#base29}}{{> qmk_key }}{{/base29}}
           - chord: [kL0]
-            keycode: W
+            keycode: {{#base14}}{{> qmk_key }}{{/base14}}
           - chord: [kR0]
-            keycode: ","
+            keycode: {{#base15}}{{> qmk_key }}{{/base15}}
           - chord: [kT0]
-            keycode: ESC
+            keycode: {{#baset0}}{{> qmk_key }}{{/baset0}}
           - chord: [kT1]
-            keycode: TAB
+            keycode: {{#baset1}}{{> qmk_key }}{{/baset1}}
           - chord: [kT2]
-            keycode: BSPC
+            keycode: {{#baset4}}{{> qmk_key }}{{/baset4}}
           - chord: [kT3]
-            keycode: DEL
+            keycode: {{#baset5}}{{> qmk_key }}{{/baset5}}
 
           - chord: [kT1, k24]
             keycode: DF(game)
