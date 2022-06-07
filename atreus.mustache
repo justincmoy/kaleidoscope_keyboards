@@ -151,6 +151,7 @@ void setup() {
   QUKEYS(
     kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), Key_LeftShift)
   );
+  SimpleChords.ignoreOnLayers_ = 1 << GAME;
   SimpleChords.timeout_ = 30;
 }
 
