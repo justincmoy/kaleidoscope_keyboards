@@ -1,0 +1,252 @@
+---
+keys:
+  - k00
+  - k01
+  - k02
+  - k03
+  - k04
+  - k05
+  - k06
+  - k07
+  - k08
+  - k09
+  - kLP
+  - kLR
+  - kLM
+  - kLI
+  - kLT
+  - kRT
+  - kRI
+  - kRM
+  - kRR
+  - kRP
+  - k20
+  - k21
+  - k22
+  - k23
+  - k24
+  - k25
+  - k26
+  - k27
+  - k28
+  - k29
+  - kL0
+  - kR0
+  - kT0
+  - kT1
+  - kT2
+  - kT3
+parameters:
+  layout_function_name: LAYOUT_HOME_ROW_FULL
+  chord_timeout: 40
+  dance_timeout: 200
+  leader_timeout: 500
+  tap_timeout: 15
+  command_max_length: 5
+  leader_max_length: 1
+  dynamic_macro_max_length: 20
+  string_max_length: 16
+  long_press_multiplier: 5
+  default_pseudolayer: ASETNIOP
+layers:
+  - type: auto
+pseudolayers:
+  - name: ASETNIOP
+    chords:
+      - type: chord_set_with_keycode
+        set: asetniop
+        keycodes:
+          - chord: [kLP]
+            keycode: {{#base10}}{{> qmk_key }}{{/base10}}
+          - chord: [kLR]
+            keycode: {{#base11}}{{> qmk_key }}{{/base11}}
+          - chord: [kLM]
+            keycode: {{#base12}}{{> qmk_key }}{{/base12}}
+          - chord: [kLI]
+            keycode: {{#base13}}{{> qmk_key }}{{/base13}}
+          - chord: [kRI]
+            keycode: {{#base16}}{{> qmk_key }}{{/base16}}
+          - chord: [kRM]
+            keycode: {{#base17}}{{> qmk_key }}{{/base17}}
+          - chord: [kRR]
+            keycode: {{#base18}}{{> qmk_key }}{{/base18}}
+          - chord: [kRP]
+            keycode: {{#base19}}{{> qmk_key }}{{/base19}}
+          - chord: [kLT]
+            keycode: {{#baset2}}{{> qmk_key }}{{/baset2}}
+          - chord: [kRT]
+            keycode: {{#baset3}}{{> qmk_key }}{{/baset3}}
+{{#chords}}
+          - chord: {{qmk_keys}}
+            keycode: {{> qmk_key}}
+{{/chords}}
+
+          - chord: [kLM, kLI, kRI, kRM]
+            keycode: LEAD
+          - chord: [kLP, kLR, kRR, kRP]
+            keycode: LOCK
+          - chord: [kLP, kLR, kLM, kLI, kRI, kRM, kRR, kRP]
+            keycode: RESET
+
+          - chord: [k00]
+            keycode: {{#base00}}{{> qmk_key }}{{/base00}}
+          - chord: [k01]
+            keycode: {{#base01}}{{> qmk_key }}{{/base01}}
+          - chord: [k02]
+            keycode: {{#base02}}{{> qmk_key }}{{/base02}}
+          - chord: [k03]
+            keycode: {{#base03}}{{> qmk_key }}{{/base03}}
+          - chord: [k04]
+            keycode: {{#base04}}{{> qmk_key }}{{/base04}}
+          - chord: [k05]
+            keycode: {{#base05}}{{> qmk_key }}{{/base05}}
+          - chord: [k06]
+            keycode: {{#base06}}{{> qmk_key }}{{/base06}}
+          - chord: [k07]
+            keycode: {{#base07}}{{> qmk_key }}{{/base07}}
+          - chord: [k08]
+            keycode: {{#base08}}{{> qmk_key }}{{/base08}}
+          - chord: [k09]
+            keycode: {{#base09}}{{> qmk_key }}{{/base09}}
+          - chord: [k20]
+            keycode: {{#base20}}{{> qmk_key }}{{/base20}}
+          - chord: [k21]
+            keycode: {{#base21}}{{> qmk_key }}{{/base21}}
+          - chord: [k22]
+            keycode: {{#base22}}{{> qmk_key }}{{/base22}}
+          - chord: [k23]
+            keycode: {{#base23}}{{> qmk_key }}{{/base23}}
+          - chord: [k24]
+            keycode: {{#base24}}{{> qmk_key }}{{/base24}}
+          - chord: [k25]
+            keycode: {{#base25}}{{> qmk_key }}{{/base25}}
+          - chord: [k26]
+            keycode: {{#base26}}{{> qmk_key }}{{/base26}}
+          - chord: [k27]
+            keycode: {{#base27}}{{> qmk_key }}{{/base27}}
+          - chord: [k28]
+            keycode: {{#base28}}{{> qmk_key }}{{/base28}}
+          - chord: [k29]
+            keycode: {{#base29}}{{> qmk_key }}{{/base29}}
+          - chord: [kL0]
+            keycode: {{#base14}}{{> qmk_key }}{{/base14}}
+          - chord: [kR0]
+            keycode: {{#base15}}{{> qmk_key }}{{/base15}}
+          - chord: [kT0]
+            keycode: {{#baset0}}{{> qmk_key }}{{/baset0}}
+          - chord: [kT1]
+            keycode: {{#baset1}}{{> qmk_key }}{{/baset1}}
+          - chord: [kT2]
+            keycode: {{#baset4}}{{> qmk_key }}{{/baset4}}
+          - chord: [kT3]
+            keycode: {{#baset5}}{{> qmk_key }}{{/baset5}}
+
+          - chord: [kT1, k24]
+            keycode: DF(game)
+  - name: asetniop_123
+    chords:
+      - type: chord_set_with_keycode
+        set: asetniop_123
+        keycodes:
+          - chord: [kLP]
+            keycode: '1'
+          - chord: [kLR]
+            keycode: '2'
+          - chord: [kLM]
+            keycode: '3'
+          - chord: [kLI]
+            keycode: '4'
+          - chord: [kRI]
+            keycode: '7'
+          - chord: [kRM]
+            keycode: '8'
+          - chord: [kRR]
+            keycode: '9'
+          - chord: [kRP]
+            keycode: '0'
+          - chord: [kLM, kLI]
+            keycode: '5'
+          - chord: [kRI, kRM]
+            keycode: '6'
+          - chord: [kLT]
+            keycode: DF(ASETNIOP)
+          - chord: [kRT]
+            keycode: LSFT
+          - chord: [kLT, kRT]
+            keycode: BSPC
+  - name: asetniop_mouse
+    chords:
+      - type: chord_set_with_keycode
+        set: asetniop_mouse
+        keycodes:
+          - chord: [kLP]
+            keycode: HOME
+          - chord: [kLR]
+            keycode: PGUP
+          - chord: [kLM]
+            keycode: PGDN
+          - chord: [kLI]
+            keycode: BTN2
+          - chord: [kRI]
+            keycode: MS_L
+          - chord: [kRM]
+            keycode: MS_D
+          - chord: [kRR]
+            keycode: MS_U
+          - chord: [kRP]
+            keycode: MS_R
+          - chord: [kLT]
+            keycode: DF(ASETNIOP)
+          - chord: [kRT]
+            keycode: BTN1
+  - name: game
+    chords:
+      - type: chord_set_with_keycode
+        set: game
+        keycodes:
+          - chord: [k00]
+            keycode: {{#game00}}{{> qmk_key }}{{/game00}}
+          - chord: [k01]
+            keycode: {{#game01}}{{> qmk_key }}{{/game01}}
+          - chord: [k02]
+            keycode: {{#game02}}{{> qmk_key }}{{/game02}}
+          - chord: [k03]
+            keycode: {{#game03}}{{> qmk_key }}{{/game03}}
+          - chord: [k04]
+            keycode: {{#game04}}{{> qmk_key }}{{/game04}}
+          - chord: [kLP]
+            keycode: {{#game10}}{{> qmk_key }}{{/game10}}
+          - chord: [kLR]
+            keycode: {{#game11}}{{> qmk_key }}{{/game11}}
+          - chord: [kLM]
+            keycode: {{#game12}}{{> qmk_key }}{{/game12}}
+          - chord: [kLI]
+            keycode: {{#game13}}{{> qmk_key }}{{/game13}}
+          - chord: [kL0]
+            keycode: {{#game14}}{{> qmk_key }}{{/game14}}
+          - chord: [k20]
+            keycode: {{#game20}}{{> qmk_key }}{{/game20}}
+          - chord: [k21]
+            keycode: {{#game21}}{{> qmk_key }}{{/game21}}
+          - chord: [k22]
+            keycode: {{#game22}}{{> qmk_key }}{{/game22}}
+          - chord: [k23]
+            keycode: {{#game23}}{{> qmk_key }}{{/game23}}
+          - chord: [k24]
+            keycode: {{#game24}}{{> qmk_key }}{{/game24}}
+          - chord: [kT0]
+            keycode: {{#gamet0}}{{> qmk_key }}{{/gamet0}}
+          - chord: [kT1]
+            keycode: {{#gamet1}}{{> qmk_key }}{{/gamet1}}
+          - chord: [kLT]
+            keycode: {{#gamet2}}{{> qmk_key }}{{/gamet2}}
+          - chord: [kT1, k24]
+            keycode: DF(ASETNIOP)
+leader_sequences:
+  - name: ls_vim_cwd
+    function: void ls_vim_cwd(void) { SEND_STRING("%:p:h"); }
+    sequence:
+      - KC_SCLN
+extra_dependencies:
+  - keymap.h
+extra_code: []

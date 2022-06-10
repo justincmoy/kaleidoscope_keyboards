@@ -1,0 +1,360 @@
+base00: &key_j
+  kaleidoscope: Key_J
+  qmk: KC_J
+base01: &key_f
+  kaleidoscope: Key_F
+  qmk: KC_F
+base02: &key_m
+  kaleidoscope: Key_M
+  qmk: KC_M
+base03: &key_p
+  kaleidoscope: Key_P
+  qmk: KC_P
+base04: &key_v
+  kaleidoscope: Key_V
+  qmk: KC_V
+base05: &key_semicolon
+  kaleidoscope: Key_Semicolon
+  qmk: KC_SEMICOLON
+base06: &key_period
+  kaleidoscope: Key_Period
+  qmk: KC_DOT
+base07: &key_slash
+  kaleidoscope: Key_Slash
+  qmk: KC_SLASH
+base08: &key_quote
+  kaleidoscope: Key_Quote
+  qmk: KC_QUOTE
+base09: &key_backtick
+  kaleidoscope: Key_Backtick
+  qmk: KC_GRAVE
+
+base10: &key_r
+  kaleidoscope: Key_R
+  qmk: KC_R
+base11: &key_s
+  kaleidoscope: Key_S
+  qmk: KC_S
+base12: &key_n
+  kaleidoscope: Key_N
+  qmk: KC_N
+base13: &key_d
+  kaleidoscope: Key_D
+  qmk: KC_D
+base14: &key_w
+  kaleidoscope: Key_W
+  qmk: KC_W
+base15: &key_comma
+  kaleidoscope: Key_Comma
+  qmk: KC_COMMA
+base16: &key_a
+  kaleidoscope: Key_A
+  qmk: KC_A
+base17: &key_e
+  kaleidoscope: Key_E
+  qmk: KC_E
+base18: &key_i
+  kaleidoscope: Key_I
+  qmk: KC_I
+base19: &key_h
+  kaleidoscope: Key_H
+  qmk: KC_H
+
+base20: &key_x
+  kaleidoscope: Key_X
+  qmk: KC_X
+base21: &key_g
+  kaleidoscope: Key_G
+  qmk: KC_G
+base22: &key_l
+  kaleidoscope: Key_L
+  qmk: KC_L
+base23: &key_c
+  kaleidoscope: Key_C
+  qmk: KC_C
+base24: &key_b
+  kaleidoscope: Key_B
+  qmk: KC_B
+base25: &key_minus
+  kaleidoscope: Key_Minus
+  qmk: KC_MINUS
+base26: &key_u
+  kaleidoscope: Key_U
+  qmk: KC_U
+base27: &key_o
+  kaleidoscope: Key_O
+  qmk: KC_O
+base28: &key_y
+  kaleidoscope: Key_Y
+  qmk: KC_Y
+base29: &key_k
+  kaleidoscope: Key_K
+  qmk: KC_K
+
+baset0: &key_esc
+  kaleidoscope: Key_Esc
+  qmk: KC_ESCAPE
+baset1: &key_tab
+  kaleidoscope: Key_Tab
+  qmk: KC_TAB
+baset2: &key_t
+  kaleidoscope: Key_T
+  qmk: KC_T
+baset3:
+  kaleidoscope: Key_Space # Qukeys
+  qmk: KM(SPACE, LSFT) # MOD_LSFT(KC_SPACE)
+baset4: &key_backspace
+  kaleidoscope: Key_Backspace
+  qmk: KC_BACKSPACE
+baset5: &key_delete
+  kaleidoscope: Key_Delete
+  qmk: KC_DELETE
+
+game00: *key_tab
+game01: &key_q
+  kaleidoscope: Key_Q
+  qmk: KC_Q
+game02: *key_w
+game03: *key_e
+game04: *key_r
+
+game10:
+  kaleidoscope: Key_LShift
+  qmk: KC_LEFT_SHIFT
+game11: *key_a
+game12: *key_s
+game13: *key_d
+game14: *key_f
+
+game20:
+  kaleidoscope: Key_LCtrl
+  qmk: KC_LEFT_CTRL
+game21: &key_z
+  kaleidoscope: Key_Z
+  qmk: KC_Z
+game22: *key_x
+game23: *key_c
+game24: *key_v
+
+gamet0: *key_esc
+# TODO: number
+gamet1:
+  kaleidoscope: ShiftToLayer(NUM)
+  qmk: MO(asetniop_123)
+gamet2:
+  kaleidoscope: Key_Space
+  qmk: KC_SPACE
+
+chords:
+  - << : *key_tab
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 1), KeyAddr(1, 2), KeyAddr(1, 3)}"
+    qmk_keys: "[kLP, kLR, kLM, kLI]"
+  - kaleidoscope: Key_Enter
+    qmk: KC_ENTER
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 9), KeyAddr(1, 10), KeyAddr(1, 11)}"
+    qmk_keys: "[kRI, kRM, kRR, kRP]"
+  - kaleidoscope: "" # TODO
+    qmk: "DF(asetniop_123)"
+    qmk_keys: "[kLP, kLI, kRI, kRP]"
+  - kaleidoscope: "" # TODO
+    qmk: "CAPS"
+    qmk_keys: "[kLR, kLM, kRM, kRR]"
+  - << : *key_w
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 1)}"
+    qmk_keys: "[kLP, kLR]"
+  - << : *key_l
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 2)}"
+    qmk_keys: "[kLR, kLM]"
+  - << : *key_p
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 3)}"
+    qmk_keys: "[kLM, kLI]"
+  - << : *key_b
+    atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 8)}"
+    qmk_keys: "[kLI, kRI]"
+  - kaleidoscope: "" # TODO
+    qmk: "DF(asetniop_mouse)"
+    qmk_keys: "[kRI, kRM]"
+  - << : *key_o
+    atreus_keys: "{KeyAddr(1, 9), KeyAddr(1, 10)}"
+    qmk_keys: "[kRM, kRR]"
+  - << : *key_semicolon
+    atreus_keys: "{KeyAddr(1, 10), KeyAddr(1, 11)}"
+    qmk_keys: "[kRR, kRP]"
+  - << : *key_x
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 2)}"
+    qmk_keys: "[kLP, kLM]"
+  - << : *key_c
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 3)}"
+    qmk_keys: "[kLR, kLI]"
+  - << : *key_j
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 8)}"
+    qmk_keys: "[kLM, kRI]"
+  - << : *key_v
+    atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 9)}"
+    qmk_keys: "[kLI, kRM]"
+  - << : *key_u
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 10)}"
+    qmk_keys: "[kRI, kRR]"
+  - kaleidoscope: "" # TODO
+    qmk: "LGUI"
+    qmk_keys: "[kRM, kRP]"
+  - << : *key_f
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3)}"
+    qmk_keys: "[kLP, kLI]"
+  - << : *key_g
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 8)}"
+    qmk_keys: "[kLR, kRI]"
+  - << : *key_comma
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 9)}"
+    qmk_keys: "[kLM, kRM]"
+  - << : *key_y
+    atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 10)}"
+    qmk_keys: "[kLI, kRR]"
+  - << : *key_m
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11)}"
+    qmk_keys: "[kRI, kRP]"
+  - << : *key_q
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 8)}"
+    qmk_keys: "[kLP, kRI]"
+  - << : *key_k
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 9)}"
+    qmk_keys: "[kLR, kRM]"
+  - << : *key_minus
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 10)}"
+    qmk_keys: "[kLM, kRR]"
+  - << : *key_delete
+    atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 11)}"
+    qmk_keys: "[kLI, kRP]"
+  - << : *key_z
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 9)}"
+    qmk_keys: "[kLP, kRM]"
+  - << : *key_period
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 10)}"
+    qmk_keys: "[kLR, kRR]"
+  - << : *key_quote
+    atreus_keys: "{KeyAddr(1, 2), KeyAddr(1, 11)}"
+    qmk_keys: "[kLM, kRP]"
+  - kaleidoscope: Key_LeftBracket
+    qmk: KC_LEFT_BRACKET
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 10)}"
+    qmk_keys: "[kLP, kRR]"
+  - kaleidoscope: Key_RightBracket
+    qmk: KC_RIGHT_BRACKET
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 11)}"
+    qmk_keys: "[kLR, kRP]"
+  - << : *key_slash
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 11)}"
+    qmk_keys: "[kLP, kRP]"
+  - << : *key_backspace
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(3, 6)}"
+    qmk_keys: "[kLT, kRT]"
+  - << : *key_backtick
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 1), KeyAddr(1, 2)}"
+    qmk_keys: "[kLP, kLR, kLM]"
+  - kaleidoscope: Key_Backslash
+    qmk: KC_BACKSLASH
+    atreus_keys: "{KeyAddr(1, 1), KeyAddr(1, 2), KeyAddr(1, 3)}"
+    qmk_keys: "[kLR, kLM, kLI]"
+  - kaleidoscope: Key_Equals
+    qmk: KC_EQUAL
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 9), KeyAddr(1, 10)}"
+    qmk_keys: "[kRI, kRM, kRR]"
+  - << : *key_esc
+    atreus_keys: "{KeyAddr(1, 9), KeyAddr(1, 10), KeyAddr(1, 11)}"
+    qmk_keys: "[kRM, kRR, kRP]"
+  - << : *key_z
+    atreus_keys: "{KeyAddr(0, 1), KeyAddr(0, 2)}"
+    qmk_keys: "[k01, k02]"
+  - << : *key_q
+    atreus_keys: "{KeyAddr(2, 9), KeyAddr(2, 10)}"
+    qmk_keys: "[k27, k28]"
+  - kaleidoscope: "Key_Home"
+    qmk: "KC_HOME"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 0)}"
+    qmk_keys: "[kLT, kLP]"
+  - kaleidoscope: "Key_PageUp"
+    qmk: "KC_PAGE_UP"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 1)}"
+    qmk_keys: "[kLT, kLR]"
+  - kaleidoscope: "Key_PageDown"
+    qmk: "KC_PAGE_DOWN"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 2)}"
+    qmk_keys: "[kLT, kLM]"
+  - kaleidoscope: "Key_End"
+    qmk: "KC_END"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 3)}"
+    qmk_keys: "[kLT, kLI]"
+  - kaleidoscope: "Key_LeftArrow"
+    qmk: "KC_LEFT"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 8)}"
+    qmk_keys: "[kLT, kRI]"
+  - kaleidoscope: "Key_DownArrow"
+    qmk: "KC_DOWN"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 9)}"
+    qmk_keys: "[kLT, kRM]"
+  - kaleidoscope: "Key_UpArrow"
+    qmk: "KC_UP"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 10)}"
+    qmk_keys: "[kLT, kRR]"
+  - kaleidoscope: "Key_RightArrow"
+    qmk: "KC_RIGHT"
+    atreus_keys: "{KeyAddr(3, 5), KeyAddr(1, 11)}"
+    qmk_keys: "[kLT, kRP]"
+  - kaleidoscope: "Key_1"
+    qmk: "KC_1"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 0)}"
+    qmk_keys: "[kRI, kRP, kLP]"
+  - kaleidoscope: "Key_2"
+    qmk: "KC_2"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 1)}"
+    qmk_keys: "[kRI, kRP, kLR]"
+  - kaleidoscope: "Key_3"
+    qmk: "KC_3"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 2)}"
+    qmk_keys: "[kRI, kRP, kLM]"
+  - kaleidoscope: "Key_4"
+    qmk: "KC_4"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 3)}"
+    qmk_keys: "[kRI, kRP, kLI]"
+  - kaleidoscope: "Key_5"
+    qmk: "KC_5"
+    atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 11), KeyAddr(1, 2), KeyAddr(1, 3)}"
+    qmk_keys: "[kRI, kRP, kLM, kLI]"
+  - kaleidoscope: "Key_6"
+    qmk: "KC_6"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 8), KeyAddr(1, 9)}"
+    qmk_keys: "[kLP, kLI, kRI, kRM]"
+  - kaleidoscope: "Key_7"
+    qmk: "KC_7"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 8)}"
+    qmk_keys: "[kLP, kLI, kRI]"
+  - kaleidoscope: "Key_8"
+    qmk: "KC_8"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 9)}"
+    qmk_keys: "[kLP, kLI, kRM]"
+  - kaleidoscope: "Key_9"
+    qmk: "KC_9"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 10)}"
+    qmk_keys: "[kLP, kLI, kRR]"
+  - kaleidoscope: "Key_0"
+    qmk: "KC_0"
+    atreus_keys: "{KeyAddr(1, 0), KeyAddr(1, 3), KeyAddr(1, 11)}"
+    qmk_keys: "[kLP, kLI, kRP]"
+  - kaleidoscope: "OSM(LeftGui)"
+    qmk: "O(KC_LGUI)"
+    atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 0)}"
+    qmk_keys: "[kRT, kLP]"
+  - kaleidoscope: "OSM(LeftAlt)"
+    qmk: "O(KC_LALT)"
+    atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 1)}"
+    qmk_keys: "[kRT, kLR]"
+  - kaleidoscope: "OSM(LeftControl)"
+    qmk: "O(KC_LCTL)"
+    atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 2)}"
+    qmk_keys: "[kRT, kLM]"
+  - kaleidoscope: "OSM(LeftShift)"
+    qmk: "O(KC_LSFT)"
+    atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 3)}"
+    qmk_keys: "[kRT, kLI]"
+
+    last: true
