@@ -149,6 +149,12 @@ void setup() {
   MouseKeys.accelSpeed = 5;
   MouseKeys.setSpeedLimit(60);
   QUKEYS(
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 0), Key_LeftGui),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 1), Key_LeftAlt),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 2), Key_LeftControl),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 9), Key_LeftControl),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 10), Key_LeftAlt),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 11), Key_LeftGui),
     kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), Key_LeftShift),
     kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 5), ShiftToLayer(NUM)),
     kaleidoscope::plugin::Qukey(NUM, KeyAddr(3, 6), Key_LeftShift)
