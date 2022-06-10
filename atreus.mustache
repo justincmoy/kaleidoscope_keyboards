@@ -67,7 +67,7 @@ KEYMAPS(
     XXX, XXX, XXX, XXX, XXX,
 
     Key_1, Key_2, Key_3, Key_4, Key_5,
-    XXX, XXX, XXX, XXX, XXX,
+    Key_6, Key_7, Key_8, Key_9, Key_0,
 
     XXX, XXX, XXX, XXX, XXX,
     XXX, XXX,
@@ -149,7 +149,9 @@ void setup() {
   MouseKeys.accelSpeed = 5;
   MouseKeys.setSpeedLimit(60);
   QUKEYS(
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), Key_LeftShift)
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), Key_LeftShift),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 5), ShiftToLayer(NUM)),
+    kaleidoscope::plugin::Qukey(NUM, KeyAddr(3, 6), Key_LeftShift)
   );
   SimpleChords.ignoreOnLayers_ = 1 << GAME;
   SimpleChords.timeout_ = 30;
