@@ -7,12 +7,14 @@
 #include "Kaleidoscope-Qukeys.h"
 
 enum {
-  MACRO_LOCK_GAME
+  MACRO_LOCK_GAME,
+  MACRO_LOCK_MOUSE
 };
 
 enum {
   BASE,
   NUM,
+  MOUSE,
   GAME
 };
 
@@ -79,6 +81,23 @@ KEYMAPS(
     XXX, XXX, XXX
   ),
 
+  [MOUSE] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    Key_mouseScrollL, Key_mouseScrollUp, Key_mouseScrollDn, Key_mouseScrollR, XXX,
+    XXX, Key_mouseL, Key_mouseDn, Key_mouseUp, Key_mouseR,
+
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    XXX, XXX, XXX,
+    XXX, XXX, M(MACRO_LOCK_MOUSE),
+    XXX, XXX, XXX,
+    XXX, XXX, XXX
+  ),
+
   [GAME] = KEYMAP(
     {{#game00}}{{> kaleidoscope_key }}{{/game00}},
     {{#game01}}{{> kaleidoscope_key }}{{/game01}},
@@ -133,6 +152,15 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
         Layer.deactivate(GAME);
       } else {
         Layer.activate(GAME);
+      }
+    }
+    break;
+  case MACRO_LOCK_MOUSE:
+    if (keyToggledOn(event.state)) {
+      if (Layer.isActive(MOUSE)) {
+        Layer.deactivate(MOUSE);
+      } else {
+        Layer.activate(MOUSE);
       }
     }
     break;
