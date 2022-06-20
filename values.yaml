@@ -171,9 +171,6 @@ chords:
   - << : *key_b
     atreus_keys: "{KeyAddr(1, 3), KeyAddr(1, 8)}"
     qmk_keys: "[kLI, kRI]"
-  - kaleidoscope: "" # TODO
-    qmk: "DF(asetniop_mouse)"
-    qmk_keys: "[kRI, kRM]"
   - << : *key_o
     atreus_keys: "{KeyAddr(1, 9), KeyAddr(1, 10)}"
     qmk_keys: "[kRM, kRR]"
@@ -357,8 +354,8 @@ chords:
     atreus_keys: "{KeyAddr(3, 6), KeyAddr(1, 3)}"
     qmk_keys: "[kRT, kLI]"
   - kaleidoscope: "M(MACRO_LOCK_MOUSE)"
-    qmk: "" # TODO
+    qmk: "DF(asetniop_mouse)"
     atreus_keys: "{KeyAddr(1, 8), KeyAddr(1, 9)}"
-    qmk_keys: "" # TODO
+    qmk_keys: "[kRI, kRM]"
 
     last: true
