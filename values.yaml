@@ -98,8 +98,8 @@ baset1: &key_tab
   kaleidoscope: Key_Tab
   qmk: KC_TAB
 baset2: &key_t
-  kaleidoscope: Key_T
-  qmk: KC_T
+  kaleidoscope: Key_T # Qukeys
+  qmk: KL(T, asetniop_123)
 baset3:
   kaleidoscope: Key_Space # Qukeys
   qmk: KM(SPACE, LSFT) # MOD_LSFT(KC_SPACE)
