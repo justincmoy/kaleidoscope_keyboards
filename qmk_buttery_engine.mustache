@@ -149,25 +149,26 @@ pseudolayers:
         set: asetniop_123
         keycodes:
           - chord: [kLP]
-            keycode: '1'
+            keycode: {{#num10}}{{> qmk_key }}{{/num10}}
           - chord: [kLR]
-            keycode: '2'
+            keycode: {{#num11}}{{> qmk_key }}{{/num11}}
           - chord: [kLM]
-            keycode: '3'
+            keycode: {{#num12}}{{> qmk_key }}{{/num12}}
           - chord: [kLI]
-            keycode: '4'
-          - chord: [kRI]
-            keycode: '7'
-          - chord: [kRM]
-            keycode: '8'
-          - chord: [kRR]
-            keycode: '9'
-          - chord: [kRP]
-            keycode: '0'
+            keycode: {{#num13}}{{> qmk_key }}{{/num13}}
           - chord: [kLM, kLI]
-            keycode: '5'
+            keycode: {{#num14}}{{> qmk_key }}{{/num14}}
           - chord: [kRI, kRM]
-            keycode: '6'
+            keycode: {{#num15}}{{> qmk_key }}{{/num15}}
+          - chord: [kRI]
+            keycode: {{#num16}}{{> qmk_key }}{{/num16}}
+          - chord: [kRM]
+            keycode: {{#num17}}{{> qmk_key }}{{/num17}}
+          - chord: [kRR]
+            keycode: {{#num18}}{{> qmk_key }}{{/num18}}
+          - chord: [kRP]
+            keycode: {{#num19}}{{> qmk_key }}{{/num19}}
+
           - chord: [kLT]
             keycode: DF(ASETNIOP)
           - chord: [kRT]

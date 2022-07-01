@@ -110,6 +110,37 @@ baset5: &key_delete
   kaleidoscope: Key_Delete
   qmk: KC_DELETE
 
+num10: &key_1
+  kaleidoscope: Key_1
+  qmk: KC_1
+num11: &key_2
+  kaleidoscope: Key_2
+  qmk: KC_2
+num12: &key_3
+  kaleidoscope: Key_3
+  qmk: KC_3
+num13: &key_4
+  kaleidoscope: Key_4
+  qmk: KC_4
+num14: &key_5
+  kaleidoscope: Key_5
+  qmk: KC_5
+num15: &key_6
+  kaleidoscope: Key_6
+  qmk: KC_6
+num16: &key_7
+  kaleidoscope: Key_7
+  qmk: KC_7
+num17: &key_8
+  kaleidoscope: Key_8
+  qmk: KC_8
+num18: &key_9
+  kaleidoscope: Key_9
+  qmk: KC_9
+num19: &key_0
+  kaleidoscope: Key_0
+  qmk: KC_0
+
 game00: *key_tab
 game01: &key_q
   kaleidoscope: Key_Q
@@ -137,7 +168,6 @@ game23: *key_c
 game24: *key_v
 
 gamet0: *key_esc
-# TODO: number
 gamet1:
   kaleidoscope: ShiftToLayer(NUM)
   qmk: MO(asetniop_123)
