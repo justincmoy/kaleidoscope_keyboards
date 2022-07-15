@@ -1,3 +1,5 @@
-*.swp
+*.hex
 *.ino
+*.swp
 keymap.c
+keymap_def.yaml
