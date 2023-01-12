@@ -8,13 +8,14 @@
 
 enum {
   MACRO_LOCK_GAME,
-  MACRO_LOCK_MOUSE
 };
 
 enum {
   BASE,
-  NUM,
+  NAV,
   MOUSE,
+  NUM,
+  SYM,
   GAME
 };
 
@@ -47,7 +48,7 @@ KEYMAPS(
     {{#base22}}{{> kaleidoscope_key }}{{/base22}},
     {{#base23}}{{> kaleidoscope_key }}{{/base23}},
     {{#base24}}{{> kaleidoscope_key }}{{/base24}},
-    XXX, XXX,
+    XXX, M(MACRO_LOCK_GAME),
     {{#base25}}{{> kaleidoscope_key }}{{/base25}},
     {{#base26}}{{> kaleidoscope_key }}{{/base26}},
     {{#base27}}{{> kaleidoscope_key }}{{/base27}},
@@ -61,7 +62,7 @@ KEYMAPS(
     {{#baset3}}{{> kaleidoscope_key }}{{/baset3}},
     {{#baset4}}{{> kaleidoscope_key }}{{/baset4}},
     {{#baset5}}{{> kaleidoscope_key }}{{/baset5}},
-    XXX, XXX, M(MACRO_LOCK_GAME)
+    XXX, XXX, XXX
   ),
 
   [NUM] = KEYMAP(
@@ -126,7 +127,7 @@ KEYMAPS(
     {{#game22}}{{> kaleidoscope_key }}{{/game22}},
     {{#game23}}{{> kaleidoscope_key }}{{/game23}},
     {{#game24}}{{> kaleidoscope_key }}{{/game24}},
-    XXX, XXX,
+    XXX, M(MACRO_LOCK_GAME),
     XXX, XXX, XXX, XXX, XXX,
 
     XXX, XXX, XXX,
@@ -134,19 +135,12 @@ KEYMAPS(
     {{#gamet1}}{{> kaleidoscope_key }}{{/gamet1}},
     {{#gamet2}}{{> kaleidoscope_key }}{{/gamet2}},
     XXX, XXX, XXX,
-    XXX, XXX, M(MACRO_LOCK_GAME)
+    XXX, XXX, XXX
   )
 )
 
-USE_SIMPLE_CHORDS(
-{{#chords}}
-  {{#atreus_keys}}{.keys = {{atreus_keys}}, .action = {{kaleidoscope}}}{{^last}},{{/last}}{{/atreus_keys}}
-{{/chords}}
-);
-
 KALEIDOSCOPE_INIT_PLUGINS(
   Qukeys,
-  SimpleChords,
   OneShot,
   Macros,
   MouseKeys
@@ -163,15 +157,6 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
       }
     }
     break;
-  case MACRO_LOCK_MOUSE:
-    if (keyToggledOn(event.state)) {
-      if (Layer.isActive(MOUSE)) {
-        Layer.deactivate(MOUSE);
-      } else {
-        Layer.activate(MOUSE);
-      }
-    }
-    break;
   default:
     break;
   }
@@ -181,22 +166,12 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
 
 void setup() {
   Kaleidoscope.setup();
-  MouseKeys.accelDelay = 30;
-  MouseKeys.accelSpeed = 5;
-  MouseKeys.setSpeedLimit(60);
-  QUKEYS(
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 0), Key_LeftGui),
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 1), Key_LeftAlt),
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 2), Key_LeftControl),
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 9), Key_LeftControl),
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 10), Key_LeftAlt),
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(1, 11), Key_LeftGui),
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), Key_LeftShift),
-    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 5), ShiftToLayer(NUM)),
-    kaleidoscope::plugin::Qukey(NUM, KeyAddr(3, 6), Key_LeftShift)
-  );
-  SimpleChords.ignoreOnLayers_ = 1 << GAME;
-  SimpleChords.timeout_ = 30;
+ QUKEYS(
+   kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 4), ShiftToLayer(NAV)),
+   kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 5), ShiftToLayer(MOUSE)),
+   kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), ShiftToLayer(NUM)),
+   kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 8), ShiftToLayer(SYM))
+ );
 }
 
 void loop() {

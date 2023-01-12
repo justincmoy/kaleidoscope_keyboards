@@ -77,12 +77,18 @@ key_z: &key_z
   kaleidoscope: Key_Z
   qmk: KC_Z
 
+key_backspace: &key_backspace
+  kaleidoscope: Key_Backspace
+  qmk: KC_BACKSPACE
 key_backtick: &key_backtick
   kaleidoscope: Key_Backtick
   qmk: KC_GRAVE
 key_comma: &key_comma
   kaleidoscope: Key_Comma
   qmk: KC_COMMA
+key_delete: &key_delete
+  kaleidoscope: Key_Delete
+  qmk: KC_DELETE
 key_minus: &key_minus
   kaleidoscope: Key_Minus
   qmk: KC_MINUS
@@ -95,9 +101,18 @@ key_quote: &key_quote
 key_semicolon: &key_semicolon
   kaleidoscope: Key_Semicolon
   qmk: KC_SEMICOLON
+key_shift: &key_shift
+  kaleidoscope: Key_LShift
+  qmk: KC_LEFT_SHIFT
 key_slash: &key_slash
   kaleidoscope: Key_Slash
   qmk: KC_SLASH
+key_space: &key_space
+  kaleidoscope: Key_Space
+  qmk: KC_SPACE
+key_tab: &key_tab
+  kaleidoscope: Key_Tab
+  qmk: KC_TAB
 
 base00: *key_q
 base01: *key_w
@@ -135,21 +150,11 @@ base29: *key_slash
 baset0: &key_esc
   kaleidoscope: Key_Esc
   qmk: KC_ESCAPE
-baset1: &key_tab
-  kaleidoscope: Key_Tab
-  qmk: KC_TAB
-baset2: &key_t
-  kaleidoscope: Key_T # Qukeys
-  qmk: KL(T, asetniop_123)
-baset3:
-  kaleidoscope: Key_Space # Qukeys
-  qmk: KM(SPACE, LSFT) # MOD_LSFT(KC_SPACE)
-baset4: &key_backspace
-  kaleidoscope: Key_Backspace
-  qmk: KC_BACKSPACE
-baset5: &key_delete
-  kaleidoscope: Key_Delete
-  qmk: KC_DELETE
+baset1: *key_space # Qukeys
+baset2: *key_tab # Qukeys
+baset3: *key_backspace # Qukeys
+baset4: *key_shift
+baset5: *key_delete # Qukeys
 
 num10: &key_1
   kaleidoscope: Key_1
