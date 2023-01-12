@@ -77,6 +77,40 @@ key_z: &key_z
   kaleidoscope: Key_Z
   qmk: KC_Z
 
+key_1: &key_1
+  kaleidoscope: Key_1
+  qmk: KC_1
+key_2: &key_2
+  kaleidoscope: Key_2
+  qmk: KC_2
+key_3: &key_3
+  kaleidoscope: Key_3
+  qmk: KC_3
+key_4: &key_4
+  kaleidoscope: Key_4
+  qmk: KC_4
+key_5: &key_5
+  kaleidoscope: Key_5
+  qmk: KC_5
+key_6: &key_6
+  kaleidoscope: Key_6
+  qmk: KC_6
+key_7: &key_7
+  kaleidoscope: Key_7
+  qmk: KC_7
+key_8: &key_8
+  kaleidoscope: Key_8
+  qmk: KC_8
+key_9: &key_9
+  kaleidoscope: Key_9
+  qmk: KC_9
+key_0: &key_0
+  kaleidoscope: Key_0
+  qmk: KC_0
+
+key_backslash: &key_backslash
+  kaleidoscope: Key_Backslash
+  qmk: # TODO
 key_backspace: &key_backspace
   kaleidoscope: Key_Backspace
   qmk: KC_BACKSPACE
@@ -92,6 +126,15 @@ key_comma: &key_comma
 key_delete: &key_delete
   kaleidoscope: Key_Delete
   qmk: KC_DELETE
+key_esc: &key_esc
+  kaleidoscope: Key_Esc
+  qmk: KC_ESCAPE
+key_equals: &key_equals
+  kaleidoscope: Key_Equals
+  qmk: # TODO
+key_lbracket: &key_lbracket
+  kaleidoscope: Key_LeftBracket
+  qmk: # TODO
 key_minus: &key_minus
   kaleidoscope: Key_Minus
   qmk: KC_MINUS
@@ -101,6 +144,9 @@ key_period: &key_period
 key_quote: &key_quote
   kaleidoscope: Key_Quote
   qmk: KC_QUOTE
+key_rbracket: &key_rbracket
+  kaleidoscope: Key_RightBracket
+  qmk: # TODO
 key_semicolon: &key_semicolon
   kaleidoscope: Key_Semicolon
   qmk: KC_SEMICOLON
@@ -150,45 +196,42 @@ base27: *key_comma
 base28: *key_period
 base29: *key_slash
 
-baset0: &key_esc
-  kaleidoscope: Key_Esc
-  qmk: KC_ESCAPE
+baset0: *key_esc
 baset1: *key_space # Qukeys
 baset2: *key_tab # Qukeys
 baset3: *key_backspace # Qukeys
 baset4: *key_shift
 baset5: *key_delete # Qukeys
 
-num10: &key_1
-  kaleidoscope: Key_1
-  qmk: KC_1
-num11: &key_2
-  kaleidoscope: Key_2
-  qmk: KC_2
-num12: &key_3
-  kaleidoscope: Key_3
-  qmk: KC_3
-num13: &key_4
-  kaleidoscope: Key_4
-  qmk: KC_4
-num14: &key_5
-  kaleidoscope: Key_5
-  qmk: KC_5
-num15: &key_6
-  kaleidoscope: Key_6
-  qmk: KC_6
-num16: &key_7
-  kaleidoscope: Key_7
-  qmk: KC_7
-num17: &key_8
-  kaleidoscope: Key_8
-  qmk: KC_8
-num18: &key_9
-  kaleidoscope: Key_9
-  qmk: KC_9
-num19: &key_0
-  kaleidoscope: Key_0
-  qmk: KC_0
+num00: *key_lbracket
+num01: *key_7
+num02: *key_8
+num03: *key_9
+num04: *key_rbracket
+num10: *key_semicolon
+num11: *key_4
+num12: *key_5
+num13: *key_6
+num14: *key_equals
+num20: *key_backtick
+num21: *key_1
+num22: *key_2
+num23: *key_3
+num24: *key_backslash
+numt0: *key_period
+numt1: *key_0
+numt2: *key_minus
+
+nav00:
+  kaleidoscope: XXX
+nav01:
+  kaleidoscope: LCTRL(Key_W)
+nav02:
+  kaleidoscope: LCTRL(Key_Backslash)
+nav03:
+  kaleidoscope: LCTRL(Key_N)
+nav04:
+  kaleidoscope: LCTRL(Key_B)
 
 game00: *key_tab
 game01: *key_q
