@@ -3,7 +3,6 @@
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
 #include "Kaleidoscope-OneShot.h"
-#include "Kaleidoscope-SimpleChords.h"
 #include "Kaleidoscope-Qukeys.h"
 
 enum {
@@ -65,6 +64,40 @@ KEYMAPS(
     XXX, XXX, XXX
   ),
 
+  [NAV] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    Key_mouseScrollL, Key_mouseScrollUp, Key_mouseScrollDn, Key_mouseScrollR, XXX,
+    XXX, Key_mouseL, Key_mouseDn, Key_mouseUp, Key_mouseR,
+
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    XXX, XXX, XXX,
+    XXX, XXX, XXX,
+    XXX, XXX, XXX,
+    XXX, XXX, XXX
+  ),
+
+  [MOUSE] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    Key_mouseScrollL, Key_mouseScrollUp, Key_mouseScrollDn, Key_mouseScrollR, XXX,
+    XXX, Key_mouseL, Key_mouseDn, Key_mouseUp, Key_mouseR,
+
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+
+    XXX, XXX, XXX,
+    XXX, XXX, XXX,
+    XXX, XXX, XXX,
+    XXX, XXX, XXX
+  ),
+
   [NUM] = KEYMAP(
     {{#num00}}{{> kaleidoscope_key }}{{/num00}},
     {{#num01}}{{> kaleidoscope_key }}{{/num01}},
@@ -96,19 +129,33 @@ KEYMAPS(
     XXX, XXX, XXX
   ),
 
-  [MOUSE] = KEYMAP(
-    XXX, XXX, XXX, XXX, XXX,
+  [SYM] = KEYMAP(
+    {{#num00}}{{> kaleidoscope_key }}{{/num00}},
+    {{#num01}}{{> kaleidoscope_key }}{{/num01}},
+    {{#num02}}{{> kaleidoscope_key }}{{/num02}},
+    {{#num03}}{{> kaleidoscope_key }}{{/num03}},
+    {{#num04}}{{> kaleidoscope_key }}{{/num04}},
     XXX, XXX, XXX, XXX, XXX,
 
-    Key_mouseScrollL, Key_mouseScrollUp, Key_mouseScrollDn, Key_mouseScrollR, XXX,
-    XXX, Key_mouseL, Key_mouseDn, Key_mouseUp, Key_mouseR,
+    {{#num10}}{{> kaleidoscope_key }}{{/num10}},
+    {{#num11}}{{> kaleidoscope_key }}{{/num11}},
+    {{#num12}}{{> kaleidoscope_key }}{{/num12}},
+    {{#num13}}{{> kaleidoscope_key }}{{/num13}},
+    {{#num14}}{{> kaleidoscope_key }}{{/num14}},
+    XXX, OSM(LeftShift), OSM(LeftControl), OSM(LeftAlt), OSM(LeftGui),
 
-    XXX, XXX, XXX, XXX, XXX,
+    {{#num20}}{{> kaleidoscope_key }}{{/num20}},
+    {{#num21}}{{> kaleidoscope_key }}{{/num21}},
+    {{#num22}}{{> kaleidoscope_key }}{{/num22}},
+    {{#num23}}{{> kaleidoscope_key }}{{/num23}},
+    {{#num24}}{{> kaleidoscope_key }}{{/num24}},
     XXX, XXX,
     XXX, XXX, XXX, XXX, XXX,
 
     XXX, XXX, XXX,
-    XXX, XXX, M(MACRO_LOCK_MOUSE),
+    {{#numt0}}{{> kaleidoscope_key }}{{/numt0}},
+    {{#numt1}}{{> kaleidoscope_key }}{{/numt1}},
+    {{#numt2}}{{> kaleidoscope_key }}{{/numt2}},
     XXX, XXX, XXX,
     XXX, XXX, XXX
   ),
@@ -173,12 +220,12 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
 
 void setup() {
   Kaleidoscope.setup();
- QUKEYS(
-   kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 4), ShiftToLayer(NAV)),
-   kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 5), ShiftToLayer(MOUSE)),
-   kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), ShiftToLayer(NUM)),
-   kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 8), ShiftToLayer(SYM))
- );
+  QUKEYS(
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 4), ShiftToLayer(NAV)),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 5), ShiftToLayer(MOUSE)),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 6), ShiftToLayer(NUM)),
+    kaleidoscope::plugin::Qukey(BASE, KeyAddr(3, 8), ShiftToLayer(SYM))
+  );
 }
 
 void loop() {
