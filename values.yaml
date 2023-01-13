@@ -225,13 +225,27 @@ baset5:
   qmk: # TODO
 
 nav01:
-  kaleidoscope: CTL_T(W)
+  kaleidoscope: LCTRL(Key_W)
+  qmk: # TODO
 nav02:
-  kaleidoscope: CTL_T(Backslash)
+  kaleidoscope: LCTRL(Key_Backslash)
+  qmk: # TODO
 nav03:
-  kaleidoscope: CTL_T(N)
+  kaleidoscope: LCTRL(Key_N)
+  qmk: # TODO
 nav04:
-  kaleidoscope: CTL_T(B)
+  kaleidoscope: LCTRL(Key_B)
+  qmk: # TODO
+nav06:
+  kaleidoscope: LCTRL(Key_PageUp)
+  qmk: # TODO
+nav09:
+  kaleidoscope: LCTRL(Key_PageDown)
+  qmk: # TODO
+nav10: *key_osm_gui
+nav11: *key_osm_alt
+nav12: *key_osm_ctrl
+nav13: *key_osm_shift
 nav16:
   kaleidoscope: Key_LeftArrow
   qmk: # TODO
@@ -243,6 +257,18 @@ nav18:
   qmk: # TODO
 nav19:
   kaleidoscope: Key_RightArrow
+  qmk: # TODO
+nav20:
+  kaleidoscope: LGUI(Key_Z)
+  qmk: # TODO
+nav21:
+  kaleidoscope: LGUI(Key_X)
+  qmk: # TODO
+nav22:
+  kaleidoscope: LGUI(Key_C)
+  qmk: # TODO
+nav24:
+  kaleidoscope: LGUI(Key_V)
   qmk: # TODO
 nav26:
   kaleidoscope: Key_Home
@@ -270,16 +296,16 @@ mouse18:
   kaleidoscope: Key_mouseUp
   qmk: # TODO
 mouse19:
-  kaleidoscope: Key_mouseDn
+  kaleidoscope: Key_mouseR
   qmk: # TODO
 mouse26:
   kaleidoscope: Key_mouseScrollL
   qmk: # TODO
 mouse27:
-  kaleidoscope: Key_mouseScrollUp
+  kaleidoscope: Key_mouseScrollDn
   qmk: # TODO
 mouse28:
-  kaleidoscope: Key_mouseScrollDn
+  kaleidoscope: Key_mouseScrollUp
   qmk: # TODO
 mouse29:
   kaleidoscope: Key_mouseScrollR
