@@ -3,3 +3,4 @@
 *.swp
 keymap.c
 keymap_def.yaml
+Makefile

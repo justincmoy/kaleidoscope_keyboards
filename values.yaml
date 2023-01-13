@@ -163,6 +163,19 @@ key_tab: &key_tab
   kaleidoscope: Key_Tab
   qmk: KC_TAB
 
+key_osm_alt: &key_osm_alt
+  kaleidoscope: OSM(LeftAlt)
+  qmk: # TODO
+key_osm_ctrl: &key_osm_ctrl
+  kaleidoscope: OSM(LeftControl)
+  qmk: # TODO
+key_osm_gui: &key_osm_gui
+  kaleidoscope: OSM(LeftGui)
+  qmk: # TODO
+key_osm_shift: &key_osm_shift
+  kaleidoscope: OSM(LeftShift)
+  qmk: # TODO
+
 base00: *key_q
 base01: *key_w
 base02: *key_f
@@ -197,11 +210,86 @@ base28: *key_period
 base29: *key_slash
 
 baset0: *key_esc
-baset1: *key_space # Qukeys
-baset2: *key_tab # Qukeys
-baset3: *key_backspace # Qukeys
+baset1:
+  kaleidoscope: LT(NAV, Space)
+  qmk: # TODO
+baset2:
+  kaleidoscope: LT(MOUSE, Tab)
+  qmk: # TODO
+baset3:
+  kaleidoscope: LT(NUM, Backspace)
+  qmk: # TODO
 baset4: *key_shift
-baset5: *key_delete # Qukeys
+baset5:
+  kaleidoscope: LT(SYM, Delete)
+  qmk: # TODO
+
+nav01:
+  kaleidoscope: CTL_T(W)
+nav02:
+  kaleidoscope: CTL_T(Backslash)
+nav03:
+  kaleidoscope: CTL_T(N)
+nav04:
+  kaleidoscope: CTL_T(B)
+nav16:
+  kaleidoscope: Key_LeftArrow
+  qmk: # TODO
+nav17:
+  kaleidoscope: Key_DownArrow
+  qmk: # TODO
+nav18:
+  kaleidoscope: Key_UpArrow
+  qmk: # TODO
+nav19:
+  kaleidoscope: Key_RightArrow
+  qmk: # TODO
+nav26:
+  kaleidoscope: Key_Home
+  qmk: # TODO
+nav27:
+  kaleidoscope: Key_PageDown
+  qmk: # TODO
+nav28:
+  kaleidoscope: Key_PageUp
+  qmk: # TODO
+nav29:
+  kaleidoscope: Key_End
+  qmk: # TODO
+
+mouse16:
+  kaleidoscope: Key_mouseL
+  qmk: # TODO
+mouse17:
+  kaleidoscope: Key_mouseDn
+  qmk: # TODO
+mouse18:
+  kaleidoscope: Key_mouseUp
+  qmk: # TODO
+mouse19:
+  kaleidoscope: Key_mouseDn
+  qmk: # TODO
+mouse26:
+  kaleidoscope: Key_mouseScrollL
+  qmk: # TODO
+mouse27:
+  kaleidoscope: Key_mouseScrollUp
+  qmk: # TODO
+mouse28:
+  kaleidoscope: Key_mouseScrollDn
+  qmk: # TODO
+mouse29:
+  kaleidoscope: Key_mouseScrollR
+  qmk: # TODO
+mouset3:
+  kaleidoscope: Key_mouseBtnR
+  qmk: # TODO
+mouset4:
+  kaleidoscope: Key_mouseBtnL
+  qmk: # TODO
+mouset5:
+  kaleidoscope: Key_mouseBtnM
+  qmk: # TODO
 
 num00: *key_lbracket
 num01: *key_7
@@ -213,6 +301,10 @@ num11: *key_4
 num12: *key_5
 num13: *key_6
 num14: *key_equals
+num16: *key_osm_shift
+num17: *key_osm_ctrl
+num18: *key_osm_alt
+num19: *key_osm_gui
 num20: *key_backtick
 num21: *key_1
 num22: *key_2
@@ -222,16 +314,9 @@ numt0: *key_period
 numt1: *key_0
 numt2: *key_minus
 
-nav00:
-  kaleidoscope: XXX
-nav01:
-  kaleidoscope: LCTRL(Key_W)
-nav02:
-  kaleidoscope: LCTRL(Key_Backslash)
-nav03:
-  kaleidoscope: LCTRL(Key_N)
-nav04:
-  kaleidoscope: LCTRL(Key_B)
+symt0: *key_9
+symt1: *key_0
+symt2: *key_minus
 
 game00: *key_tab
 game01: *key_q
