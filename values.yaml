@@ -282,9 +282,11 @@ nav28:
 nav29:
   kaleidoscope: Key_End
   qmk: # TODO
+navt3: *key_backspace
 navt4:
   kaleidoscope: Key_Enter
   qmk: # TODO
+navt5: *key_delete
 
 mouse16:
   kaleidoscope: Key_mouseL
