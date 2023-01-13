@@ -256,6 +256,9 @@ nav28:
 nav29:
   kaleidoscope: Key_End
   qmk: # TODO
+navt4:
+  kaleidoscope: Key_Enter
+  qmk: # TODO
 
 mouse16:
   kaleidoscope: Key_mouseL
