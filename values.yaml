@@ -354,6 +354,7 @@ game01: *key_q
 game02: *key_w
 game03: *key_e
 game04: *key_r
+game05: *key_g
 
 game10: *key_shift
 game11: *key_a
