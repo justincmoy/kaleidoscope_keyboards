@@ -239,6 +239,12 @@ nav04:
 nav06:
   kaleidoscope: LCTRL(Key_PageUp)
   qmk: # TODO
+nav07:
+  kaleidoscope: LALT(Key_DownArrow)
+  qmk: # TODO
+nav08:
+  kaleidoscope: LALT(Key_UpArrow)
+  qmk: # TODO
 nav09:
   kaleidoscope: LCTRL(Key_PageDown)
   qmk: # TODO
@@ -354,6 +360,7 @@ game01: *key_q
 game02: *key_w
 game03: *key_e
 game04: *key_r
+game05: *key_g
 
 game10: *key_shift
 game11: *key_a
