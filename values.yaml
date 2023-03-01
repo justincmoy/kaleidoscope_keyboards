@@ -296,37 +296,37 @@ navt5: *key_delete
 
 mouse16:
   kaleidoscope: Key_mouseL
-  qmk: # TODO
+  qmk: KC_MS_LEFT
 mouse17:
   kaleidoscope: Key_mouseDn
-  qmk: # TODO
+  qmk: KC_MS_DOWN
 mouse18:
   kaleidoscope: Key_mouseUp
-  qmk: # TODO
+  qmk: KC_MS_UP
 mouse19:
   kaleidoscope: Key_mouseR
-  qmk: # TODO
+  qmk: KC_MS_RIGHT
 mouse26:
   kaleidoscope: Key_mouseScrollL
-  qmk: # TODO
+  qmk: KC_MS_WH_LEFT
 mouse27:
   kaleidoscope: Key_mouseScrollDn
-  qmk: # TODO
+  qmk: KC_MS_WH_DOWN
 mouse28:
   kaleidoscope: Key_mouseScrollUp
-  qmk: # TODO
+  qmk: KC_MS_WH_UP
 mouse29:
   kaleidoscope: Key_mouseScrollR
-  qmk: # TODO
+  qmk: KC_MS_WH_RIGHT
 mouset3:
   kaleidoscope: Key_mouseBtnR
-  qmk: # TODO
+  qmk: KC_MS_BTN2
 mouset4:
   kaleidoscope: Key_mouseBtnL
-  qmk: # TODO
+  qmk: KC_MS_BTN1
 mouset5:
   kaleidoscope: Key_mouseBtnM
-  qmk: # TODO
+  qmk: KC_MS_BTN3
 
 num00: *key_lbracket
 num01: *key_7
