@@ -1,0 +1,55 @@
+enum layer_names {
+  LAYER_BASE,
+  LAYER_NAV,
+  LAYER_MOUSE,
+  LAYER_NUM,
+  LAYER_SYM,
+  LAYER_GAME
+};
+
+#include QMK_KEYBOARD_H
+#include "keymap.h"
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  [LAYER_BASE] = LAYOUT_split_3x5_3(
+    {{#base00}}{{> qmk_key }}{{/base00}},
+    {{#base01}}{{> qmk_key }}{{/base01}},
+    {{#base02}}{{> qmk_key }}{{/base02}},
+    {{#base03}}{{> qmk_key }}{{/base03}},
+    {{#base04}}{{> qmk_key }}{{/base04}},
+    {{#base05}}{{> qmk_key }}{{/base05}},
+    {{#base06}}{{> qmk_key }}{{/base06}},
+    {{#base07}}{{> qmk_key }}{{/base07}},
+    {{#base08}}{{> qmk_key }}{{/base08}},
+    {{#base09}}{{> qmk_key }}{{/base09}},
+
+    {{#base10}}{{> qmk_key }}{{/base10}},
+    {{#base11}}{{> qmk_key }}{{/base11}},
+    {{#base12}}{{> qmk_key }}{{/base12}},
+    {{#base13}}{{> qmk_key }}{{/base13}},
+    {{#base14}}{{> qmk_key }}{{/base14}},
+    {{#base15}}{{> qmk_key }}{{/base15}},
+    {{#base16}}{{> qmk_key }}{{/base16}},
+    {{#base17}}{{> qmk_key }}{{/base17}},
+    {{#base18}}{{> qmk_key }}{{/base18}},
+    {{#base19}}{{> qmk_key }}{{/base19}},
+
+    {{#base20}}{{> qmk_key }}{{/base20}},
+    {{#base21}}{{> qmk_key }}{{/base21}},
+    {{#base22}}{{> qmk_key }}{{/base22}},
+    {{#base23}}{{> qmk_key }}{{/base23}},
+    {{#base24}}{{> qmk_key }}{{/base24}},
+    {{#base25}}{{> qmk_key }}{{/base25}},
+    {{#base26}}{{> qmk_key }}{{/base26}},
+    {{#base27}}{{> qmk_key }}{{/base27}},
+    {{#base28}}{{> qmk_key }}{{/base28}},
+    {{#base29}}{{> qmk_key }}{{/base29}},
+
+    {{#baset0}}{{> qmk_key }}{{/baset0}},
+    {{#baset1}}{{> qmk_key }}{{/baset1}},
+    {{#baset2}}{{> qmk_key }}{{/baset2}},
+    {{#baset3}}{{> qmk_key }}{{/baset3}},
+    {{#baset4}}{{> qmk_key }}{{/baset4}},
+    {{#baset5}}{{> qmk_key }}{{/baset5}}
+  )
+};

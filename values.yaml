@@ -57,7 +57,7 @@ key_s: &key_s
   qmk: KC_S
 key_t: &key_t
   kaleidoscope: Key_T
-  qmk: Key_T
+  qmk: KC_T
 key_u: &key_u
   kaleidoscope: Key_U
   qmk: KC_U
@@ -212,17 +212,17 @@ base29: *key_slash
 baset0: *key_esc
 baset1:
   kaleidoscope: LT(NAV, Space)
-  qmk: # TODO
+  qmk: LT(LAYER_NAV, KC_SPACE)
 baset2:
   kaleidoscope: LT(MOUSE, Tab)
-  qmk: # TODO
+  qmk: LT(LAYER_MOUSE, KC_TAB)
 baset3:
   kaleidoscope: LT(NUM, Backspace)
-  qmk: # TODO
+  qmk: LT(LAYER_NUM, KC_BACKSPACE)
 baset4: *key_shift
 baset5:
   kaleidoscope: LT(SYM, Delete)
-  qmk: # TODO
+  qmk: LT(LAYER_SYM, KC_DELETE)
 
 nav01:
   kaleidoscope: LCTRL(Key_W)
