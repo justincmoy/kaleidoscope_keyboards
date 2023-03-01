@@ -110,7 +110,7 @@ key_0: &key_0
 
 key_backslash: &key_backslash
   kaleidoscope: Key_Backslash
-  qmk: # TODO
+  qmk: KC_BACKSLASH
 key_backspace: &key_backspace
   kaleidoscope: Key_Backspace
   qmk: KC_BACKSPACE
@@ -131,10 +131,10 @@ key_esc: &key_esc
   qmk: KC_ESCAPE
 key_equals: &key_equals
   kaleidoscope: Key_Equals
-  qmk: # TODO
+  qmk: KC_EQUAL
 key_lbracket: &key_lbracket
   kaleidoscope: Key_LeftBracket
-  qmk: # TODO
+  qmk: KC_LEFT_BRACKET
 key_minus: &key_minus
   kaleidoscope: Key_Minus
   qmk: KC_MINUS
@@ -146,7 +146,7 @@ key_quote: &key_quote
   qmk: KC_QUOTE
 key_rbracket: &key_rbracket
   kaleidoscope: Key_RightBracket
-  qmk: # TODO
+  qmk: KC_RIGHT_BRACKET
 key_semicolon: &key_semicolon
   kaleidoscope: Key_Semicolon
   qmk: KC_SEMICOLON
