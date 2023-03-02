@@ -57,7 +57,7 @@ key_s: &key_s
   qmk: KC_S
 key_t: &key_t
   kaleidoscope: Key_T
-  qmk: Key_T
+  qmk: KC_T
 key_u: &key_u
   kaleidoscope: Key_U
   qmk: KC_U
@@ -110,7 +110,7 @@ key_0: &key_0
 
 key_backslash: &key_backslash
   kaleidoscope: Key_Backslash
-  qmk: # TODO
+  qmk: KC_BACKSLASH
 key_backspace: &key_backspace
   kaleidoscope: Key_Backspace
   qmk: KC_BACKSPACE
@@ -131,10 +131,10 @@ key_esc: &key_esc
   qmk: KC_ESCAPE
 key_equals: &key_equals
   kaleidoscope: Key_Equals
-  qmk: # TODO
+  qmk: KC_EQUAL
 key_lbracket: &key_lbracket
   kaleidoscope: Key_LeftBracket
-  qmk: # TODO
+  qmk: KC_LEFT_BRACKET
 key_minus: &key_minus
   kaleidoscope: Key_Minus
   qmk: KC_MINUS
@@ -146,7 +146,7 @@ key_quote: &key_quote
   qmk: KC_QUOTE
 key_rbracket: &key_rbracket
   kaleidoscope: Key_RightBracket
-  qmk: # TODO
+  qmk: KC_RIGHT_BRACKET
 key_semicolon: &key_semicolon
   kaleidoscope: Key_Semicolon
   qmk: KC_SEMICOLON
@@ -165,16 +165,16 @@ key_tab: &key_tab
 
 key_osm_alt: &key_osm_alt
   kaleidoscope: OSM(LeftAlt)
-  qmk: # TODO
+  qmk: OSM(MOD_LALT)
 key_osm_ctrl: &key_osm_ctrl
   kaleidoscope: OSM(LeftControl)
-  qmk: # TODO
+  qmk: OSM(MOD_LCTL)
 key_osm_gui: &key_osm_gui
   kaleidoscope: OSM(LeftGui)
-  qmk: # TODO
+  qmk: OSM(MOD_LGUI)
 key_osm_shift: &key_osm_shift
   kaleidoscope: OSM(LeftShift)
-  qmk: # TODO
+  qmk: OSM(MOD_LSFT)
 
 base00: *key_q
 base01: *key_w
@@ -212,121 +212,121 @@ base29: *key_slash
 baset0: *key_esc
 baset1:
   kaleidoscope: LT(NAV, Space)
-  qmk: # TODO
+  qmk: LT(LAYER_NAV, KC_SPACE)
 baset2:
   kaleidoscope: LT(MOUSE, Tab)
-  qmk: # TODO
+  qmk: LT(LAYER_MOUSE, KC_TAB)
 baset3:
   kaleidoscope: LT(NUM, Backspace)
-  qmk: # TODO
+  qmk: LT(LAYER_NUM, KC_BACKSPACE)
 baset4: *key_shift
 baset5:
   kaleidoscope: LT(SYM, Delete)
-  qmk: # TODO
+  qmk: LT(LAYER_SYM, KC_DELETE)
 
 nav01:
   kaleidoscope: LCTRL(Key_W)
-  qmk: # TODO
+  qmk: LCTL(KC_W)
 nav02:
   kaleidoscope: LCTRL(Key_Backslash)
-  qmk: # TODO
+  qmk: LCTL(KC_BACKSLASH)
 nav03:
   kaleidoscope: LCTRL(Key_N)
-  qmk: # TODO
+  qmk: LCTL(KC_N)
 nav04:
   kaleidoscope: LCTRL(Key_B)
-  qmk: # TODO
+  qmk: LCTL(KC_B)
 nav06:
   kaleidoscope: LCTRL(Key_PageUp)
-  qmk: # TODO
+  qmk: LCTL(KC_PAGE_UP)
 nav07:
   kaleidoscope: LALT(Key_DownArrow)
-  qmk: # TODO
+  qmk: LALT(KC_DOWN)
 nav08:
   kaleidoscope: LALT(Key_UpArrow)
-  qmk: # TODO
+  qmk: LALT(KC_UP)
 nav09:
   kaleidoscope: LCTRL(Key_PageDown)
-  qmk: # TODO
+  qmk: LCTL(KC_PAGE_UP)
 nav10: *key_osm_gui
 nav11: *key_osm_alt
 nav12: *key_osm_ctrl
 nav13: *key_osm_shift
 nav16:
   kaleidoscope: Key_LeftArrow
-  qmk: # TODO
+  qmk: KC_LEFT
 nav17:
   kaleidoscope: Key_DownArrow
-  qmk: # TODO
+  qmk: KC_DOWN
 nav18:
   kaleidoscope: Key_UpArrow
-  qmk: # TODO
+  qmk: KC_UP
 nav19:
   kaleidoscope: Key_RightArrow
-  qmk: # TODO
+  qmk: KC_RIGHT
 nav20:
   kaleidoscope: LGUI(Key_Z)
-  qmk: # TODO
+  qmk: LGUI(KC_Z)
 nav21:
   kaleidoscope: LGUI(Key_X)
-  qmk: # TODO
+  qmk: LGUI(KC_X)
 nav22:
   kaleidoscope: LGUI(Key_C)
-  qmk: # TODO
+  qmk: LGUI(KC_C)
 nav24:
   kaleidoscope: LGUI(Key_V)
-  qmk: # TODO
+  qmk: LGUI(KC_V)
 nav26:
   kaleidoscope: Key_Home
-  qmk: # TODO
+  qmk: KC_HOME
 nav27:
   kaleidoscope: Key_PageDown
-  qmk: # TODO
+  qmk: KC_PAGE_DOWN
 nav28:
   kaleidoscope: Key_PageUp
-  qmk: # TODO
+  qmk: KC_PAGE_UP
 nav29:
   kaleidoscope: Key_End
-  qmk: # TODO
+  qmk: KC_END
 navt3: *key_backspace
 navt4:
   kaleidoscope: Key_Enter
-  qmk: # TODO
+  qmk: KC_ENTER
 navt5: *key_delete
 
 mouse16:
   kaleidoscope: Key_mouseL
-  qmk: # TODO
+  qmk: KC_MS_LEFT
 mouse17:
   kaleidoscope: Key_mouseDn
-  qmk: # TODO
+  qmk: KC_MS_DOWN
 mouse18:
   kaleidoscope: Key_mouseUp
-  qmk: # TODO
+  qmk: KC_MS_UP
 mouse19:
   kaleidoscope: Key_mouseR
-  qmk: # TODO
+  qmk: KC_MS_RIGHT
 mouse26:
   kaleidoscope: Key_mouseScrollL
-  qmk: # TODO
+  qmk: KC_MS_WH_LEFT
 mouse27:
   kaleidoscope: Key_mouseScrollDn
-  qmk: # TODO
+  qmk: KC_MS_WH_DOWN
 mouse28:
   kaleidoscope: Key_mouseScrollUp
-  qmk: # TODO
+  qmk: KC_MS_WH_UP
 mouse29:
   kaleidoscope: Key_mouseScrollR
-  qmk: # TODO
+  qmk: KC_MS_WH_RIGHT
 mouset3:
   kaleidoscope: Key_mouseBtnR
-  qmk: # TODO
+  qmk: KC_MS_BTN2
 mouset4:
   kaleidoscope: Key_mouseBtnL
-  qmk: # TODO
+  qmk: KC_MS_BTN1
 mouset5:
   kaleidoscope: Key_mouseBtnM
-  qmk: # TODO
+  qmk: KC_MS_BTN3
 
 num00: *key_lbracket
 num01: *key_7
