@@ -1,7 +1,7 @@
 key_a: &key_a
   kaleidoscope: Key_A
   qmk: KC_A
-key_: &key_b
+key_b: &key_b
   kaleidoscope: Key_B
   qmk: KC_B
 key_c: &key_c
