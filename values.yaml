@@ -247,7 +247,7 @@ nav08:
   qmk: LALT(KC_UP)
 nav09:
   kaleidoscope: LCTRL(Key_PageDown)
-  qmk: LCTL(KC_PAGE_UP)
+  qmk: LCTL(KC_PAGE_DOWN)
 nav10: *key_osm_gui
 nav11: *key_osm_alt
 nav12: *key_osm_ctrl
