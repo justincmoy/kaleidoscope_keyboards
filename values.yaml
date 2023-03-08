@@ -294,6 +294,13 @@ navt4:
   qmk: KC_ENTER
 navt5: *key_delete
 
+mouse00:
+  kaleidoscope: M(MACRO_LOCK_GAME)
+  qmk:  TG(LAYER_GAME)
+mouse10: *key_osm_gui
+mouse11: *key_osm_alt
+mouse12: *key_osm_ctrl
+mouse13: *key_osm_shift
 mouse16:
   kaleidoscope: Key_mouseL
   qmk: KC_MS_LEFT
