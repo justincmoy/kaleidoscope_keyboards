@@ -11,6 +11,7 @@ enum {
 
 enum {
   BASE,
+  BASE_LT,
   NAV,
   MOUSE,
   NUM,
@@ -74,6 +75,62 @@ KEYMAPS(
     {{#baset5}}{{> model100_key }}{{/baset5}},
 
     ShiftToLayer(MOUSE), XXX // palm
+  ),
+
+  [BASE_LT] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{#base00}}{{> model100_key }}{{/base00}},
+    {{#base01}}{{> model100_key }}{{/base01}},
+    {{#base02}}{{> model100_key }}{{/base02}},
+    {{#base03}}{{> model100_key }}{{/base03}},
+    {{#base04}}{{> model100_key }}{{/base04}},
+    XXX, XXX,
+    {{#base05}}{{> model100_key }}{{/base05}},
+    {{#base06}}{{> model100_key }}{{/base06}},
+    {{#base07}}{{> model100_key }}{{/base07}},
+    {{#base08}}{{> model100_key }}{{/base08}},
+    {{#base09}}{{> model100_key }}{{/base09}},
+    XXX,
+
+    XXX,
+    {{#base10}}{{> model100_key }}{{/base10}},
+    {{#base11}}{{> model100_key }}{{/base11}},
+    {{#base12}}{{> model100_key }}{{/base12}},
+    {{#base13}}{{> model100_key }}{{/base13}},
+    {{#base14}}{{> model100_key }}{{/base14}},
+    {{#base15}}{{> model100_key }}{{/base15}},
+    {{#base16}}{{> model100_key }}{{/base16}},
+    {{#base17}}{{> model100_key }}{{/base17}},
+    {{#base18}}{{> model100_key }}{{/base18}},
+    {{#base19}}{{> model100_key }}{{/base19}},
+    XXX,
+
+    XXX,
+    {{#base20}}{{> model100_key }}{{/base20}},
+    {{#base21}}{{> model100_key }}{{/base21}},
+    {{#base22}}{{> model100_key }}{{/base22}},
+    {{#base23}}{{> model100_key }}{{/base23}},
+    {{#base24}}{{> model100_key }}{{/base24}},
+    XXX, XXX,
+    {{#base25}}{{> model100_key }}{{/base25}},
+    {{#base26}}{{> model100_key }}{{/base26}},
+    {{#base27}}{{> model100_key }}{{/base27}},
+    {{#base28}}{{> model100_key }}{{/base28}},
+    {{#base29}}{{> model100_key }}{{/base29}},
+    XXX,
+
+    {{#navt0}}{{> model100_key }}{{/navt0}}{{^navt0}}XXX{{/navt0}},
+    {{#navt1}}{{> model100_key }}{{/navt1}}{{^navt1}}XXX{{/navt1}},
+    {{#navt2}}{{> model100_key }}{{/navt2}}{{^navt2}}XXX{{/navt2}},
+    XXX, XXX,
+    {{#navt3}}{{> model100_key }}{{/navt3}}{{^navt3}}XXX{{/navt3}},
+    {{#navt4}}{{> model100_key }}{{/navt4}}{{^navt4}}XXX{{/navt4}},
+    {{#navt5}}{{> model100_key }}{{/navt5}}{{^navt5}}XXX{{/navt5}},
+
+    XXX, XXX // palm
   ),
 
   [NAV] = KEYMAP(

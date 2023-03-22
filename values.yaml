@@ -213,7 +213,7 @@ baset0: *key_esc
 baset1:
   kaleidoscope: LT(NAV, Space)
   qmk: LT(LAYER_NAV, KC_SPACE)
-  model100: Key_Space
+  model100: LT(BASE_LT, Space)
 baset2:
   kaleidoscope: LT(MOUSE, Tab)
   qmk: LT(LAYER_MOUSE, KC_TAB)
