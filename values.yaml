@@ -232,9 +232,11 @@ nav01:
 nav02:
   kaleidoscope: LCTRL(Key_Backslash)
   qmk: LCTL(KC_BACKSLASH)
+  model100: Key_UpArrow
 nav03:
   kaleidoscope: LCTRL(Key_N)
   qmk: LCTL(KC_N)
+  model100: M(MACRO_VIM_ESCAPE_TERMINAL)
 nav04:
   kaleidoscope: LCTRL(Key_B)
   qmk: LCTL(KC_B)
@@ -251,21 +253,34 @@ nav09:
   kaleidoscope: LCTRL(Key_PageDown)
   qmk: LCTL(KC_PAGE_DOWN)
 nav10: *key_osm_gui
-nav11: *key_osm_alt
-nav12: *key_osm_ctrl
-nav13: *key_osm_shift
+nav11:
+  kaleidoscope: OSM(LeftAlt)
+  qmk: OSM(MOD_LALT)
+  model100: Key_LeftArrow
+nav12:
+  kaleidoscope: OSM(LeftControl)
+  qmk: OSM(MOD_LCTL)
+  model100: Key_DownArrow
+nav13:
+  kaleidoscope: OSM(LeftShift)
+  qmk: OSM(MOD_LSFT)
+  model100: Key_RightArrow
 nav16:
   kaleidoscope: Key_LeftArrow
   qmk: KC_LEFT
+  model100: OSM(LeftShift)
 nav17:
   kaleidoscope: Key_DownArrow
   qmk: KC_DOWN
+  model100: OSM(LeftControl)
 nav18:
   kaleidoscope: Key_UpArrow
   qmk: KC_UP
+  model100: OSM(LeftAlt)
 nav19:
   kaleidoscope: Key_RightArrow
   qmk: KC_RIGHT
+  model100: OSM(LeftGui)
 nav20:
   kaleidoscope: LGUI(Key_Z)
   qmk: LGUI(KC_Z)
