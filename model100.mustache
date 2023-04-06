@@ -1,5 +1,7 @@
 #include "Kaleidoscope.h"
 #include "kaleidoscope/layers.h"
+#include "Kaleidoscope-LedControl.h"
+#include "Kaleidoscope-LED-ActiveModColor.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
 #include "Kaleidoscope-OneShot.h"
@@ -380,7 +382,10 @@ KALEIDOSCOPE_INIT_PLUGINS(
   Qukeys,
   OneShot,
   Macros,
-  MouseKeys
+  MouseKeys,
+  LEDControl,
+  LEDOff,
+  ActiveModColorEffect
 );
 
 const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
