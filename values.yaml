@@ -176,35 +176,35 @@ key_osm_shift: &key_osm_shift
   kaleidoscope: OSM(LeftShift)
   qmk: OSM(MOD_LSFT)
 
-base00: *key_q
-base01: *key_w
-base02: *key_f
-base03: *key_p
-base04: *key_b
-base05: *key_j
-base06: *key_l
-base07: *key_u
-base08: *key_y
-base09: *key_quote
+base00: *key_b
+base01: *key_l
+base02: *key_d
+base03: *key_w
+base04: *key_z
+base05: *key_quote
+base06: *key_j
+base07: *key_o
+base08: *key_u
+base09: *key_j
 
-base10: *key_a
+base10: *key_n
 base11: *key_r
-base12: *key_s
-base13: *key_t
+base12: *key_t
+base13: *key_s
 base14: *key_g
-base15: *key_m
-base16: *key_n
-base17: *key_e
-base18: *key_i
-base19: *key_o
+base15: *key_y
+base16: *key_h
+base17: *key_a
+base18: *key_e
+base19: *key_i
 
-base20: *key_z
+base20: *key_q
 base21: *key_x
-base22: *key_c
-base23: *key_d
+base22: *key_m
+base23: *key_c
 base24: *key_v
 base25: *key_k
-base26: *key_h
+base26: *key_p
 base27: *key_comma
 base28: *key_period
 base29: *key_slash
@@ -226,20 +226,23 @@ baset5:
   kaleidoscope: LT(SYM, Delete)
   qmk: LT(LAYER_SYM, KC_DELETE)
 
+nav00:
+  kaleidoscope: LCTRL(Key_B)
+  qmk: LCTL(KC_B)
 nav01:
-  kaleidoscope: LCTRL(Key_W)
-  qmk: LCTL(KC_W)
+  kaleidoscope: LCTRL(Key_N)
+  qmk: LCTL(KC_N)
+  model100: M(MACRO_VIM_ESCAPE_TERMINAL)
 nav02:
   kaleidoscope: LCTRL(Key_Backslash)
   qmk: LCTL(KC_BACKSLASH)
   model100: Key_UpArrow
 nav03:
-  kaleidoscope: LCTRL(Key_N)
-  qmk: LCTL(KC_N)
-  model100: M(MACRO_VIM_ESCAPE_TERMINAL)
+  kaleidoscope: LCTRL(Key_W)
+  qmk: LCTL(KC_W)
 nav04:
-  kaleidoscope: LCTRL(Key_B)
-  qmk: LCTL(KC_B)
+  kaleidoscope: LGUI(Key_Z)
+  qmk: LGUI(KC_Z)
 nav06:
   kaleidoscope: LCTRL(Key_PageUp)
   qmk: LCTL(KC_PAGE_UP)
@@ -281,13 +284,10 @@ nav19:
   kaleidoscope: Key_RightArrow
   qmk: KC_RIGHT
   model100: OSM(LeftGui)
-nav20:
-  kaleidoscope: LGUI(Key_Z)
-  qmk: LGUI(KC_Z)
 nav21:
   kaleidoscope: LGUI(Key_X)
   qmk: LGUI(KC_X)
-nav22:
+nav23:
   kaleidoscope: LGUI(Key_C)
   qmk: LGUI(KC_C)
 nav24:
