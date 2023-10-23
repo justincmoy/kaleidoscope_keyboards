@@ -2,6 +2,7 @@
 #include "kaleidoscope/layers.h"
 #include "Kaleidoscope-LedControl.h"
 #include "Kaleidoscope-LED-ActiveModColor.h"
+#include "Kaleidoscope-LED-Stalker.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
 #include "Kaleidoscope-OneShot.h"
@@ -385,7 +386,8 @@ KALEIDOSCOPE_INIT_PLUGINS(
   MouseKeys,
   LEDControl,
   LEDOff,
-  ActiveModColorEffect
+  ActiveModColorEffect,
+  StalkerEffect
 );
 
 const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
@@ -393,8 +395,10 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
   case MACRO_LOCK_GAME:
     if (keyToggledOn(event.state)) {
       if (Layer.isActive(GAME)) {
+        LEDOff.activate();
         Layer.deactivate(GAME);
       } else {
+        StalkerEffect.activate();
         Layer.activate(GAME);
       }
     }
@@ -410,6 +414,7 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
 
 void setup() {
   Kaleidoscope.setup();
+  StalkerEffect.variant = STALKER(Rainbow);
 }
 
 void loop() {
