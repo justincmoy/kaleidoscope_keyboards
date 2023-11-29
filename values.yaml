@@ -176,38 +176,38 @@ key_osm_shift: &key_osm_shift
   kaleidoscope: OSM(LeftShift)
   qmk: OSM(MOD_LSFT)
 
-base00: *key_b
-base01: *key_l
-base02: *key_d
-base03: *key_w
-base04: *key_z
-base05: *key_quote
+base00: *key_v
+base01: *key_m
+base02: *key_l
+base03: *key_c
+base04: *key_p
+base05: *key_x
 base06: *key_f
 base07: *key_o
 base08: *key_u
 base09: *key_j
 
-base10: *key_n
-base11: *key_r
-base12: *key_t
-base13: *key_s
-base14: *key_g
-base15: *key_y
-base16: *key_h
+base10: *key_s
+base11: *key_t
+base12: *key_r
+base13: *key_d
+base14: *key_y
+base15: *key_period
+base16: *key_n
 base17: *key_a
 base18: *key_e
 base19: *key_i
 
-base20: *key_q
-base21: *key_x
-base22: *key_m
-base23: *key_c
-base24: *key_v
-base25: *key_k
-base26: *key_p
-base27: *key_comma
-base28: *key_period
-base29: *key_slash
+base20: *key_z
+base21: *key_k
+base22: *key_q
+base23: *key_g
+base24: *key_w
+base25: *key_b
+base26: *key_h
+base27: *key_quote
+base28: *key_slash
+base29: *key_comma
 
 baset0: *key_esc
 baset1:
@@ -227,22 +227,20 @@ baset5:
   qmk: LT(LAYER_SYM, KC_DELETE)
 
 nav00:
-  kaleidoscope: LCTRL(Key_B)
-  qmk: LCTL(KC_B)
+  kaleidoscope: LGUI(Key_V)
+  qmk: LGUI(KC_V)
 nav01:
-  kaleidoscope: LCTRL(Key_N)
-  qmk: LCTL(KC_N)
   model100: M(MACRO_VIM_ESCAPE_TERMINAL)
 nav02:
   kaleidoscope: LCTRL(Key_Backslash)
   qmk: LCTL(KC_BACKSLASH)
   model100: Key_UpArrow
 nav03:
-  kaleidoscope: LCTRL(Key_W)
-  qmk: LCTL(KC_W)
-nav04:
-  kaleidoscope: LGUI(Key_Z)
-  qmk: LGUI(KC_Z)
+  kaleidoscope: LGUI(Key_C)
+  qmk: LGUI(KC_C)
+nav05:
+  kaleidoscope: LGUI(Key_X)
+  qmk: LGUI(KC_X)
 nav06:
   kaleidoscope: LCTRL(Key_PageUp)
   qmk: LCTL(KC_PAGE_UP)
@@ -255,7 +253,9 @@ nav08:
 nav09:
   kaleidoscope: LCTRL(Key_PageDown)
   qmk: LCTL(KC_PAGE_DOWN)
-nav10: *key_osm_gui
+nav10:
+  kaleidoscope: LCTRL(Key_W)
+  qmk: LCTL(KC_W)
 nav11:
   kaleidoscope: OSM(LeftAlt)
   qmk: OSM(MOD_LALT)
@@ -284,15 +284,12 @@ nav19:
   kaleidoscope: Key_RightArrow
   qmk: KC_RIGHT
   model100: OSM(LeftGui)
-nav21:
-  kaleidoscope: LGUI(Key_X)
-  qmk: LGUI(KC_X)
-nav23:
-  kaleidoscope: LGUI(Key_C)
-  qmk: LGUI(KC_C)
-nav24:
-  kaleidoscope: LGUI(Key_V)
-  qmk: LGUI(KC_V)
+nav20:
+  kaleidoscope: LGUI(Key_Z)
+  qmk: LGUI(KC_Z)
+nav25:
+  kaleidoscope: LCTRL(Key_B)
+  qmk: LCTL(KC_B)
 nav26:
   kaleidoscope: Key_Home
   qmk: KC_HOME
