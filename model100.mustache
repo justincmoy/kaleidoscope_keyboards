@@ -1,5 +1,8 @@
 #include "Kaleidoscope.h"
+#include "kaleidoscope/Runtime.h"
 #include "kaleidoscope/layers.h"
+#include "Kaleidoscope-Chord.h"
+#include "Kaleidoscope-Cycle.h"
 #include "Kaleidoscope-LedControl.h"
 #include "Kaleidoscope-LED-ActiveModColor.h"
 #include "Kaleidoscope-LED-Stalker.h"
@@ -380,6 +383,7 @@ KEYMAPS(
 )
 
 KALEIDOSCOPE_INIT_PLUGINS(
+  Cycle,
   Qukeys,
   OneShot,
   Macros,
@@ -387,8 +391,27 @@ KALEIDOSCOPE_INIT_PLUGINS(
   LEDControl,
   LEDOff,
   ActiveModColorEffect,
-  StalkerEffect
+  StalkerEffect,
+  Chord
 );
+
+void cycleAction(Key previous_key, uint8_t cycle_count) {
+  if (previous_key == Key_A) {
+    Macros.tap(Key_O);
+  } else if (previous_key == Key_L) {
+    Macros.tap(Key_K);
+  } else if (previous_key == Key_K) {
+    Macros.tap(Key_S);
+  } else if (previous_key == Key_O) {
+    Macros.tap(Key_A);
+  } else if (previous_key == Key_R) {
+    Macros.tap(Key_L);
+  } else if (previous_key == Key_S) {
+    Macros.tap(Key_K);
+  } else if (previous_key == Key_U) {
+    Macros.tap(Key_E);
+  }
+}
 
 const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
   switch (macroIndex) {
@@ -413,6 +436,9 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
 }
 
 void setup() {
+  CHORDS(
+    CHORD(Key_K, Key_J), Key_Q
+  );
   Kaleidoscope.setup();
   StalkerEffect.variant = STALKER(Rainbow);
 }
