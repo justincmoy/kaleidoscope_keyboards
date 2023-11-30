@@ -182,8 +182,7 @@ base02: *key_l
 base03: *key_c
 base04: *key_p
 base05: *key_x
-base06:
-  model100: Key_Cycle
+base06: *key_f
 base07: *key_o
 base08: *key_u
 base09: *key_comma
@@ -193,7 +192,8 @@ base11: *key_t
 base12: *key_r
 base13: *key_d
 base14: *key_y
-base15: *key_f
+base15:
+  model100: Key_Cycle
 base16: *key_n
 base17: *key_a
 base18: *key_e
