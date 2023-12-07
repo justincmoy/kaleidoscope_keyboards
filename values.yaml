@@ -288,6 +288,10 @@ nav19:
 nav20:
   kaleidoscope: LGUI(Key_Z)
   qmk: LGUI(KC_Z)
+num21:
+  kaleidoscope: LGUI(Key_1)
+num22:
+  kaleidoscope: LGUI(Key_2)
 nav23:
   model100: M(MACRO_VIM_ESCAPE_TERMINAL)
 nav24:
