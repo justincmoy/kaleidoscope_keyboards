@@ -185,14 +185,15 @@ base05: *key_x
 base06: *key_f
 base07: *key_o
 base08: *key_u
-base09: *key_semicolon
+base09: *key_comma
 
 base10: *key_s
 base11: *key_t
 base12: *key_r
 base13: *key_d
 base14: *key_y
-base15: *key_period
+base15:
+  model100: Key_Cycle
 base16: *key_n
 base17: *key_a
 base18: *key_e
@@ -207,7 +208,7 @@ base25: *key_b
 base26: *key_h
 base27: *key_quote
 base28: *key_slash
-base29: *key_comma
+base29: *key_period
 
 baset0: *key_esc
 baset1:
@@ -221,8 +222,7 @@ baset2:
 baset3:
   kaleidoscope: LT(NUM, Backspace)
   qmk: LT(LAYER_NUM, KC_BACKSPACE)
-baset4:
-  kaleidoscope: SFT_T(Cycle)
+baset4: *key_shift
 baset5:
   kaleidoscope: LT(SYM, Delete)
   qmk: LT(LAYER_SYM, KC_DELETE)
