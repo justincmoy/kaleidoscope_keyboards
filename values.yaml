@@ -185,15 +185,14 @@ base05: *key_x
 base06: *key_f
 base07: *key_o
 base08: *key_u
-base09: *key_comma
+base09: *key_j
 
 base10: *key_s
 base11: *key_t
 base12: *key_r
 base13: *key_d
 base14: *key_y
-base15:
-  model100: Key_Cycle
+base15: *key_period
 base16: *key_n
 base17: *key_a
 base18: *key_e
@@ -201,14 +200,14 @@ base19: *key_i
 
 base20: *key_z
 base21: *key_k
-base22: *key_j
+base22: *key_q
 base23: *key_g
 base24: *key_w
 base25: *key_b
 base26: *key_h
 base27: *key_quote
 base28: *key_slash
-base29: *key_period
+base29: *key_comma
 
 baset0: *key_esc
 baset1:

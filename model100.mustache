@@ -1,7 +1,6 @@
 #include "Kaleidoscope.h"
 #include "kaleidoscope/Runtime.h"
 #include "kaleidoscope/layers.h"
-#include "Kaleidoscope-Chord.h"
 #include "Kaleidoscope-Cycle.h"
 #include "Kaleidoscope-LedControl.h"
 #include "Kaleidoscope-LED-ActiveModColor.h"
@@ -391,8 +390,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   LEDControl,
   LEDOff,
   ActiveModColorEffect,
-  StalkerEffect,
-  Chord
+  StalkerEffect
 );
 
 void cycleAction(Key previous_key, uint8_t cycle_count) {
@@ -444,12 +442,9 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
 }
 
 void setup() {
-  CHORDS(
-    CHORD(Key_K, Key_J), Key_Q
-  );
   Kaleidoscope.setup();
   StalkerEffect.variant = STALKER(Rainbow);
-  Cycle.setTimeout(100);
+  Cycle.setTimeout(75);
 }
 
 void loop() {
