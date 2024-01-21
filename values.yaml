@@ -392,7 +392,7 @@ game01: *key_q
 game02: *key_w
 game03: *key_e
 game04: *key_r
-game05: *key_g
+game05: *key_b
 
 game10: *key_shift
 game11: *key_a
@@ -405,7 +405,7 @@ game21: *key_z
 game22: *key_x
 game23: *key_c
 game24: *key_v
-game25: *key_b
+game25: *key_g
 
 gamet0: *key_esc
 gamet1: *key_space
