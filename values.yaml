@@ -243,13 +243,13 @@ nav06:
   kaleidoscope: LCTRL(Key_PageUp)
   qmk: LCTL(KC_PAGE_UP)
 nav07:
-  # Slack: previous channel
-  kaleidoscope: LALT(Key_UpArrow)
-  qmk: LALT(KC_UP)
-nav08:
   # Slack: next channel
   kaleidoscope: LALT(Key_DownArrow)
   qmk: LALT(KC_DOWN)
+nav08:
+  # Slack: previous channel
+  kaleidoscope: LALT(Key_UpArrow)
+  qmk: LALT(KC_UP)
 nav09:
   # Browser: right tab
   kaleidoscope: LCTRL(Key_PageDown)
