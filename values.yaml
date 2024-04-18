@@ -222,7 +222,7 @@ baset3:
   kaleidoscope: LT(NUM, Backspace)
   qmk: LT(LAYER_NUM, KC_BACKSPACE)
 baset4:
-  model100: Key_Cycle
+  model100: Key_LShift
 baset5:
   kaleidoscope: LT(SYM, Delete)
   qmk: LT(LAYER_SYM, KC_DELETE)
