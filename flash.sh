@@ -15,7 +15,11 @@ if [ "$1" = 'crkbd' ]; then
     exit
 fi
 
-mustache values.yaml $1.mustache > kaleidoscope/$1/$1.ino
+if [ "$1" = 'model100' ]; then
+    j2 -f yaml $1.j2 values.yaml --filters filters.py -o kaleidoscope/$1/$1.ino
+else
+    mustache values.yaml $1.mustache > kaleidoscope/$1/$1.ino
+fi
 cp kaleidoscope/Makefile kaleidoscope/$1/
 
 set +e
