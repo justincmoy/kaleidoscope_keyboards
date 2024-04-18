@@ -235,29 +235,23 @@ nav01:
 nav02:
   kaleidoscope: Key_UpArrow
 nav03:
-  model100: M(MACRO_VIM_ESCAPE_TERMINAL)
+  model100: XXX
 nav05:
-  kaleidoscope: XXX
+  model100: XXX
 nav06:
   # Browser: left tab
   kaleidoscope: LCTRL(Key_PageUp)
   qmk: LCTL(KC_PAGE_UP)
 nav07:
-  # Slack: next channel
-  kaleidoscope: LALT(Key_DownArrow)
-  qmk: LALT(KC_DOWN)
+  kaleidoscope: XXX
 nav08:
-  # Slack: previous channel
-  kaleidoscope: LALT(Key_UpArrow)
-  qmk: LALT(KC_UP)
+  kaleidoscope: XXX
 nav09:
   # Browser: right tab
   kaleidoscope: LCTRL(Key_PageDown)
   qmk: LCTL(KC_PAGE_DOWN)
 nav10:
-  # Vim: splits
-  kaleidoscope: LCTRL(Key_W)
-  qmk: LCTL(KC_W)
+  kaleidoscope: XXX
 nav11:
   kaleidoscope: Key_LeftArrow
 nav12:
