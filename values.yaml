@@ -108,6 +108,43 @@ key_0: &key_0
   kaleidoscope: Key_0
   qmk: KC_0
 
+key_f1: &key_f1
+  kaleidoscope: Key_F1
+  qmk: KC_F1
+key_f2: &key_f2
+  kaleidoscope: Key_F2
+  qmk: KC_F2
+key_f3: &key_f3
+  kaleidoscope: Key_F3
+  qmk: KC_F3
+key_f4: &key_f4
+  kaleidoscope: Key_F4
+  qmk: KC_F4
+key_f5: &key_f5
+  kaleidoscope: Key_F5
+  qmk: KC_F5
+key_f6: &key_f6
+  kaleidoscope: Key_F6
+  qmk: KC_F6
+key_f7: &key_f7
+  kaleidoscope: Key_F7
+  qmk: KC_F7
+key_f8: &key_f8
+  kaleidoscope: Key_F8
+  qmk: KC_F8
+key_f9: &key_f9
+  kaleidoscope: Key_F9
+  qmk: KC_F9
+key_f10: &key_f10
+  kaleidoscope: Key_F10
+  qmk: KC_F10
+key_f11: &key_f11
+  kaleidoscope: Key_F11
+  qmk: KC_F11
+key_f12: &key_f12
+  kaleidoscope: Key_F12
+  qmk: KC_F12
+
 key_backslash: &key_backslash
   kaleidoscope: Key_Backslash
   qmk: KC_BACKSLASH
@@ -361,6 +398,19 @@ numt2: *key_minus
 symt0: *key_9
 symt1: *key_0
 symt2: *key_minus
+
+fkeys00: *key_f12
+fkeys01: *key_f7
+fkeys02: *key_f8
+fkeys03: *key_f9
+fkeys10: *key_f11
+fkeys11: *key_f4
+fkeys12: *key_f5
+fkeys13: *key_f6
+fkeys20: *key_f10
+fkeys21: *key_f1
+fkeys22: *key_f2
+fkeys23: *key_f3
 
 game00: *key_tab
 game01: *key_q

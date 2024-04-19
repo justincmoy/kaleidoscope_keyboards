@@ -20,6 +20,7 @@ enum {
   MOUSE,
   NUM,
   SYM,
+  FKEYS,
   GAME
 };
 
@@ -73,7 +74,7 @@ KEYMAPS(
     {{ baset1 | model100_key }},
     {{ baset2 | model100_key }},
     M(MACRO_LOCK_GAME),
-    XXX,
+    ShiftToLayer(FKEYS),
     {{ baset3 | model100_key }},
     {{ baset4 | model100_key }},
     {{ baset5 | model100_key }},
@@ -349,6 +350,62 @@ KEYMAPS(
     {{ symt3 | model100_key_shift }},
     {{ symt4 | model100_key_shift }},
     {{ symt5 | model100_key_shift }},
+
+    XXX, XXX // palm
+  ),
+
+  [FKEYS] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ fkeys00 | model100_key }},
+    {{ fkeys01 | model100_key }},
+    {{ fkeys02 | model100_key }},
+    {{ fkeys03 | model100_key }},
+    {{ fkeys04 | model100_key }},
+    XXX, XXX,
+    {{ fkeys05 | model100_key }},
+    {{ fkeys06 | model100_key }},
+    {{ fkeys07 | model100_key }},
+    {{ fkeys08 | model100_key }},
+    {{ fkeys09 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ fkeys10 | model100_key }},
+    {{ fkeys11 | model100_key }},
+    {{ fkeys12 | model100_key }},
+    {{ fkeys13 | model100_key }},
+    {{ fkeys14 | model100_key }},
+    {{ fkeys15 | model100_key }},
+    {{ fkeys16 | model100_key }},
+    {{ fkeys17 | model100_key }},
+    {{ fkeys18 | model100_key }},
+    {{ fkeys19 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ fkeys20 | model100_key }},
+    {{ fkeys21 | model100_key }},
+    {{ fkeys22 | model100_key }},
+    {{ fkeys23 | model100_key }},
+    {{ fkeys24 | model100_key }},
+    XXX, XXX,
+    {{ fkeys25 | model100_key }},
+    {{ fkeys26 | model100_key }},
+    {{ fkeys27 | model100_key }},
+    {{ fkeys28 | model100_key }},
+    {{ fkeys29 | model100_key }},
+    XXX,
+
+    {{ fkeyst0 | model100_key }},
+    {{ fkeyst1 | model100_key }},
+    {{ fkeyst2 | model100_key }},
+    XXX, XXX,
+    {{ fkeyst3 | model100_key }},
+    {{ fkeyst4 | model100_key }},
+    {{ fkeyst5 | model100_key }},
 
     XXX, XXX // palm
   ),
