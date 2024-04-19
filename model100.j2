@@ -11,7 +11,6 @@
 
 enum {
   MACRO_LOCK_GAME,
-  MACRO_VIM_ESCAPE_TERMINAL,
 };
 
 enum {
@@ -424,8 +423,6 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
       }
     }
     break;
-  case MACRO_VIM_ESCAPE_TERMINAL:
-    return MACRO(D(LeftControl), T(Backslash), T(N), U(LeftControl));
   default:
     break;
   }
