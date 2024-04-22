@@ -176,38 +176,38 @@ key_osm_shift: &key_osm_shift
   kaleidoscope: OSM(LeftShift)
   qmk: OSM(MOD_LSFT)
 
-base00: *key_b
+base00: *key_w
 base01: *key_l
-base02: *key_d
-base03: *key_w
-base04: *key_z
-base05: *key_quote
+base02: *key_y
+base03: *key_p
+base04: *key_b
+base05: *key_z
 base06: *key_f
 base07: *key_o
 base08: *key_u
-base09: *key_j
+base09: *key_quote
 
-base10: *key_n
+base10: *key_c
 base11: *key_r
-base12: *key_t
-base13: *key_s
+base12: *key_s
+base13: *key_t
 base14: *key_g
-base15: *key_y
-base16: *key_h
-base17: *key_a
-base18: *key_e
-base19: *key_i
+base15: *key_m
+base16: *key_n
+base17: *key_e
+base18: *key_i
+base19: *key_a
 
 base20: *key_q
-base21: *key_x
-base22: *key_m
-base23: *key_c
-base24: *key_v
-base25: *key_k
-base26: *key_p
-base27: *key_comma
-base28: *key_period
-base29: *key_slash
+base21: *key_j
+base22: *key_v
+base23: *key_d
+base24: *key_k
+base25: *key_x
+base26: *key_h
+base27: *key_slash
+base28: *key_comma
+base29: *key_period
 
 baset0: *key_esc
 baset1:
