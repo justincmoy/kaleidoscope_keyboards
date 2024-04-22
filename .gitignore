@@ -4,3 +4,4 @@
 keymap.c
 keymap_def.yaml
 Makefile
+__pycache__

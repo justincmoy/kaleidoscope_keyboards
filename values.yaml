@@ -108,6 +108,43 @@ key_0: &key_0
   kaleidoscope: Key_0
   qmk: KC_0
 
+key_f1: &key_f1
+  kaleidoscope: Key_F1
+  qmk: KC_F1
+key_f2: &key_f2
+  kaleidoscope: Key_F2
+  qmk: KC_F2
+key_f3: &key_f3
+  kaleidoscope: Key_F3
+  qmk: KC_F3
+key_f4: &key_f4
+  kaleidoscope: Key_F4
+  qmk: KC_F4
+key_f5: &key_f5
+  kaleidoscope: Key_F5
+  qmk: KC_F5
+key_f6: &key_f6
+  kaleidoscope: Key_F6
+  qmk: KC_F6
+key_f7: &key_f7
+  kaleidoscope: Key_F7
+  qmk: KC_F7
+key_f8: &key_f8
+  kaleidoscope: Key_F8
+  qmk: KC_F8
+key_f9: &key_f9
+  kaleidoscope: Key_F9
+  qmk: KC_F9
+key_f10: &key_f10
+  kaleidoscope: Key_F10
+  qmk: KC_F10
+key_f11: &key_f11
+  kaleidoscope: Key_F11
+  qmk: KC_F11
+key_f12: &key_f12
+  kaleidoscope: Key_F12
+  qmk: KC_F12
+
 key_backslash: &key_backslash
   kaleidoscope: Key_Backslash
   qmk: KC_BACKSLASH
@@ -221,78 +258,60 @@ baset2:
 baset3:
   kaleidoscope: LT(NUM, Backspace)
   qmk: LT(LAYER_NUM, KC_BACKSPACE)
-baset4: *key_shift
+baset4:
+  model100: Key_LShift
 baset5:
   kaleidoscope: LT(SYM, Delete)
   qmk: LT(LAYER_SYM, KC_DELETE)
 
 nav00:
-  kaleidoscope: LCTRL(Key_B)
-  qmk: LCTL(KC_B)
+  kaleidoscope: XXX
 nav01:
-  kaleidoscope: LCTRL(Key_N)
-  qmk: LCTL(KC_N)
-  model100: M(MACRO_VIM_ESCAPE_TERMINAL)
+  # Tmux
+  kaleidoscope: LCTRL(Key_B)
 nav02:
-  kaleidoscope: LCTRL(Key_Backslash)
-  qmk: LCTL(KC_BACKSLASH)
-  model100: Key_UpArrow
+  kaleidoscope: Key_UpArrow
 nav03:
-  kaleidoscope: LCTRL(Key_W)
-  qmk: LCTL(KC_W)
-nav04:
-  kaleidoscope: LGUI(Key_Z)
-  qmk: LGUI(KC_Z)
+  model100: XXX
+nav05:
+  model100: XXX
 nav06:
+  # Browser: left tab
   kaleidoscope: LCTRL(Key_PageUp)
   qmk: LCTL(KC_PAGE_UP)
 nav07:
-  kaleidoscope: LALT(Key_DownArrow)
-  qmk: LALT(KC_DOWN)
+  kaleidoscope: XXX
 nav08:
-  kaleidoscope: LALT(Key_UpArrow)
-  qmk: LALT(KC_UP)
+  kaleidoscope: XXX
 nav09:
+  # Browser: right tab
   kaleidoscope: LCTRL(Key_PageDown)
   qmk: LCTL(KC_PAGE_DOWN)
-nav10: *key_osm_gui
+nav10:
+  kaleidoscope: XXX
 nav11:
-  kaleidoscope: OSM(LeftAlt)
-  qmk: OSM(MOD_LALT)
-  model100: Key_LeftArrow
-nav12:
-  kaleidoscope: OSM(LeftControl)
-  qmk: OSM(MOD_LCTL)
-  model100: Key_DownArrow
-nav13:
-  kaleidoscope: OSM(LeftShift)
-  qmk: OSM(MOD_LSFT)
-  model100: Key_RightArrow
-nav16:
   kaleidoscope: Key_LeftArrow
-  qmk: KC_LEFT
-  model100: OSM(LeftShift)
-nav17:
+nav12:
   kaleidoscope: Key_DownArrow
-  qmk: KC_DOWN
-  model100: OSM(LeftControl)
-nav18:
-  kaleidoscope: Key_UpArrow
-  qmk: KC_UP
-  model100: OSM(LeftAlt)
-nav19:
+nav13:
   kaleidoscope: Key_RightArrow
-  qmk: KC_RIGHT
-  model100: OSM(LeftGui)
+nav16:
+  kaleidoscope: OSM(LeftShift)
+nav17:
+  kaleidoscope: OSM(LeftControl)
+nav18:
+  kaleidoscope: OSM(LeftAlt)
+nav19:
+  kaleidoscope: OSM(LeftGui)
+nav20:
+  kaleidoscope: LGUI(Key_Z)
+  qmk: LGUI(KC_Z)
 nav21:
   kaleidoscope: LGUI(Key_X)
-  qmk: LGUI(KC_X)
-nav23:
+nav22:
   kaleidoscope: LGUI(Key_C)
-  qmk: LGUI(KC_C)
-nav24:
+nav23:
   kaleidoscope: LGUI(Key_V)
-  qmk: LGUI(KC_V)
 nav26:
   kaleidoscope: Key_Home
   qmk: KC_HOME
@@ -380,12 +399,25 @@ symt0: *key_9
 symt1: *key_0
 symt2: *key_minus
 
+fkeys00: *key_f12
+fkeys01: *key_f7
+fkeys02: *key_f8
+fkeys03: *key_f9
+fkeys10: *key_f11
+fkeys11: *key_f4
+fkeys12: *key_f5
+fkeys13: *key_f6
+fkeys20: *key_f10
+fkeys21: *key_f1
+fkeys22: *key_f2
+fkeys23: *key_f3
+
 game00: *key_tab
 game01: *key_q
 game02: *key_w
 game03: *key_e
 game04: *key_r
-game05: *key_g
+game05: *key_b
 
 game10: *key_shift
 game11: *key_a

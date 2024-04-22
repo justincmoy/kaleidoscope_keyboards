@@ -1,0 +1,497 @@
+#include "Kaleidoscope.h"
+#include "kaleidoscope/Runtime.h"
+#include "kaleidoscope/layers.h"
+#include "Kaleidoscope-LedControl.h"
+#include "Kaleidoscope-LED-ActiveModColor.h"
+#include "Kaleidoscope-LED-Stalker.h"
+#include "Kaleidoscope-Macros.h"
+#include "Kaleidoscope-MouseKeys.h"
+#include "Kaleidoscope-OneShot.h"
+#include "Kaleidoscope-Qukeys.h"
+
+enum {
+  MACRO_LOCK_GAME,
+};
+
+enum {
+  BASE,
+  BASE_LT,
+  NAV,
+  MOUSE,
+  NUM,
+  SYM,
+  FKEYS,
+  GAME
+};
+
+KEYMAPS(
+  [BASE] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ base00 | model100_key }},
+    {{ base01 | model100_key }},
+    {{ base02 | model100_key }},
+    {{ base03 | model100_key }},
+    {{ base04 | model100_key }},
+    XXX, XXX,
+    {{ base05 | model100_key }},
+    {{ base06 | model100_key }},
+    {{ base07 | model100_key }},
+    {{ base08 | model100_key }},
+    {{ base09 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ base10 | model100_key }},
+    {{ base11 | model100_key }},
+    {{ base12 | model100_key }},
+    {{ base13 | model100_key }},
+    {{ base14 | model100_key }},
+    {{ base15 | model100_key }},
+    {{ base16 | model100_key }},
+    {{ base17 | model100_key }},
+    {{ base18 | model100_key }},
+    {{ base19 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ base20 | model100_key }},
+    {{ base21 | model100_key }},
+    {{ base22 | model100_key }},
+    {{ base23 | model100_key }},
+    {{ base24 | model100_key }},
+    XXX, XXX,
+    {{ base25 | model100_key }},
+    {{ base26 | model100_key }},
+    {{ base27 | model100_key }},
+    {{ base28 | model100_key }},
+    {{ base29 | model100_key }},
+    XXX,
+
+    {{ baset0 | model100_key }},
+    {{ baset1 | model100_key }},
+    {{ baset2 | model100_key }},
+    M(MACRO_LOCK_GAME),
+    ShiftToLayer(FKEYS),
+    {{ baset3 | model100_key }},
+    {{ baset4 | model100_key }},
+    {{ baset5 | model100_key }},
+
+    ShiftToLayer(MOUSE), ShiftToLayer(NAV) // palm
+  ),
+
+  [BASE_LT] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ base00 | model100_key }},
+    {{ base01 | model100_key }},
+    {{ base02 | model100_key }},
+    {{ base03 | model100_key }},
+    {{ base04 | model100_key }},
+    XXX, XXX,
+    {{ base05 | model100_key }},
+    {{ base06 | model100_key }},
+    {{ base07 | model100_key }},
+    {{ base08 | model100_key }},
+    {{ base09 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ base10 | model100_key }},
+    {{ base11 | model100_key }},
+    {{ base12 | model100_key }},
+    {{ base13 | model100_key }},
+    {{ base14 | model100_key }},
+    {{ base15 | model100_key }},
+    {{ base16 | model100_key }},
+    {{ base17 | model100_key }},
+    {{ base18 | model100_key }},
+    {{ base19 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ base20 | model100_key }},
+    {{ base21 | model100_key }},
+    {{ base22 | model100_key }},
+    {{ base23 | model100_key }},
+    {{ base24 | model100_key }},
+    XXX, XXX,
+    {{ base25 | model100_key }},
+    {{ base26 | model100_key }},
+    {{ base27 | model100_key }},
+    {{ base28 | model100_key }},
+    {{ base29 | model100_key }},
+    XXX,
+
+    {{ navt0 | model100_key }},
+    {{ navt1 | model100_key }},
+    {{ navt2 | model100_key }},
+    XXX, XXX,
+    {{ navt3 | model100_key }},
+    {{ navt4 | model100_key }},
+    {{ navt5 | model100_key }},
+
+    XXX, XXX // palm
+  ),
+
+  [NAV] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ nav00 | model100_key }},
+    {{ nav01 | model100_key }},
+    {{ nav02 | model100_key }},
+    {{ nav03 | model100_key }},
+    {{ nav04 | model100_key }},
+    XXX, XXX,
+    {{ nav05 | model100_key }},
+    {{ nav06 | model100_key }},
+    {{ nav07 | model100_key }},
+    {{ nav08 | model100_key }},
+    {{ nav09 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ nav10 | model100_key }},
+    {{ nav11 | model100_key }},
+    {{ nav12 | model100_key }},
+    {{ nav13 | model100_key }},
+    {{ nav14 | model100_key }},
+    {{ nav15 | model100_key }},
+    {{ nav16 | model100_key }},
+    {{ nav17 | model100_key }},
+    {{ nav18 | model100_key }},
+    {{ nav19 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ nav20 | model100_key }},
+    {{ nav21 | model100_key }},
+    {{ nav22 | model100_key }},
+    {{ nav23 | model100_key }},
+    {{ nav24 | model100_key }},
+    XXX, XXX,
+    {{ nav25 | model100_key }},
+    {{ nav26 | model100_key }},
+    {{ nav27 | model100_key }},
+    {{ nav28 | model100_key }},
+    {{ nav29 | model100_key }},
+    XXX,
+
+    {{ navt0 | model100_key }},
+    {{ navt1 | model100_key }},
+    {{ navt2 | model100_key }},
+    XXX, XXX,
+    {{ navt3 | model100_key }},
+    {{ navt4 | model100_key }},
+    {{ navt5 | model100_key }},
+
+    XXX, XXX // palm
+  ),
+
+  [MOUSE] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX,
+    XXX,
+
+    XXX,
+    {{ mouse10 | model100_key }},
+    {{ mouse11 | model100_key }},
+    {{ mouse12 | model100_key }},
+    {{ mouse13 | model100_key }},
+    {{ mouse14 | model100_key }},
+    {{ mouse15 | model100_key }},
+    {{ mouse16 | model100_key }},
+    {{ mouse17 | model100_key }},
+    {{ mouse18 | model100_key }},
+    {{ mouse19 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ mouse20 | model100_key }},
+    {{ mouse21 | model100_key }},
+    {{ mouse22 | model100_key }},
+    {{ mouse23 | model100_key }},
+    {{ mouse24 | model100_key }},
+    XXX, XXX,
+    {{ mouse25 | model100_key }},
+    {{ mouse26 | model100_key }},
+    {{ mouse27 | model100_key }},
+    {{ mouse28 | model100_key }},
+    {{ mouse29 | model100_key }},
+    XXX,
+
+    {{ mouset0 | model100_key }},
+    {{ mouset1 | model100_key }},
+    {{ mouset2 | model100_key }},
+    XXX, XXX,
+    {{ mouset3 | model100_key }},
+    {{ mouset4 | model100_key }},
+    {{ mouset5 | model100_key }},
+
+    XXX, XXX // palm
+  ),
+
+  [NUM] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ num00 | model100_key }},
+    {{ num01 | model100_key }},
+    {{ num02 | model100_key }},
+    {{ num03 | model100_key }},
+    {{ num04 | model100_key }},
+    XXX, XXX,
+    {{ num05 | model100_key }},
+    {{ num06 | model100_key }},
+    {{ num07 | model100_key }},
+    {{ num08 | model100_key }},
+    {{ num09 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ num10 | model100_key }},
+    {{ num11 | model100_key }},
+    {{ num12 | model100_key }},
+    {{ num13 | model100_key }},
+    {{ num14 | model100_key }},
+    {{ num15 | model100_key }},
+    {{ num16 | model100_key }},
+    {{ num17 | model100_key }},
+    {{ num18 | model100_key }},
+    {{ num19 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ num20 | model100_key }},
+    {{ num21 | model100_key }},
+    {{ num22 | model100_key }},
+    {{ num23 | model100_key }},
+    {{ num24 | model100_key }},
+    XXX, XXX,
+    {{ num25 | model100_key }},
+    {{ num26 | model100_key }},
+    {{ num27 | model100_key }},
+    {{ num28 | model100_key }},
+    {{ num29 | model100_key }},
+    XXX,
+
+    {{ numt0 | model100_key }},
+    {{ numt1 | model100_key }},
+    {{ numt2 | model100_key }},
+    XXX, XXX,
+    {{ numt3 | model100_key }},
+    {{ numt4 | model100_key }},
+    {{ numt5 | model100_key }},
+
+    XXX, XXX // palm
+  ),
+
+  [SYM] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ num00 | model100_key_shift }},
+    {{ num01 | model100_key_shift }},
+    {{ num02 | model100_key_shift }},
+    {{ num03 | model100_key_shift }},
+    {{ num04 | model100_key_shift }},
+    XXX, XXX,
+    {{ num05 | model100_key_shift }},
+    {{ num06 | model100_key_shift }},
+    {{ num07 | model100_key_shift }},
+    {{ num08 | model100_key_shift }},
+    {{ num09 | model100_key_shift }},
+    XXX,
+
+    XXX,
+    {{ num10 | model100_key_shift }},
+    {{ num11 | model100_key_shift }},
+    {{ num12 | model100_key_shift }},
+    {{ num13 | model100_key_shift }},
+    {{ num14 | model100_key_shift }},
+    {{ num15 | model100_key }},
+    {{ num16 | model100_key }},
+    {{ num17 | model100_key }},
+    {{ num18 | model100_key }},
+    {{ num19 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ num20 | model100_key_shift }},
+    {{ num21 | model100_key_shift }},
+    {{ num22 | model100_key_shift }},
+    {{ num23 | model100_key_shift }},
+    {{ num24 | model100_key_shift }},
+    XXX, XXX,
+    {{ num25 | model100_key_shift }},
+    {{ num26 | model100_key_shift }},
+    {{ num27 | model100_key_shift }},
+    {{ num28 | model100_key_shift }},
+    {{ num29 | model100_key_shift }},
+    XXX,
+
+    {{ symt0 | model100_key_shift }},
+    {{ symt1 | model100_key_shift }},
+    {{ symt2 | model100_key_shift }},
+    XXX, XXX,
+    {{ symt3 | model100_key_shift }},
+    {{ symt4 | model100_key_shift }},
+    {{ symt5 | model100_key_shift }},
+
+    XXX, XXX // palm
+  ),
+
+  [FKEYS] = KEYMAP(
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ fkeys00 | model100_key }},
+    {{ fkeys01 | model100_key }},
+    {{ fkeys02 | model100_key }},
+    {{ fkeys03 | model100_key }},
+    {{ fkeys04 | model100_key }},
+    XXX, XXX,
+    {{ fkeys05 | model100_key }},
+    {{ fkeys06 | model100_key }},
+    {{ fkeys07 | model100_key }},
+    {{ fkeys08 | model100_key }},
+    {{ fkeys09 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ fkeys10 | model100_key }},
+    {{ fkeys11 | model100_key }},
+    {{ fkeys12 | model100_key }},
+    {{ fkeys13 | model100_key }},
+    {{ fkeys14 | model100_key }},
+    {{ fkeys15 | model100_key }},
+    {{ fkeys16 | model100_key }},
+    {{ fkeys17 | model100_key }},
+    {{ fkeys18 | model100_key }},
+    {{ fkeys19 | model100_key }},
+    XXX,
+
+    XXX,
+    {{ fkeys20 | model100_key }},
+    {{ fkeys21 | model100_key }},
+    {{ fkeys22 | model100_key }},
+    {{ fkeys23 | model100_key }},
+    {{ fkeys24 | model100_key }},
+    XXX, XXX,
+    {{ fkeys25 | model100_key }},
+    {{ fkeys26 | model100_key }},
+    {{ fkeys27 | model100_key }},
+    {{ fkeys28 | model100_key }},
+    {{ fkeys29 | model100_key }},
+    XXX,
+
+    {{ fkeyst0 | model100_key }},
+    {{ fkeyst1 | model100_key }},
+    {{ fkeyst2 | model100_key }},
+    XXX, XXX,
+    {{ fkeyst3 | model100_key }},
+    {{ fkeyst4 | model100_key }},
+    {{ fkeyst5 | model100_key }},
+
+    XXX, XXX // palm
+  ),
+
+  [GAME] = KEYMAP(
+    XXX, XXX, Key_1, Key_2, Key_3, Key_4, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ game00 | model100_key }},
+    {{ game01 | model100_key }},
+    {{ game02 | model100_key }},
+    {{ game03 | model100_key }},
+    {{ game04 | model100_key }},
+    {{ game05 | model100_key }},
+    XXX,
+    XXX, XXX, Key_UpArrow, XXX, XXX,
+    XXX,
+
+    XXX,
+    {{ game10 | model100_key }},
+    {{ game11 | model100_key }},
+    {{ game12 | model100_key }},
+    {{ game13 | model100_key }},
+    {{ game14 | model100_key }},
+    XXX, Key_LeftArrow, Key_DownArrow, Key_RightArrow, XXX,
+    XXX,
+
+    XXX,
+    {{ game20 | model100_key }},
+    {{ game21 | model100_key }},
+    {{ game22 | model100_key }},
+    {{ game23 | model100_key }},
+    {{ game24 | model100_key }},
+    {{ game25 | model100_key }},
+    XXX,
+    XXX, XXX, XXX, XXX, XXX,
+    XXX,
+
+    {{ gamet0 | model100_key }},
+    {{ gamet1 | model100_key }},
+    {{ gamet2 | model100_key }},
+    M(MACRO_LOCK_GAME),
+    XXX,
+    XXX, XXX, XXX,
+
+    XXX, XXX // palm
+  )
+)
+
+KALEIDOSCOPE_INIT_PLUGINS(
+  Qukeys,
+  OneShot,
+  Macros,
+  MouseKeys,
+  LEDControl,
+  LEDOff,
+  ActiveModColorEffect,
+  StalkerEffect
+);
+
+const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
+  switch (macroIndex) {
+  case MACRO_LOCK_GAME:
+    if (keyToggledOn(event.state)) {
+      if (Layer.isActive(GAME)) {
+        LEDOff.activate();
+        Layer.deactivate(GAME);
+      } else {
+        StalkerEffect.activate();
+        Layer.activate(GAME);
+      }
+    }
+    break;
+  default:
+    break;
+  }
+
+  return MACRO_NONE;
+}
+
+void setup() {
+  Kaleidoscope.setup();
+  StalkerEffect.variant = STALKER(Rainbow);
+}
+
+void loop() {
+  Kaleidoscope.loop();
+}
