@@ -144,6 +144,9 @@ key_f11: &key_f11
 key_f12: &key_f12
   kaleidoscope: Key_F12
   qmk: KC_F12
+key_f24: &key_f24
+  kaleidoscope: Key_F24
+  qmk: KC_F24
 
 key_backslash: &key_backslash
   kaleidoscope: Key_Backslash
@@ -412,7 +415,7 @@ fkeys21: *key_f1
 fkeys22: *key_f2
 fkeys23: *key_f3
 
-game00: *key_tab
+game00: XXX
 game01: *key_q
 game02: *key_w
 game03: *key_e
@@ -432,6 +435,6 @@ game23: *key_c
 game24: *key_v
 game25: *key_g
 
-gamet0: *key_esc
+gamet0: *key_f24
 gamet1: *key_space
-gamet2: *key_tab
+gamet2: XXX
