@@ -437,4 +437,4 @@ game25: *key_g
 
 gamet0: *key_f24
 gamet1: *key_space
-gamet2: XXX
+gamet2: *key_tab
