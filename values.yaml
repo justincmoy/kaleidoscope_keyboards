@@ -193,6 +193,9 @@ key_semicolon: &key_semicolon
 key_shift: &key_shift
   kaleidoscope: Key_LShift
   qmk: KC_LEFT_SHIFT
+key_alt: &key_alt
+  kaleidoscope: Key_LAlt
+  qmk: KC_LEFT_ALT
 key_slash: &key_slash
   kaleidoscope: Key_Slash
   qmk: KC_SLASH
@@ -415,7 +418,7 @@ fkeys21: *key_f1
 fkeys22: *key_f2
 fkeys23: *key_f3
 
-game00: XXX
+game00: *key_alt
 game01: *key_q
 game02: *key_w
 game03: *key_e
