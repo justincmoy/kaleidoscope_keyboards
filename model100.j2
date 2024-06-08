@@ -21,7 +21,8 @@ enum {
   NUM,
   SYM,
   FKEYS,
-  GAME
+  GAME,
+  GAMEALT
 };
 
 KEYMAPS(
@@ -411,7 +412,7 @@ KEYMAPS(
   ),
 
   [GAME] = KEYMAP(
-    XXX, XXX, Key_1, Key_2, Key_3, Key_4, XXX,
+    Key_Esc, XXX, Key_M, XXX, XXX, XXX, XXX,
     XXX, XXX, XXX, XXX, XXX, XXX, XXX,
 
     XXX,
@@ -449,6 +450,51 @@ KEYMAPS(
     {{ gamet1 | model100_key }},
     {{ gamet2 | model100_key }},
     M(MACRO_LOCK_GAME),
+    XXX,
+    XXX, XXX, XXX,
+
+    ShiftToLayer(GAMEALT), XXX // palm
+  ),
+
+  [GAMEALT] = KEYMAP(
+    Key_Esc, XXX, XXX, XXX, XXX, XXX, XXX,
+    XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+    XXX,
+    {{ game00 | model100_key }},
+    {{ game01 | model100_key }},
+    {{ game02 | model100_key }},
+    {{ game03 | model100_key }},
+    {{ game04 | model100_key }},
+    {{ game05 | model100_key }},
+    XXX,
+    XXX, XXX, Key_UpArrow, XXX, XXX,
+    XXX,
+
+    XXX,
+    {{ game10 | model100_key }},
+    {{ game11 | model100_key }},
+    {{ game12 | model100_key }},
+    {{ game13 | model100_key }},
+    {{ game14 | model100_key }},
+    XXX, Key_LeftArrow, Key_DownArrow, Key_RightArrow, XXX,
+    XXX,
+
+    XXX,
+    Key_1,
+    Key_2,
+    Key_3,
+    Key_4,
+    XXX,
+    XXX,
+    XXX,
+    XXX, XXX, XXX, XXX, XXX,
+    XXX,
+
+    {{ gamet0 | model100_key }},
+    {{ gamet1 | model100_key }},
+    {{ gamet2 | model100_key }},
+    XXX,
     XXX,
     XXX, XXX, XXX,
 
