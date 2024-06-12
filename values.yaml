@@ -241,16 +241,24 @@ base17: *key_e
 base18: *key_i
 base19: *key_a
 
-base20: *key_q
-base21: *key_j
-base22: *key_v
-base23: *key_d
+base20:
+  kaleidoscope: GUI_T(Q)
+base21:
+  kaleidoscope: ALT_T(J)
+base22:
+  kaleidoscope: CTL_T(V)
+base23:
+  kaleidoscope: SFT_T(D)
 base24: *key_k
 base25: *key_x
-base26: *key_h
-base27: *key_slash
-base28: *key_comma
-base29: *key_period
+base26:
+  kaleidoscope: SFT_T(H)
+base27:
+  kaleidoscope: CTL_T(Slash)
+base28:
+  kaleidoscope: ALT_T(Comma)
+base29:
+  kaleidoscope: GUI_T(Period)
 
 baset0: *key_esc
 baset1:

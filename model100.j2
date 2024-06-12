@@ -536,6 +536,9 @@ const macro_t *macroAction(uint8_t macroIndex, KeyEvent &event) {
 void setup() {
   Kaleidoscope.setup();
   StalkerEffect.variant = STALKER(Rainbow);
+  Qukeys.setMinimumHoldTime(250);
+  Qukeys.setOverlapThreshold(90);
+  Qukeys.setMaxIntervalForTapRepeat(0);
 }
 
 void loop() {
